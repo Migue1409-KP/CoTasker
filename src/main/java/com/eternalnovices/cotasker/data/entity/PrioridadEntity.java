@@ -2,17 +2,17 @@ package com.eternalnovices.cotasker.data.entity;
 
 import java.util.UUID;
 
-public class Prioridad {
+public class PrioridadEntity {
 	private UUID idPrioridad;
 	private String descripcion;
 	
-	private Prioridad(final UUID idPrioridad, final String descripcion) {
+	private PrioridadEntity(final UUID idPrioridad, final String descripcion) {
 		setIdPrioridad(idPrioridad);
 		setDescripcion(descripcion);
 	}
 	
-	public static final Prioridad crear(final UUID idPrioridad, final String descripcion) {
-		return new Prioridad(idPrioridad, descripcion);
+	public static final PrioridadEntity crear(final UUID idPrioridad, final String descripcion) {
+		return new PrioridadEntity(idPrioridad, descripcion);
 	}
 	
 	private final void setIdPrioridad(final UUID idPrioridad) {
