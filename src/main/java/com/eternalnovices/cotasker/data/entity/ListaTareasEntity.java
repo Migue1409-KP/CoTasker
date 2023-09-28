@@ -1,6 +1,5 @@
 package com.eternalnovices.cotasker.data.entity;
 
-import java.util.List;
 import java.util.UUID;
 import com.eternalnovices.cotasker.data.entity.support.FechasEntity;
 
@@ -10,21 +9,21 @@ public class ListaTareasEntity {
 	private String descripcion;
 	private FechasEntity fecha;
 	private PrioridadEntity prioridad;
-	private List<TareaEntity> tarea;
+	private ProyectoEntity proyecto;
 	
-	private ListaTareasEntity(final UUID idListaTareas, final String nombre, final String descripcion, final FechasEntity fechas,
-			final PrioridadEntity prioridad, final List<TareaEntity> tarea) {
+	private ListaTareasEntity(final UUID idListaTareas, final String nombre, final String descripcion, final FechasEntity fecha,
+			final PrioridadEntity prioridad, final ProyectoEntity proyecto) {
 		setIdListaTareas(idListaTareas);
 		setNombre(nombre);
 		setDescripcion(descripcion);
-		setFechas(fechas);
+		setFecha(fecha);
 		setPrioridad(prioridad);
-		setTarea(tarea);
+		setProyecto(proyecto);
 	}
 	
-	public static final ListaTareasEntity crear(final UUID idListaTareas, final String nombre, final String descripcion, final FechasEntity fechas,
-			final PrioridadEntity prioridad, final List<TareaEntity> tarea) {
-		return new ListaTareasEntity(idListaTareas, nombre, descripcion, fechas, prioridad, tarea);
+	public static final ListaTareasEntity crear(final UUID idListaTareas, final String nombre, final String descripcion, final FechasEntity fecha,
+			final PrioridadEntity prioridad, final ProyectoEntity proyecto) {
+		return new ListaTareasEntity(idListaTareas, nombre, descripcion, fecha, prioridad, proyecto);
 	}
 
 	private final void setIdListaTareas(final UUID idListaTareas) {
@@ -39,16 +38,16 @@ public class ListaTareasEntity {
 		this.descripcion = descripcion;
 	}
 
-	private final void setFechas(final FechasEntity fechas) {
-		this.fecha = fechas;
+	private final void setFecha(final FechasEntity fecha) {
+		this.fecha = fecha;
 	}
 
 	private final void setPrioridad(final PrioridadEntity prioridad) {
 		this.prioridad = prioridad;
 	}
 
-	private final void setTarea(final List<TareaEntity> tarea) {
-		this.tarea = tarea;
+	private final void setProyecto(final ProyectoEntity proyecto) {
+		this.proyecto = proyecto;
 	}
 
 	public final UUID getIdListaTareas() {
@@ -63,7 +62,7 @@ public class ListaTareasEntity {
 		return descripcion;
 	}
 
-	public final FechasEntity getFechas() {
+	public final FechasEntity getFecha() {
 		return fecha;
 	}
 
@@ -71,7 +70,7 @@ public class ListaTareasEntity {
 		return prioridad;
 	}
 
-	public final List<TareaEntity> getTarea() {
-		return tarea;
+	public final ProyectoEntity getProyecto() {
+		return proyecto;
 	}
 }

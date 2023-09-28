@@ -10,20 +10,22 @@ public class TareaEntity {
 	private FechasEntity fecha;
 	private PrioridadEntity prioridad;
 	private EstadoEntity estado;
+	private ListaTareasEntity listaTareas;
 	
 	private TareaEntity(final UUID idTarea, final String nombre, final String descripcion, final FechasEntity fecha, final PrioridadEntity prioridad,
-			final EstadoEntity estado) {
+			final EstadoEntity estado, final ListaTareasEntity listaTareas) {
 		setIdTarea(idTarea);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 		setFecha(fecha);
 		setPrioridad(prioridad);
 		setEstado(estado);
+		setListaTareas(listaTareas);
 	}
 	
 	public static final TareaEntity crear(final UUID idTarea, final String nombre, final String descripcion, final FechasEntity fecha, final PrioridadEntity prioridad,
-			final EstadoEntity estado) {
-		return new TareaEntity(idTarea, nombre, descripcion, fecha, prioridad, estado);
+			final EstadoEntity estado, final ListaTareasEntity listaTareas) {
+		return new TareaEntity(idTarea, nombre, descripcion, fecha, prioridad, estado, listaTareas);
 	}
 
 	private final void setIdTarea(final UUID idTarea) {
@@ -50,6 +52,10 @@ public class TareaEntity {
 		this.estado = estado;
 	}
 
+	private final void setListaTareas(ListaTareasEntity listaTareas) {
+		this.listaTareas = listaTareas;
+	}
+
 	public final UUID getIdTarea() {
 		return idTarea;
 	}
@@ -72,5 +78,9 @@ public class TareaEntity {
 
 	public final EstadoEntity getEstado() {
 		return estado;
+	}
+
+	public final ListaTareasEntity getListaTareas() {
+		return listaTareas;
 	}
 }
