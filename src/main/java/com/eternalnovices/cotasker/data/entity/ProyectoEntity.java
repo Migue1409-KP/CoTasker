@@ -1,6 +1,5 @@
 package com.eternalnovices.cotasker.data.entity;
 
-import java.util.List;
 import java.util.UUID;
 import com.eternalnovices.cotasker.data.entity.support.FechasEntity;
 
