@@ -7,6 +7,7 @@ import com.eternalnovices.cotasker.data.dao.ProyectoDAO;
 import com.eternalnovices.cotasker.data.dao.TareaDAO;
 import com.eternalnovices.cotasker.data.dao.UsuarioDAO;
 import com.eternalnovices.cotasker.data.dao.daofactory.concrete.SQLServerDAOFactory;
+import com.eternalnovices.cotasker.data.dao.daofactory.enumerator.TipoDAOFactory;
 
 public abstract class DAOFactory {
 	
