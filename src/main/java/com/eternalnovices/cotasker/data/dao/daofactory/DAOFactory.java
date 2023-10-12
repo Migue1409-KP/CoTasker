@@ -1,5 +1,8 @@
 package com.eternalnovices.cotasker.data.dao.daofactory;
 
+import com.eternalnovices.cotasker.crosscutting.exception.concrete.DataCoTaskerException;
+import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
+import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.data.dao.EstadoDAO;
 import com.eternalnovices.cotasker.data.dao.ListaTareaDAO;
 import com.eternalnovices.cotasker.data.dao.PrioridadDAO;
@@ -17,19 +20,24 @@ public abstract class DAOFactory {
 			return new SQLServerDAOFactory();
 		}
 		case POSTGRESSQL: {
-			//TODO improve customized exceptions
-			throw new RuntimeException("POSTGRESSQL no soportada");
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000026);
+			throw DataCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		case MYSQL: {
-			//TODO improve customized exceptions
-			throw new RuntimeException("MYSQL no soportada");
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000026);
+			throw DataCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		case ORACLE: {
-			//TODO improve customized exceptions
-			throw new RuntimeException("ORACLE no soportada");
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000026);
+			throw DataCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		default:
-			throw new RuntimeException(factoria + " no soportada");
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000026);
+			throw DataCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 	}
 	

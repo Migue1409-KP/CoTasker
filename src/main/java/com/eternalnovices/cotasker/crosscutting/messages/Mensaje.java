@@ -26,8 +26,8 @@ public class Mensaje {
 
 	private final void setCodigo(final CodigoMensaje codigo) {
 		if(UtilObjeto.esNulo(codigo)) {
-			var  mensajeUsuario = CatologoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var  mensajeTecnico = CatologoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000001);
+			var  mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
+			var  mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000001);
 			throw CrosscuttingCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		

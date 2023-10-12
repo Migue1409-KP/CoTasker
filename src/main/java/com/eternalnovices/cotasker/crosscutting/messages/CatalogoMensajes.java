@@ -7,14 +7,19 @@ import com.eternalnovices.cotasker.crosscutting.exception.concrete.CrosscuttingC
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.*;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
-public class CatologoMensajes {
+import co.edu.tiendaonline.crosscutting.messages.Mensaje;
+import co.edu.tiendaonline.crosscutting.messages.enumerator.CategoriaMensaje;
+import co.edu.tiendaonline.crosscutting.messages.enumerator.CodigoMensaje;
+import co.edu.tiendaonline.crosscutting.messages.enumerator.TipoMensaje;
+
+public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
 	static {
 		cargarMensajes();
 	}
 	
-	private CatologoMensajes() {
+	private CatalogoMensajes() {
 		super();
 	}
 	
@@ -69,6 +74,8 @@ public class CatologoMensajes {
 				"Se ha presentado un problema tratando de cancelar la transacción. Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000025, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de cancelar la transacción. Se presento una excepcion inesperada. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000026, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+				"Se ha presentado un problema tratando de conectar con la base de datos. Motor de base de datos que se trata de conectar no usado por la app..."));
 	}
 	
 	
