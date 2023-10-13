@@ -4,13 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.eternalnovices.cotasker.crosscutting.exception.concrete.CrosscuttingCoTaskerException;
-import com.eternalnovices.cotasker.crosscutting.messages.enumerator.*;
+import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CategoriaMensaje;
+import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
+import com.eternalnovices.cotasker.crosscutting.messages.enumerator.TipoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
-
-import co.edu.tiendaonline.crosscutting.messages.Mensaje;
-import co.edu.tiendaonline.crosscutting.messages.enumerator.CategoriaMensaje;
-import co.edu.tiendaonline.crosscutting.messages.enumerator.CodigoMensaje;
-import co.edu.tiendaonline.crosscutting.messages.enumerator.TipoMensaje;
 
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();

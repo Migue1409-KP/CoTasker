@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import com.eternalnovices.cotasker.crosscutting.exception.concrete.CrosscuttingCoTaskerException;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
-import com.eternalnovices.cotasker.crosscutting.messages.CatologoMensajes;
 
 public class UtilSQL {
 	private UtilSQL() {
