@@ -1,0 +1,10 @@
+INSERT INTO Tarea (idTarea, nombre, descripcion, fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin, idLista, idEstado, idPrioridad)
+VALUES (1, "Qie hacer", "es ver que voy hacer", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+sentenciaPreparada.setObjet(1, tarea.getIdTarea())
+sentenciaPreparada.setObjet(2, tarea.getIdTarea())
+sentenciaPreparada.setObjet(3, tarea.getIdTarea())
+sentenciaPreparada.setObjet(4, tarea.getFecha().getFechaCreacion())
+sentenciaPreparada.setObjet(5, tarea.getListaTareas().getGetId())
+sentenciaPreparada.setObjet(1, tarea.getIdTarea())
+sentenciaPreparada.setObjet(1, tarea.getIdTarea())
