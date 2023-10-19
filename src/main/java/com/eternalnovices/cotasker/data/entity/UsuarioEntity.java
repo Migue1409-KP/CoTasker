@@ -3,7 +3,7 @@ package com.eternalnovices.cotasker.data.entity;
 import java.util.UUID;
 
 public class UsuarioEntity {
-	private UUID id;
+	private UUID idUsuario;
 	private String nombre;
 	private String apellido;
 	private String correoElectronico;
@@ -12,7 +12,7 @@ public class UsuarioEntity {
 	
 	private UsuarioEntity(final UUID id, final String nombre, final String apellido, final String correoElectronico,
 			final boolean correoElectronicoConfirmado, final String contrasena) {
-		setId(id);
+		setIdUsuario(id);
 		setNombre(nombre);
 		setApellido(apellido);
 		setCorreoElectronico(correoElectronico);
@@ -25,8 +25,8 @@ public class UsuarioEntity {
 		return new UsuarioEntity(id, nombre, apellido, correoElectronico, correoElectronicoConfirmado, contrasena);
 	}
 
-	private final void setId(final UUID id) {
-		this.id = id;
+	private final void setIdUsuario(final UUID id) {
+		this.idUsuario = id;
 	}
 
 	private final void setNombre(final String nombre) {
@@ -49,8 +49,8 @@ public class UsuarioEntity {
 		this.contrasena = contrasena;
 	}
 
-	public final UUID getId() {
-		return id;
+	public final UUID getIdUsuario() {
+		return idUsuario;
 	}
 
 	public final String getNombre() {

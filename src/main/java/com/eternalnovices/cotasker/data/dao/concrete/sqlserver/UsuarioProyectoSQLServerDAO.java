@@ -5,45 +5,46 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import com.eternalnovices.cotasker.data.dao.UsuarioDAO;
+import com.eternalnovices.cotasker.data.dao.UsuarioProyectoDAO;
 import com.eternalnovices.cotasker.data.dao.base.SQLDAO;
 import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
+import com.eternalnovices.cotasker.data.entity.UsuarioProyectoEntity;
 
-public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
+public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyectoDAO{
 
-	protected UsuarioSQLServerDAO(final Connection conexion) {
+	protected UsuarioProyectoSQLServerDAO(final Connection conexion) {
 		super(conexion);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public final void crear(final UsuarioEntity entity) {
+	public void crear(UsuarioProyectoEntity entity) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public final void modificar(final UsuarioEntity entity) {
+	public void modificar(UsuarioProyectoEntity entity) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public final void eliminar(final UUID id) {
+	public void eliminar(UUID id) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public final Optional<UsuarioEntity> consultarPorId(final UUID id) {
+	public Optional<UsuarioEntity> consultarPorId(UUID id) {
 		// TODO Auto-generated method stub
 		return Optional.empty();
 	}
 
 	@Override
-	public final List<UsuarioEntity> consultar(final UsuarioEntity entity) {
+	public List<UsuarioEntity> consultar(UsuarioProyectoEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
 }
