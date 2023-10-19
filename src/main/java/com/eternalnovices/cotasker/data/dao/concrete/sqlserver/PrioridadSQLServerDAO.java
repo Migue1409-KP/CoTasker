@@ -141,7 +141,7 @@ public class PrioridadSQLServerDAO extends SQLDAO implements PrioridadDAO {
 	}
 
 	private List<PrioridadEntity> ejecutarConsulta(PreparedStatement sentenciaPreparada) {
-final var listaResultados = new ArrayList<PrioridadEntity>();
+		final var listaResultados = new ArrayList<PrioridadEntity>();
 		
 		try (final var resultados = sentenciaPreparada.executeQuery()) {
 			
