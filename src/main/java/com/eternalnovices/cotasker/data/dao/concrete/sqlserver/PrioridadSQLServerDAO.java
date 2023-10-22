@@ -30,8 +30,8 @@ public class PrioridadSQLServerDAO extends SQLDAO implements PrioridadDAO {
 		sentencia.append("SET descripcion=?, ");
 		sentencia.append("WHERE idPrioridad=? ");
 		try (final var sentenciaPreparada=getConexion().prepareStatement(sentencia.toString())){
-			sentenciaPreparada.setObject(1, prioridad.getIdPrioridad());
-			sentenciaPreparada.setString(2, prioridad.getDescripcion());
+			sentenciaPreparada.setString(1, prioridad.getDescripcion());
+			sentenciaPreparada.setObject(2, prioridad.getIdPrioridad());
 			
 			sentenciaPreparada.executeUpdate();
 		} catch (final SQLException e) {
@@ -120,20 +120,18 @@ public class PrioridadSQLServerDAO extends SQLDAO implements PrioridadDAO {
 		String operadorCondicional = "WHERE";
 		
 		sentencia.append("SELECT prio.idPrioridad,prio.descripcion ");
-		sentencia.append("FROM Prioridad prio");
-		sentencia.append("WHERE idPrioridad=?");
+		sentencia.append("FROM Prioridad prio ");
 		
 		if(!UtilObjeto.esNulo(prioridad)) {
 			if(!UtilObjeto.esNulo(prioridad.getIdPrioridad())) {
-				sentencia.append(operadorCondicional).append("prio.idPrioridad = ?");
+				sentencia.append(operadorCondicional).append(" prio.idPrioridad = ? ");
 				operadorCondicional="AND";
 				parametros.add(prioridad.getIdPrioridad());
 			}
 			
 			if(!UtilTexto.estaVacio(prioridad.getDescripcion())) {
-			sentencia.append(operadorCondicional).append("prio.descripcion=?");
-			parametros.add(prioridad.getDescripcion());
-			
+				sentencia.append(operadorCondicional).append(" prio.descripcion=? ");
+				parametros.add(prioridad.getDescripcion());
 			}
 		}
 				
@@ -153,11 +151,11 @@ public class PrioridadSQLServerDAO extends SQLDAO implements PrioridadDAO {
 				listaResultados.add(prioridadEntity);
 			}
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000311);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000321);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		} catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000311);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000322);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);		
 		}
@@ -171,11 +169,11 @@ public class PrioridadSQLServerDAO extends SQLDAO implements PrioridadDAO {
 				sentenciaPreparada.setObject(indice + 1, parametros.get(indice));
 			}
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000311);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000318);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		} catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000311);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000319);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}

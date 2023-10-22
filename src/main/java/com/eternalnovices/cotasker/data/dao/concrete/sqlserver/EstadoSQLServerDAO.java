@@ -31,8 +31,8 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 		sentencia.append("SET descripcion=?, ");
 		sentencia.append("WHERE idEstado=? ");
 		try (final var sentenciaPreparada=getConexion().prepareStatement(sentencia.toString())){
-			sentenciaPreparada.setObject(1, estado.getIdEstado());
-			sentenciaPreparada.setString(2, estado.getDescripcion());
+			sentenciaPreparada.setString(1, estado.getDescripcion());
+			sentenciaPreparada.setObject(2, estado.getIdEstado());
 			
 			sentenciaPreparada.executeUpdate();
 		} catch (final SQLException e) {
@@ -51,33 +51,22 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 		final var sentencia = new StringBuilder();
 		sentencia.append("SELECT est.idEstado,est.descripcion ");
 		sentencia.append("FROM Estado est");
-		sentencia.append("WHERE idEstado=?");
+		sentencia.append("WHERE est.idEstado=? ");
 		
 		Optional<EstadoEntity> resultado= Optional.empty();
 		
 		try(final var sentenciaPreparada=getConexion().prepareStatement(sentencia.toString())){
 			sentenciaPreparada.setObject(1, id);
 			resultado = ejecutarConsultaPorId(sentenciaPreparada);
-			try(final var resultados=sentenciaPreparada.executeQuery()){
-				if(resultados.next()) {
-					var estadoEntity = EstadoEntity.crear(UUID.fromString(resultados.getObject("est.idEstado").toString()),
-							resultados.getString("est.descripcion"));
-					resultado= Optional.of(estadoEntity);
-				}
-			}catch(SQLException e) {
-				var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000301);
-				var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000302);
-				throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
-			}
 		}catch(DataCoTaskerException e) {
 			throw e;
 		} catch (SQLException e) {
-			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000301);
-			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000303);
+			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000326);
+			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000330);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}catch (Exception e) {
-			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000301);
-			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000304);
+			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000326);
+			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000331);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 		return resultado;
@@ -116,12 +105,12 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 		} catch (DataCoTaskerException e) {
 			throw e;
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000314);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000315);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000332);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000333);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}  catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000314);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000316);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000332);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000334);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 	}
@@ -139,12 +128,12 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 				listaResultados.add(estadoEntity);
 			}
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000321);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000335);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000336);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		} catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000322);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000335);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000337);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);		
 		}
 		
@@ -157,12 +146,12 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 				sentenciaPreparada.setObject(indice + 1, parametros.get(indice));
 			}
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000318);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000335);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000338);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		} catch (Exception e) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000317);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000319);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000339);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 	}
@@ -175,17 +164,16 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 		
 		sentencia.append("SELECT est.idEstado,est.descripcion ");
 		sentencia.append("FROM Estado est");
-		sentencia.append("WHERE idEstado=?");
 		
 		if(!UtilObjeto.esNulo(estado)) {
 			if(!UtilObjeto.esNulo(estado.getIdEstado())) {
-				sentencia.append(operadorCondicional).append("est.idEstado = ?");
+				sentencia.append(operadorCondicional).append( "est.idEstado = ? ");
 				operadorCondicional="AND";
 				parametros.add(estado.getIdEstado());
 			}
 			
 			if(!UtilTexto.estaVacio(estado.getDescripcion())) {
-			sentencia.append(operadorCondicional).append("est.descripcion=?");
+			sentencia.append(operadorCondicional).append(" est.descripcion=? ");
 			parametros.add(estado.getDescripcion());
 			
 			}
