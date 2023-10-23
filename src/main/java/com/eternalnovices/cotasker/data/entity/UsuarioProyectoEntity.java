@@ -28,8 +28,4 @@ public class UsuarioProyectoEntity {
 	private final void setUsuario(final UsuarioEntity usuario) {
 		this.usuario = usuario;
 	}
-	
-	
-	
-	
 }
