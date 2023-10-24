@@ -263,7 +263,36 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en funcion ejecutarConsulta en TareaoDAO tratando de consultar taraes.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000141, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en TareaoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000361, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La fecha de creación es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000362, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El identificador de prioridad es un dato obligatorio y no puede ser igual al UUID por defecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000363, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud de la descripción de prioridad no es valida. La longitud maxima son 25 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000364, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripción de prioridad es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000365, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripción de prioridad solo puede contener letras"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000366, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El identificador de estado es un dato obligatorio y no puede ser igual al UUID por defecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000367, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud de la descripción de estado no es valida. La longitud maxima son 25 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000368, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripción de estado es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000369, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripción de estado solo puede contener letras"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000370, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase FechasEntityMapper.No es posible mapear las fechas dominio a partir de una entidad de fechas entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000371, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase FechasEntityMapper.No es posible mapear las fehas entity a partir de una entidad de fechas dominio nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000372, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase PrioridadEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000373, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase PrioridadEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000374, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase EstadoEntityMapper.No es posible mapear un estado dominio a partir de una entidad de un estado entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000375, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase EstadoEntityMapper.No es posible mapear un estado entity a partir de una entidad de un estado dominio nula"));
 	}
 	
 	
