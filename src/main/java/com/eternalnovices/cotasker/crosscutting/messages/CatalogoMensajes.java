@@ -387,7 +387,46 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000240, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000382, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El id del Usuario   es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000384, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud del nombre del usuario no es valida. La longitud maxima son 100 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000385, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre del usuario  es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000386, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre del usuario solo debe contener digitos letras o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000387, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud del apellido del usuario no es valida. La longitud maxima son 100 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000388, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El apellido del usuario  es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000389, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El apellido del usuario solo debe contener digitos letras o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000390, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud de la contraseña del usuario no es valida. La longitud maxima son 100 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000391, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La contraseña del usuario  es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000392, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La contraseña del usuario solo debe contener digitos letras o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000393, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud del correo electronico del usuario no es valida. La longitud maxima son 100 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000394, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El correo  del usuario  es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000395, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El correo del usuario no cumple con los requisitos de un correo electronico"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000396, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La comfirmacion del correo del  usuario debe ser obligatoria"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000397, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase ProyectoEntityMApper.No es posible mapear un proyecto dominio a partir de una entidad de un proyecto entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000398, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase ProyectoEntityMApper.No es posible mapear el proyecto entity a partir de una entidad de proyectos dominio nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000399, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioEntityMApper.No es posible mapear el usuario domain a partir de una entidad de usuario entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003991, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase UsuarioEntityMApper.No es posible mapear el usuario entity a partir de una entidad de usuario Domain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003992, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioProyectoEntityMApper.No es posible mapear el UsuarioProyecto domain a partir de una entidad de UsuarioProyecto entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003993, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase UsuarioProyectoEntityMApper.No es posible mapear el UsuarioProyecto entity a partir de una entidad de UsuarioProyecto Domain nula"));
 	}
 	
 	
