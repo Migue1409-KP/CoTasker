@@ -14,18 +14,18 @@ private static final ValidationRule<String> instancia = new DescripcionProyectoV
 	}
 	
 	@Override
-	public void validar(String dato) {
+	public void validar(final String dato) {
 		validarLongitud(dato);
 		validarObligatoriedad(dato);
 		validarFormato(dato);
 	}
 	
-	public static final void ejecutarValidacion(final String dato) {
+	public static final void ejecutarValidacion(final  String dato) {
 		instancia.validar(dato);
 	}
 
 	
-	private void validarFormato(String dato) {
+	private void validarFormato(final String dato) {
 		if(!UtilTexto.contieneSoloLetrasDigitosEspacios(dato)) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000381);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
@@ -34,7 +34,7 @@ private static final ValidationRule<String> instancia = new DescripcionProyectoV
 
 
 
-	private void validarObligatoriedad(String dato) {
+	private void validarObligatoriedad(final String dato) {
 		if(UtilTexto.estaVacio(dato)) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000382);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
@@ -43,7 +43,7 @@ private static final ValidationRule<String> instancia = new DescripcionProyectoV
 
 
 
-	private void validarLongitud(String dato) {
+	private void validarLongitud(final String dato) {
 		if(!UtilTexto.longitudMaximaValida(dato, 60)) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000380);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
