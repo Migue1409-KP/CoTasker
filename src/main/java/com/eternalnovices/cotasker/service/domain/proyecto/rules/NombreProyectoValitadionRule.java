@@ -44,7 +44,7 @@ public class NombreProyectoValitadionRule implements ValidationRule<String> {
 
 
 	private void validarLongitud(final String dato) {
-		if(!UtilTexto.longitudMaximaValida(dato, 30)) {
+		if(!UtilTexto.longitudValida(dato,1, 30)) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000377);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
