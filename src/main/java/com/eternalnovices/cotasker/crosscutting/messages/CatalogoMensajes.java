@@ -293,6 +293,20 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase EstadoEntityMapper.No es posible mapear un estado dominio a partir de una entidad de un estado entity nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000375, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase EstadoEntityMapper.No es posible mapear un estado entity a partir de una entidad de un estado dominio nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000376, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El identificador de proyecto  es un dato obligatorio y no puede ser igual al UUID por defecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000377, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud del nombre del proyecto  no es valida. La longitud maxima son 30 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000378, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre del proyecto solo puede contener letras, digitos o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000379, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre del proyecto  es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000380, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud de la descripcion  del proyecto  no es valida. La longitud maxima son 30 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000381, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripcion del proyecto solo puede contener letras, digitos o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000382, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripcion  del proyecto  es un dato obligatorio"));
 	}
 	
 	
