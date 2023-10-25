@@ -5,7 +5,6 @@ import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.data.entity.TareaEntity;
-import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
 import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
@@ -26,7 +25,7 @@ public class TareaEntityMapper implements EntityMapper<TareaEntity, TareaDomain>
 		 
 		return TareaDomain.crear(entity.getIdTarea(), entity.getNombre(), entity.getDescripcion(),
 				FechasEntityMapper.convertToDomain(entity.getFecha()) , PrioridadEntityMapper.convertToDomain(entity.getPrioridad()),
-				ListaTareasEntityMapper.convertToDomain(entity.getListaTareas()));
+				EstadoEntityMapper.convertToDomain(entity.getEstado()),ListaTareasEntityMapper.convertToDomain(entity.getListaTareas()));
 		}
 
 	@Override
@@ -39,7 +38,7 @@ public class TareaEntityMapper implements EntityMapper<TareaEntity, TareaDomain>
 		
 		return TareaEntity.crear(domain.getIdTarea(), domain.getNombre(), domain.getDescripcion(), 
 				FechasEntityMapper.convertToEntity(domain.getFecha()) , PrioridadEntityMapper.convertToEntity(domain.getPrioridad()),
-				ListaTareasEntityMapper.convertToEntity(domain.getListaTareas()));
+				EstadoEntityMapper.convertToEntity(domain.getEstado()),ListaTareasEntityMapper.convertToEntity(domain.getListaTareas()));
 	}
 	
 	public static final TareaDomain convertToDomain(final TareaEntity entity) {		 
