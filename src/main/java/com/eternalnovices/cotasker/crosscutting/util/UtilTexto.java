@@ -5,7 +5,7 @@ public final class UtilTexto {
 	public static final String VACIO = "";
 	private static final String PATTERN_SOLO_LETRAS = "^[a-zA-ZÁÉÍÓÚáéíóú]+";
 	private static final String PATTERN_SOLO_LETRAS_DIGITOS_ESPACIOS = "^[0-9a-zA-ZÁÉÍÓÚáéíóú ]+";
-	private static final String PATTERN_CORREO_ELECTRONICO = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+    private static final String PATTERN_CORREO_ELECTRONICO = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$";
 	
 	private UtilTexto() {
 		super();

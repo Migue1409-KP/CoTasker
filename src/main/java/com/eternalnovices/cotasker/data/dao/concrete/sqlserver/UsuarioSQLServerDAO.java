@@ -49,10 +49,7 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000340);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000342);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
-		}
-		
-		
-;		
+		}		
 	}
 
 	@Override
@@ -267,7 +264,8 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 				sentencia.append(operadorCondicional).append("correoElectronicoConfirmado =? ");
 				operadorCondicional="AND";
 				parametros.add(usuario.isCorreoElectronicoConfirmado());
-			}if(!UtilTexto.estaVacio(usuario.getContrasena())) {
+			}
+			if(!UtilTexto.estaVacio(usuario.getContrasena())) {
 				sentencia.append(operadorCondicional).append("contrasena =? ");
 				parametros.add(usuario.getContrasena());
 			}
