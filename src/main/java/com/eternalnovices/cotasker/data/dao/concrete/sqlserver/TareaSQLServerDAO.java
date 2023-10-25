@@ -34,7 +34,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 	public void crear(TareaEntity entity) {
 		final var sentencia = new StringBuilder();
 		
-		sentencia.append("INSERT INTO Tarea (idTarea, nombre, descripcion, fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin, idPrioridad, idEstado, idListaTareas) ");
+		sentencia.append("INSERT INTO Tarea (idTarea, nombre, descripcion, fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin, idPrioridad, idEstado, idLista) ");
 		sentencia.append("VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		
 		try (final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())) {
@@ -65,7 +65,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 		final var sentencia = new StringBuilder();
 		
 		sentencia.append("UPDATE Tarea ");
-		sentencia.append("SET nombre = ?, descripcion = ?, fechaCreacion = ?, fechaEstimadaInicio = ?, fechaEstimadaFin = ?, idPrioridad = ?, idEstado = ?, idListaTareas = ? ");
+		sentencia.append("SET nombre = ?, descripcion = ?, fechaCreacion = ?, fechaEstimadaInicio = ?, fechaEstimadaFin = ?, idPrioridad = ?, idEstado = ?, idLista = ? ");
 		sentencia.append("WHERE idTarea = ? ");
 		
 		try (final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())) {
@@ -116,7 +116,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 	public Optional<TareaEntity> consultarPorId(UUID id) {
 		final var sentencia = new StringBuilder();
 		sentencia.append("SELECT ta.idTarea, ta.nombre, ta.descripcion, ta.fechaCreacion, ta.fechaEstimadaInicio, ta.fechaEstimadaFin, ta.idPrioridad, pri.descripcion, "
-				+ "ta.idEstado, es.descripcio, ta.idListaTareas, li.nombre, li.descripcion, li.fechaCreacion, li.fechaEstimadaInicio, li.fechaEstimadaFin, li.IdProyecto, "
+				+ "ta.idEstado, es.descripcio, ta.idLista, li.nombre, li.descripcion, li.fechaCreacion, li.fechaEstimadaInicio, li.fechaEstimadaFin, li.IdProyecto, "
 				+ "pr.nombre, pr.descripcion, pr.fechaCreacion, pr.fechaEstimadaInicio, pr.fechaEstimadaFin, li.idPrioridad, prili.descripcion");
 		sentencia.append("FROM  Tareas ta ");
 		sentencia.append("JOIN  Prioridad pri ");
@@ -124,9 +124,9 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 		sentencia.append("JOIN  Estado es ");
 		sentencia.append("	ON  ta.idTarea = es.idEstado ");
 		sentencia.append("JOIN  ListaTareas li ");
-		sentencia.append("	ON  ta.idTarea = li.idListaTareas ");
+		sentencia.append("	ON  ta.idTarea = li.idLista ");
 		sentencia.append("JOIN  Prioridad prili ");
-		sentencia.append("	ON   li.idListaTareas = prili.IdPrioridad ");
+		sentencia.append("	ON   li.idLista = prili.IdPrioridad ");
 		sentencia.append("JOIN  Proyecto pr ");
 		sentencia.append("	ON  li.idTarea = pr.idProyecto ");
 		sentencia.append("WHERE ta.idTarea = ? ");
@@ -185,7 +185,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 						PrioridadEntity.crear(UUID.fromString(resultados.getObject("ta.idPrioridad").toString()), resultados.getString("pri.descripcion")),
 						EstadoEntity.crear(UUID.fromString(resultados.getObject("ta.idEstado").toString()), resultados.getString("es.descripcion")),
 						ListaTareasEntity.crear(
-								UUID.fromString(resultados.getObject("ta.idListaTareas").toString()),
+								UUID.fromString(resultados.getObject("ta.idLista").toString()),
 								resultados.getString("li.nombre"), 
 								resultados.getString("li.descripcion"), 
 								FechasEntity.crear(resultados.getDate("li.fechaCreacion"), resultados.getDate("li.fechaEstimadaInicio"), resultados.getDate("li.fechaEstimadaFin")),
@@ -218,7 +218,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 		String operadorCondicional = "WHERE";
 		
 		sentencia.append("SELECT ta.idTarea, ta.nombre, ta.descripcion, ta.fechaCreacion, ta.fechaEstimadaInicio, ta.fechaEstimadaFin, ta.idPrioridad, pri.descripcion, "
-				+ "ta.idEstado, es.descripcio, ta.idListaTareas, li.nombre, li.descripcion, li.fechaCreacion, li.fechaEstimadaInicio, li.fechaEstimadaFin, li.IdProyecto, "
+				+ "ta.idEstado, es.descripcio, ta.idLista, li.nombre, li.descripcion, li.fechaCreacion, li.fechaEstimadaInicio, li.fechaEstimadaFin, li.IdProyecto, "
 				+ "pr.nombre, pr.descripcion, pr.fechaCreacion, pr.fechaEstimadaInicio, pr.fechaEstimadaFin, li.idPrioridad, prili.descripcion");
 		sentencia.append("FROM  Tareas ta ");
 		sentencia.append("JOIN  Prioridad pri ");
@@ -226,9 +226,9 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 		sentencia.append("JOIN  Estado es ");
 		sentencia.append("	ON  ta.idTarea = es.idEstado ");
 		sentencia.append("JOIN  ListaTareas li ");
-		sentencia.append("	ON  ta.idTarea = li.idListaTareas ");
+		sentencia.append("	ON  ta.idTarea = li.idLista ");
 		sentencia.append("JOIN  Prioridad prili ");
-		sentencia.append("	ON   li.idListaTareas = prili.IdPrioridad ");
+		sentencia.append("	ON   li.idLista = prili.IdPrioridad ");
 		sentencia.append("JOIN  Proyecto pr ");
 		sentencia.append("	ON  li.idTarea = pr.idProyecto ");
 		
@@ -284,8 +284,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 			}
 			
 			if(!UtilObjeto.esNulo(entity.getListaTareas())) {
-				sentencia.append(operadorCondicional).append(" li.idListaTareas = ?");
-				operadorCondicional = "AND";
+				sentencia.append(operadorCondicional).append(" li.idLista = ?");
 				parametros.add(entity.getListaTareas().getIdListaTareas());
 			}
 		}
@@ -325,7 +324,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 						PrioridadEntity.crear(UUID.fromString(resultados.getObject("ta.idPrioridad").toString()), resultados.getString("pri.descripcion")),
 						EstadoEntity.crear(UUID.fromString(resultados.getObject("ta.idEstado").toString()), resultados.getString("es.descripcion")),
 						ListaTareasEntity.crear(
-								UUID.fromString(resultados.getObject("ta.idListaTareas").toString()),
+								UUID.fromString(resultados.getObject("ta.idLista").toString()),
 								resultados.getString("li.nombre"), 
 								resultados.getString("li.descripcion"), 
 								FechasEntity.crear(resultados.getDate("li.fechaCreacion"), resultados.getDate("li.fechaEstimadaInicio"), resultados.getDate("li.fechaEstimadaFin")),
