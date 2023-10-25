@@ -5,6 +5,7 @@ public final class UtilTexto {
 	public static final String VACIO = "";
 	private static final String PATTERN_SOLO_LETRAS = "^[a-zA-ZÁÉÍÓÚáéíóú]+";
 	private static final String PATTERN_SOLO_LETRAS_DIGITOS_ESPACIOS = "^[0-9a-zA-ZÁÉÍÓÚáéíóú ]+";
+	private static final String PATTERN_CORREO_ELECTRONICO = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	
 	private UtilTexto() {
 		super();
@@ -63,5 +64,9 @@ public final class UtilTexto {
 	
 	public static final boolean contieneSoloLetrasDigitosEspacios(final String valor) {
 		return obtenerValorDefecto(valor).matches(PATTERN_SOLO_LETRAS_DIGITOS_ESPACIOS);
+	}
+	
+	public static final boolean contieneFormatoCorreo(final String valor) {
+		return obtenerValorDefecto(valor).matches(PATTERN_CORREO_ELECTRONICO);
 	}
 }
