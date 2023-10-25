@@ -40,6 +40,7 @@ public class TareaEntityMapper implements EntityMapper<TareaEntity, TareaDomain>
 		return TareaEntity.crear(domain.getIdTarea(), domain.getNombre(), domain.getDescripcion(), 
 				FechasEntityMapper.convertToEntity(domain.getFecha()) , PrioridadEntityMapper.convertToEntity(domain.getPrioridad()),
 				EstadoEntityMapper.convertToEntity(domain.getEstado()),ListaTareasEntityMapper.convertToEntity(domain.getListaTareas()));
+		//oli
 	}
 	
 	public static final TareaDomain convertToDomain(final TareaEntity entity) {		 
