@@ -387,7 +387,13 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000240, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000241, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareaEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000242, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase ListaTareaEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
+		
+		
+		
 	}
 	
 	

@@ -10,10 +10,10 @@ import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
 import com.eternalnovices.cotasker.service.domain.prioridad.PrioridadDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
-public class ListaTareaEntityMapper implements EntityMapper<ListaTareasEntity, ListaTareasDomain> {
+public class ListaTareasEntityMapper implements EntityMapper<ListaTareasEntity, ListaTareasDomain> {
 	private static final EntityMapper<ListaTareasEntity, ListaTareasDomain> instancia = new ListaTareasEntityMapper();
 	
-	private ListaTareaEntityMapper() {
+	private ListaTareasEntityMapper() {
 		super();
 	}
 	
@@ -21,7 +21,7 @@ public class ListaTareaEntityMapper implements EntityMapper<ListaTareasEntity, L
 	public final ListaTareasDomain toDomain(final ListaTareasEntity entity) {
 		if(UtilObjeto.esNulo(entity)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000372);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000241);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		 
@@ -32,7 +32,7 @@ public class ListaTareaEntityMapper implements EntityMapper<ListaTareasEntity, L
 	public ListaTareasEntity toEntity(final ListaTareasDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000373);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000242);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		
