@@ -302,7 +302,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000379, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre del proyecto  es un dato obligatorio"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000380, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
-				"La longitud de la descripcion  del proyecto  no es valida. La longitud maxima son 30 caracteres"));
+				"La longitud de la descripcion  del proyecto  no es valida. La longitud maxima son 60 caracteres"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000381, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripcion del proyecto solo puede contener letras, digitos o espacios"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000382, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
@@ -388,11 +388,41 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000240, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000241, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareaEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
+				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareasEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000242, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo toEntity de la clase ListaTareaEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
-		
-		
+				"Se ha presentado un problema en el metodo toEntity de la clase ListaTareasEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000243, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase TareaEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000244, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase TareaEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000245, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripcion de la lista de tareas solo puede contener letras, digitos o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000246, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud de la descripcion de la lista de tareas no es valida. La longitud maxima son 60 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000247, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripcion  de la lista de tareas es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000248, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El identificador de la lista de tareas es un dato obligatorio y no puede ser igual al UUID por defecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000249, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre de la lista de tareas solo puede contener letras, digitos o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000250, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre de la lista de tareas es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000251, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud del nombre de la lista de tareas no es valida. La longitud maxima son 30 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000252, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripcion de la tarea solo puede contener letras, digitos o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000253, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud de la descripcion de la tarea no es valida. La longitud maxima son 60 caracteres"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000254, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La descripcion  de la lista de tareas es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000255, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El identificador de la tarea es un dato obligatorio y no puede ser igual al UUID por defecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000256, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre de la tarea solo puede contener letras, digitos o espacios"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000257, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"El nombre de la tarea es un dato obligatorio"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000258, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+				"La longitud del nombre de la tarea no es valida. La longitud maxima son 30 caracteres"));
 		
 	}
 	
