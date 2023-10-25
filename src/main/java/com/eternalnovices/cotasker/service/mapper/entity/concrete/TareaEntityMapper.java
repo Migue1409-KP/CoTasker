@@ -5,7 +5,6 @@ import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.data.entity.TareaEntity;
-import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
 import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
