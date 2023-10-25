@@ -245,14 +245,14 @@ final var sentencia = new StringBuilder();
 			}
 			
 			if(!UtilObjeto.esNulo(entity.getPrioridad())) {
-				sentencia.append(operadorCondicional).append(" pri.idPrioridad = ?");
+				sentencia.append(operadorCondicional).append(" li.idPrioridad = ?");
 				operadorCondicional = "AND";
 				parametros.add(entity.getPrioridad().getIdPrioridad());
 			}
 			
 			
 			if(!UtilObjeto.esNulo(entity.getProyecto())) {
-				sentencia.append(operadorCondicional).append(" li.idListaTareas = ?");
+				sentencia.append(operadorCondicional).append(" li.idProyecto = ?");
 				parametros.add(entity.getProyecto().getIdProyecto());
 			}
 		}
