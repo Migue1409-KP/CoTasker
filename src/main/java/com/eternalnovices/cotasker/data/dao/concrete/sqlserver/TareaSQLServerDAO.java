@@ -285,7 +285,6 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 			
 			if(!UtilObjeto.esNulo(entity.getListaTareas())) {
 				sentencia.append(operadorCondicional).append(" li.idListaTareas = ?");
-				operadorCondicional = "AND";
 				parametros.add(entity.getListaTareas().getIdListaTareas());
 			}
 		}
