@@ -2,12 +2,10 @@ package com.eternalnovices.cotasker.service.domain.listatareas;
 
 import java.util.UUID;
 
-import com.eternalnovices.cotasker.data.entity.ListaTareasEntity;
-import com.eternalnovices.cotasker.data.entity.PrioridadEntity;
-import com.eternalnovices.cotasker.data.entity.ProyectoEntity;
-import com.eternalnovices.cotasker.data.entity.support.FechasEntity;
+
 import com.eternalnovices.cotasker.service.domain.fechas.FechasDomain;
 import com.eternalnovices.cotasker.service.domain.prioridad.PrioridadDomain;
+import com.eternalnovices.cotasker.service.domain.proyecto.ProyectoDomain;
 
 
 public class ListaTareasDomain {
@@ -17,7 +15,7 @@ public class ListaTareasDomain {
 	private String descripcion;
 	private FechasDomain fecha;
 	private PrioridadDomain prioridad;
-	private ProyectoDomian proyecto;
+	private ProyectoDomain proyecto;
 	
 	
 	private ListaTareasDomain(final UUID idListaTareas, final String nombre, final String descripcion, final FechasDomain fecha,
@@ -30,8 +28,8 @@ public class ListaTareasDomain {
 		setProyecto(proyecto);
 	}
 	
-	public static final ListaTareasDomain crear(final UUID idListaTareas, final String nombre, final String descripcion, final FechasEntity fecha,
-			final PrioridadEntity prioridad, final ProyectoEntity proyecto) {
+	public static final ListaTareasDomain crear(final UUID idListaTareas, final String nombre, final String descripcion, final FechasDomain fecha,
+			final PrioridadDomain prioridad, final ProyectoDomain proyecto) {
 		return new ListaTareasDomain(idListaTareas, nombre, descripcion, fecha, prioridad, proyecto);
 	}
 

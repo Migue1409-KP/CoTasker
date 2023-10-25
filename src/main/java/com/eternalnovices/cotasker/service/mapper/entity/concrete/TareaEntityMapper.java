@@ -4,51 +4,50 @@ import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTask
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
-import com.eternalnovices.cotasker.data.entity.ListaTareasEntity;
-import com.eternalnovices.cotasker.data.entity.PrioridadEntity;
+import com.eternalnovices.cotasker.data.entity.TareaEntity;
 import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
-import com.eternalnovices.cotasker.service.domain.prioridad.PrioridadDomain;
+import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
-
-public class ListaTareasEntityMapper implements EntityMapper<ListaTareasEntity, ListaTareasDomain> {
-	private static final EntityMapper<ListaTareasEntity, ListaTareasDomain> instancia = new ListaTareasEntityMapper();
+public class TareaEntityMapper implements EntityMapper<TareaEntity, TareaDomain> {
+	private static final EntityMapper<TareaEntity, TareaDomain> instancia = new TareaEntityMapper();
 	
-	private ListaTareasEntityMapper() {
+	private TareaEntityMapper() {
 		super();
 	}
 	
 	@Override
-	public final ListaTareasDomain toDomain(final ListaTareasEntity entity) {
+	public final TareaDomain toDomain(final TareaEntity entity) {
 		if(UtilObjeto.esNulo(entity)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000241);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		 
-		return ListaTareasDomain.crear(entity.getIdListaTareas(), entity.getNombre(), entity.getDescripcion(),
+		return TareaDomain.crear(entity.getIdTarea(), entity.getNombre(), entity.getDescripcion(),
 				FechasEntityMapper.convertToDomain(entity.getFecha()) , PrioridadEntityMapper.convertToDomain(entity.getPrioridad()),
-				ProyectoEntityMapper.convertToDomain(entity.getProyecto()));
-	}
+				ListaTareasEntityMapper.convertToDomain(entity.getListaTareas()));
+		}
 
 	@Override
-	public ListaTareasEntity toEntity(final ListaTareasDomain domain) {
+	public TareaEntity toEntity(final TareaDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000242);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		
-		return ListaTareasEntity.crear(domain.getIdListaTareas(), domain.getNombre(), domain.getDescripcion(),
+		return TareaEntity.crear(domain.getIdTarea(), domain.getNombre(), domain.getDescripcion(), 
 				FechasEntityMapper.convertToEntity(domain.getFecha()) , PrioridadEntityMapper.convertToEntity(domain.getPrioridad()),
-				ProyectoEntityMapper.convertToEntity(domain.getProyecto()));
+				ListaTareasEntityMapper.convertToEntity(domain.getListaTareas()));
 	}
 	
-	public static final ListaTareasDomain convertToDomain(final ListaTareasEntity entity) {		 
+	public static final TareaDomain convertToDomain(final TareaEntity entity) {		 
 		return instancia.toDomain(entity);
 	}
 	
-	public static final ListaTareasEntity convertToEntity(final ListaTareasDomain domain) {
+	public static final TareaEntity convertToEntity(final TareaDomain domain) {
 		return instancia.toEntity(domain);
 	}
 }
+
