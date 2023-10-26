@@ -463,7 +463,19 @@ public class CatalogoMensajes {
 				"El nombre de la tarea es un dato obligatorio"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000258, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del nombre de la tarea no es valida. La longitud maxima son 30 caracteres"));
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003994, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioDTOMapper.No es posible mapear un usuario domain a partir de una entidad de tipo usuario dto nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M000000003995, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase UsuarioDTOMapper.No es posible mapear un tipo de usuario dto a partir de una entidad de usuario domain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003996, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase ProyectoDTOMapper.No es posible mapear un proyecto domain a partir de una entidad de tipo proyecto dto nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003997, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase ProyectoDTOMapper.No es posible mapear un tipo de Proyecto dto a partir de una entidad de Proyecto domain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003998, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioProyectoDTOMapper.No es posible mapear un UsuarioProyecto domain a partir de una entidad de tipo UsuarioProyecto dto nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003999, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase UsuarioProyectoDTOMapper.No es posible mapear un tipo de UsuarioProyecto dto a partir de una entidad de UsuarioProyecto domain nula"));
+	
 	}
 	
 	
