@@ -479,7 +479,18 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareasDTOMapper.No es posible mapear una ListaTareasDomain a partir de una entidad de tipo ListaTareasDTO nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000260, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase ListaTareasDTOMapper.No es posible mapear un tipo de ListaTareasDTO a partir de una entidad de ListaTareasDomain nula"));
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000142, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase FechasDTOMapper.No es posible mapear fechas domain a partir de fechas dto nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000143, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase FechasDTOMapper.No es posible mapear fechas dto a partir de fechas domain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000144, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase PrioridadDTOMapper.No es posible mapear una prioridad domain a partir de una de prioridad dto nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000145, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase PrioridadDTOMapper.No es posible mapear una prioridad dto a partir de una de prioridad domain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000146, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase EstadoDTOMapper.No es posible mapear un estado domain a partir de un estado dto nulo"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000147, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase EstadoDTOMapper.No es posible mapear un estado dto a partir de un estado domain nulo"));
 	}
 	
 	

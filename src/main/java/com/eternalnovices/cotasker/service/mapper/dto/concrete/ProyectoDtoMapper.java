@@ -28,7 +28,7 @@ public class ProyectoDtoMapper implements DTOMapper<ProyectoDTO, ProyectoDomain>
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000003996);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return ProyectoDomain.crear(dto.getIdProyecto(),dto.getNombre(),dto.getDescripcion(),FechasDtoMapper.convertToDomain(dto.getFecha()));
+		return ProyectoDomain.crear(dto.getIdProyecto(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()));
 	}
 
 	@Override

@@ -6,16 +6,16 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilTexto;
 import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 
 public class EstadoDTO {
-	private UUID id;
+	private UUID idEstado;
 	private String descripcion;
 	
 	public EstadoDTO() {
-		setId(UtilUUID.UUIDDEFECTO);
+		setIdEstado(UtilUUID.UUIDDEFECTO);
 		setDescripcion(UtilTexto.VACIO);
 	}
 	
 	public EstadoDTO(final UUID id, final String descripcion) {
-		setId(id);
+		setIdEstado(id);
 		setDescripcion(descripcion);
 	}
 	
@@ -23,8 +23,8 @@ public class EstadoDTO {
 		return new EstadoDTO();
 	}
 	
-	public final EstadoDTO setId(final UUID id) {
-		this.id = UtilUUID.obtenerValorDefecto(id, UtilUUID.obtenerValorDefecto(id, UtilUUID.UUIDDEFECTO));
+	public final EstadoDTO setIdEstado(final UUID id) {
+		this.idEstado = UtilUUID.obtenerValorDefecto(id, UtilUUID.obtenerValorDefecto(id, UtilUUID.UUIDDEFECTO));
 		return  this;
 	}
 	
@@ -33,8 +33,8 @@ public class EstadoDTO {
 		return this;
 	}
 	
-	public final UUID getId() {
-		return id;
+	public final UUID getIdEstado() {
+		return idEstado;
 	}
 	
 	public final String getDescripcion() {

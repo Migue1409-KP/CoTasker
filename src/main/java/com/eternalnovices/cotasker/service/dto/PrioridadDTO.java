@@ -7,16 +7,16 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 
 public class PrioridadDTO {
 	
-	private UUID id;
+	private UUID idPrioridad;
 	private String descripcion;
 	
 	public PrioridadDTO() {
-		setId(UtilUUID.UUIDDEFECTO);
+		setIdPrioridad(UtilUUID.UUIDDEFECTO);
 		setDescripcion(UtilTexto.VACIO);
 	}
 	
 	public PrioridadDTO(final UUID id, final String descripcion) {
-		setId(id);
+		setIdPrioridad(id);
 		setDescripcion(descripcion);
 	}
 	
@@ -24,16 +24,16 @@ public class PrioridadDTO {
 		return new PrioridadDTO();
 	}
 	
-	public final UUID getId() {
-		return id;
+	public final UUID getIdPrioridad() {
+		return idPrioridad;
 	}
 	
 	public final String getDescripcion() {
 		return descripcion;
 	}
 	
-	public final PrioridadDTO setId(final UUID id) {
-		this.id = UtilUUID.obtenerValorDefecto(id, UtilUUID.obtenerValorDefecto(id, UtilUUID.UUIDDEFECTO));
+	public final PrioridadDTO setIdPrioridad(final UUID id) {
+		this.idPrioridad = UtilUUID.obtenerValorDefecto(id, UtilUUID.obtenerValorDefecto(id, UtilUUID.UUIDDEFECTO));
 		return this;
 	}
 	
