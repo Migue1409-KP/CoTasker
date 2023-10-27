@@ -503,7 +503,20 @@ public class CatalogoMensajes {
 				"No es posible llevar a cabo la operación deseada con la tarea"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000264, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No es posible llevar a cabo la operación deseada con la tarea"));
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039996, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la modificacion de un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039997, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase ModificarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039994, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la consulta de un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039995, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039991, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo el registro de un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039992, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039993, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"no se puede registrar un usuario con el mismo correo electronico"));
 		
 		
 	}
