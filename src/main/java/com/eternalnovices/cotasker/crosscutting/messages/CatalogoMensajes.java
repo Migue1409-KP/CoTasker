@@ -517,8 +517,12 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039993, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"no se puede registrar un usuario con el mismo correo electronico"));
-		
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000401, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No es posible llevar a cabo la operación deseada con el usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000402, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No es posible llevar a cabo la operación deseada con el proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000403, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No es posible llevar a cabo la operación deseada con el Usuarioproyecto"));
 	}
 	
 	
