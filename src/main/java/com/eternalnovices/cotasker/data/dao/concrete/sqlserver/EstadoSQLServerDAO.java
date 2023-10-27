@@ -93,7 +93,6 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 		return resultado;
 	}
 	
-
 	@Override
 	public final List<EstadoEntity> consultar(final EstadoEntity estado) {
 		final var parametros = new ArrayList<Object>();
@@ -155,9 +154,7 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 	}
-		
-	
-
+			
 	private String formarSentenciaConsulta(EstadoEntity estado, ArrayList<Object> parametros) {
 		final var sentencia = new StringBuilder();
 		String operadorCondicional = "WHERE";
@@ -181,5 +178,4 @@ public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 				
 		return sentencia.toString();
 	}
-
 }

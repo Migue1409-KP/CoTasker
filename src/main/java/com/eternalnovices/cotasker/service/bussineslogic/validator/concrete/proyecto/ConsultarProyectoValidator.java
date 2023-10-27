@@ -27,9 +27,11 @@ public class ConsultarProyectoValidator implements Validator<ProyectoDomain>{
 		if(!UtilObjeto.esNulo(domain)) {
 			if(!UtilUUID.esNulo(domain.getIdProyecto())) {
 				IdProyectoValidationRule.ejecutarValidacion(domain.getIdProyecto());
-			}if(!UtilTexto.estaVacio(domain.getNombre())) {
+			}
+			if(!UtilTexto.estaVacio(domain.getNombre())) {
 				NombreProyectoValitadionRule.ejecutarValidacion(domain.getNombre());
-			}if(!UtilTexto.estaVacio(domain.getDescripcion())) {
+			}
+			if(!UtilTexto.estaVacio(domain.getDescripcion())) {
 				DescripcionProyectoValitationRule.ejecutarValidacion(domain.getDescripcion());	
 			}
 		}
