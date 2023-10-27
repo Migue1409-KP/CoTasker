@@ -30,7 +30,7 @@ public class ListaTareasDTOMapper implements DTOMapper<ListaTareasDTO, ListaTare
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000259);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return ListaTareasDomain.crear(dto.getIdListaTareas(),dto.getNombre(),dto.getDescripcion(),FechasDtoMapper.convertToDomain(dto.getFecha()), null, ProyectoDtoMapper.convertToDomain(dto.getProyecto()));
+		return ListaTareasDomain.crear(dto.getIdListaTareas(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()), null, ProyectoDtoMapper.convertToDomain(dto.getProyecto()));
 		//TODO hacer cambio cuando este prioridad mapper
 	}
 
@@ -48,7 +48,7 @@ public class ListaTareasDTOMapper implements DTOMapper<ListaTareasDTO, ListaTare
 				.setFecha(FechasDTO.crear().setFechaCreacion(domain.getFecha().getFechaCreacion())
 						.setFechaEstimadaInicio(domain.getFecha().getFechaEstimadaInicio())
 						.setFechaEstimadaFin(domain.getFecha().getFechaEstimadaFin()))
-				.setPrioridad(PrioridadDTO.crear().setId(domain.getPrioridad().getIdPrioridad()))
+				.setPrioridad(PrioridadDTO.crear().setIdPrioridad(domain.getPrioridad().getIdPrioridad()))
 				.setProyecto(ProyectoDTO.crear().setIdProyecto(domain.getProyecto().getIdProyecto()));
 				
 	}
