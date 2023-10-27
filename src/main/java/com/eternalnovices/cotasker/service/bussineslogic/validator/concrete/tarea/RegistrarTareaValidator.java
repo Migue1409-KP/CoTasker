@@ -27,7 +27,6 @@ public final class RegistrarTareaValidator implements Validator<TareaDomain>{
 	@Override
 	public void execute(TareaDomain domain) {
 		TareaValidationRule.ejecutarValidacion(domain);
-		IdTareaValidationRule.ejecutarValidacion(domain.getIdTarea());
 		NombreTareaValitadionRule.ejecutarValidacion(domain.getNombre());
 		DescripcionTareaValitationRule.ejecutarValidacion(domain.getDescripcion());
 		FechaCreacionFechasValidationRule.ejecutarValidacion(domain.getFecha().getFechaCreacion());
