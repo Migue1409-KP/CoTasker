@@ -482,8 +482,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000261, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase TareaDTOMapper.No es posible mapear una TareaDomain a partir de una entidad de tipo TareaDTO nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000262, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo toDTO de la clase TareaDTOMapper.No es posible mapear un tipo de TareaDTO a partir de una entidad de TareaDomain nula"));
-		
+				"Se ha presentado un problema en el metodo toDTO de la clase TareaDTOMapper.No es posible mapear un tipo de TareaDTO a partir de una entidad de TareaDomain nula"));	
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000142, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase FechasDTOMapper.No es posible mapear fechas domain a partir de fechas dto nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000143, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
@@ -496,6 +495,13 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase EstadoDTOMapper.No es posible mapear un estado domain a partir de un estado dto nulo"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000147, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase EstadoDTOMapper.No es posible mapear un estado dto a partir de un estado domain nulo"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000263, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No es posible llevar a cabo la operación deseada con la tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000264, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No es posible llevar a cabo la operación deseada con la tarea"));
+		
+		
+		
 	}
 	
 	
