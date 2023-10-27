@@ -479,6 +479,10 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareasDTOMapper.No es posible mapear una ListaTareasDomain a partir de una entidad de tipo ListaTareasDTO nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000260, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase ListaTareasDTOMapper.No es posible mapear un tipo de ListaTareasDTO a partir de una entidad de ListaTareasDomain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000261, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase TareaDTOMapper.No es posible mapear una TareaDomain a partir de una entidad de tipo TareaDTO nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000262, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase TareaDTOMapper.No es posible mapear un tipo de TareaDTO a partir de una entidad de TareaDomain nula"));
 		
 	}
 	
