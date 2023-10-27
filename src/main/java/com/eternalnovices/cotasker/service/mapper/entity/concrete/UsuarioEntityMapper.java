@@ -1,10 +1,15 @@
 package com.eternalnovices.cotasker.service.mapper.entity.concrete;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTaskerException;
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
+import com.eternalnovices.cotasker.data.entity.ProyectoEntity;
 import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
+import com.eternalnovices.cotasker.service.domain.proyecto.ProyectoDomain;
 import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
@@ -44,6 +49,14 @@ public class UsuarioEntityMapper implements EntityMapper<UsuarioEntity, UsuarioD
 	public static final UsuarioEntity convertToEntity(final UsuarioDomain domain) {
 		return instancia.toEntity(domain);
 	}
-
+	
+	public static final List<UsuarioDomain>  convertToListDomain(final List<UsuarioEntity> entity){
+		List<UsuarioDomain> resultados = new ArrayList<>();
+		for (int i = 0; i < entity.size(); i++) {
+			resultados.add(convertToDomain(entity.get(i)));
+		}
+		
+		return resultados;
+	}
 
 }
