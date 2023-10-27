@@ -37,7 +37,7 @@ public class UsuarioDTOMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return UsuarioDTO.crear()
-				.setIdUsuario(domain.getId())
+				.setIdUsuario(domain.getIdUsuario())
 				.setNombre(domain.getNombre())
 				.setApellido(domain.getApellido())
 				.setCorreoElectronico(domain.getCorreoElectronico())

@@ -39,7 +39,7 @@ public class UsuarioEntityMapper implements EntityMapper<UsuarioEntity, UsuarioD
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		
-		return UsuarioEntity.crear(domain.getId(), domain.getNombre(), domain.getApellido(),domain.getCorreoElectronico(),domain.isCorreoElectronicoConfirmado(),domain.getContrasena());
+		return UsuarioEntity.crear(domain.getIdUsuario(), domain.getNombre(), domain.getApellido(),domain.getCorreoElectronico(),domain.isCorreoElectronicoConfirmado(),domain.getContrasena());
 	}
 	
 	public static final UsuarioDomain convertToDomain(final UsuarioEntity entity) {		 

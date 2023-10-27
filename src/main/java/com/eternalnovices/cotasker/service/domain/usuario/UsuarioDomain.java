@@ -13,7 +13,7 @@ public class UsuarioDomain {
 	private UsuarioDomain(final UUID idUsuario,final String nombre,final String apellido,final String correoElectronico,
 			final boolean correoElectronicoConfirmado,final String contrasena) {
 		
-		setId(idUsuario);
+		setIdUsuario(idUsuario);
 		setNombre(nombre);
 		setApellido(apellido);
 		setCorreoElectronico(correoElectronico);
@@ -27,7 +27,7 @@ public class UsuarioDomain {
 		return  new UsuarioDomain (idUsuario ,nombre,apellido,correoElectronico,correoElectronicoConfirmado,contrasena);
 	}
 	
-	public final UUID getId() {
+	public final UUID getIdUsuario() {
 		return idUsuario;
 	}
 	public final String getNombre() {
@@ -45,7 +45,7 @@ public class UsuarioDomain {
 	public final String getContrasena() {
 		return contrasena;
 	}
-	private final void setId(final UUID id) {
+	private final void setIdUsuario(final UUID id) {
 		this.idUsuario = id;
 	}
 	private final void setNombre(final String nombre) {
