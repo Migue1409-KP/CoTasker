@@ -491,6 +491,10 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase EstadoDTOMapper.No es posible mapear un estado domain a partir de un estado dto nulo"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000147, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase EstadoDTOMapper.No es posible mapear un estado dto a partir de un estado domain nulo"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000148, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La fecha estimada de inicio no puede ser antes de su fecha de creación"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000149, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La fecha estimada de fin no puede ser antes de su fecha de creación"));
 	}
 	
 	
