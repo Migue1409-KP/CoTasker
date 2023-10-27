@@ -26,7 +26,7 @@ public class IdPrioridadValidationRule implements ValidationRule<UUID> {
 	
 	private final void validarObligatoriedad(final UUID dato) {
 		if(UtilUUID.esNulo(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000362);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000093);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

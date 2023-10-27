@@ -75,113 +75,113 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema tratando de conectar con la base de datos. Motor de base de datos que se trata de conectar no usado por la app..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000027, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de establecer la coneccion con el servidor.Por favor verifique la traza del error presentado...."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000301, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000033, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar la información del tipo de identificación deseado"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000302, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000034, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de procesar los datos de una consulta por id un tipo de identificación en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000303, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000035, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar por id un estado de tarea en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000304, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000036, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado tratando de prepar la consulta por id de un estado de tarea en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000305, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000037, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de insertar un tipo de identificación en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000306, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000038, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de insertar un tipo de identificación en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000307, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000039, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se presento un problema tratando de insertar un dato en la base de datos..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000308, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000040, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar la prioridad deseado"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000309, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000041, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar la prioridad en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000310, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000042, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar la prioridad en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000311, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000043, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema al consultar la prioridad deseada"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000312, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000044, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de procesar los datos de una consulta por id una prioridad en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000313, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000045, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado tratando de procesar los datos de una consulta por id de una prioridaden la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000318, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000050, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema funcion colocarParametrosConsulta en PrioridadDAO tratando de consultar prioridad.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000319, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000051, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion colocarParametrosConsulta en PrioridadDAO tratando de consultar prioridad.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000321, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000053, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en funcion ejecutarConsulta en PrioridadDAO tratando de consultar prioridad.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000322, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000054, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en PrioridadDAO tratando de consultar prioridad.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000323, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000055, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar el estado de tarea deseado"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000324, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000056, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar el estado de tarea en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado, el problema se presenta en estado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000325, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000057, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar el estado de tarea en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado, el problema se presenta en estado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000326, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000058, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar la información del estado de tarea deseado"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000327, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000060, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de procesar los datos de una consulta por id del estado de tarea en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000328, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000059, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado tratando de procesar los datos de una consulta por id del estado de tarea en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000330, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000061, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de consultar el el estado de una tarea por id, el problema se presento en la base de datos . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000330, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000061, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de consultar el el estado de una tarea por id. por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000332, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000063, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar la información del estado de tarea "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000333, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000064, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de consultar el el estado de una tarea, el problema se presento en la base de datos . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000334, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000065, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de consultar el el estado de una tarea. por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000336, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000067, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de ejecutar la consulta de un  estado de  tarea, el problema se presento en la base de datos . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000337, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000068, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de ejecutar la consulta de un  estado de  tarea por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000335, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000066, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de ejecutar la consulta la información del estado de tarea "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000338, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000069, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion colocar los parametros para una consulta  de un  estado de  tarea, el problema se presento en la base de datos . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000339, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000070, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion colocar los parametros para una consulta  de un  estado de  tarea. por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000340, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000071, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de crear un usuario ... "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000341, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000072, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de crear un usuario . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000342, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000073, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de crear un usuario . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000344, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000076, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de modificar un usuario . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000345, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000075, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de modificar un usuario . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000343, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000074, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar un usuario ... "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000346, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000077, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de eliminar un usuario ... "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000347, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000078, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de eliminar  un usuario . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000348, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000079, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de eliminar un usuario . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000349, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000080, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar  un usuario por id ... "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000350, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000081, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de consultar  un usuario por id . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000351, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000082, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de consultar  un usuario por id . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000352, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000083, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de ejecutar una consulta de un usuario por id . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000353, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000084, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de ejecutar una consulta de un usuario por id . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000354, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000085, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar  un usuario  ... "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000355, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000086, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de consultar  un usuario  . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000356, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000087, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de consultar  un usuario  . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000357, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000088, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de ejecutar la consultar  un usuario  . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000358, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000089, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando ejecutar la consultar  un usuario  . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000359, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000090, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo SQLExepcion tratando de colocar los parametros de la consulta de un usuario  . por favor verificar traza del error "));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000360, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000091, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado de tipo Exepcion tratando de colocar los parametros de la consulta de  un usuario  . por favor verificar traza del error "));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000101, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de insetar una asignación de un proyecto con un usuario"));
@@ -261,29 +261,29 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema inesperado en funcion colocarParametrosConsulta en TareaoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000140, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en funcion ejecutarConsulta en TareaoDAO tratando de consultar taraes.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000141, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000115, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en TareaoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000361, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000092, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La fecha de creación es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000362, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000093, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El identificador de prioridad es un dato obligatorio y no puede ser igual al UUID por defecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000363, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000094, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud de la descripción de prioridad no es valida. La longitud maxima son 25 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000364, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000095, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripción de prioridad es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000365, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000096, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripción de prioridad solo puede contener letras"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000366, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000097, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El identificador de estado es un dato obligatorio y no puede ser igual al UUID por defecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000367, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000098, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud de la descripción de estado no es valida. La longitud maxima son 25 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000368, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000099, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripción de estado es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000369, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000100, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripción de estado solo puede contener letras"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000370, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000141, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase FechasEntityMapper.No es posible mapear las fechas dominio a partir de una entidad de fechas entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000371, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000150, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase FechasEntityMapper.No es posible mapear las fehas entity a partir de una entidad de fechas dominio nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000372, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase PrioridadEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));

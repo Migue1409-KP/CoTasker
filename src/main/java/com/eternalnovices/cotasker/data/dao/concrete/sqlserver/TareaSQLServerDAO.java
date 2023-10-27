@@ -345,7 +345,7 @@ public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		} catch (Exception e) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000131);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000141);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000115);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);		
 		}
 		

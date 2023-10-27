@@ -27,7 +27,7 @@ public class FechaCreacionFechasValidationRule implements ValidationRule<Date> {
 	
 	private final void validarObligatoriedad(final Date dato) {
 		if(UtilFecha.esNulo(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000361);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000092);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

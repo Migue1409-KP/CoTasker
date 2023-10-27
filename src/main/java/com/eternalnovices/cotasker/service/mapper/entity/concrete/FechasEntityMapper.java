@@ -19,7 +19,7 @@ public class FechasEntityMapper implements EntityMapper<FechasEntity, FechasDoma
 	public final FechasDomain toDomain(final FechasEntity entity) {
 		if(UtilObjeto.esNulo(entity)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000370);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000141);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		 
@@ -30,7 +30,7 @@ public class FechasEntityMapper implements EntityMapper<FechasEntity, FechasDoma
 	public FechasEntity toEntity(final FechasDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000371);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000150);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		

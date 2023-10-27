@@ -26,21 +26,21 @@ public class DescripcionPrioridadValidationRule implements ValidationRule<String
 
 	private final void validarLongitud(final String dato) {
 		if(!UtilTexto.longitudMaximaValida(dato, 25)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000363);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000094);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 	
 	private final void validarObligatoriedad(final String dato) {
 		if(UtilTexto.estaVacio(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000364);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000095);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 	
 	private final void validarFormato(final String dato) {
 		if(!UtilTexto.contieneSoloLetras(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000365);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000096);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

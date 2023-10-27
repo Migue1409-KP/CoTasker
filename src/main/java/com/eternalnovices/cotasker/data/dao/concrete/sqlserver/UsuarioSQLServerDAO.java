@@ -42,12 +42,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			
 			
 		} catch (final SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000340);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000341);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000071);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000072);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000340);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000342);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000071);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000073);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}		
 	}
@@ -75,12 +75,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			sentenciaPreparada.executeUpdate();
 			
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000343);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000344);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000074);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000076);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000343);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000345);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000074);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000075);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 		
@@ -100,12 +100,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			sentenciaPreparada.executeUpdate();
 			
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000346);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000347);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000077);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000078);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000346);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000348);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000077);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000079);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 		
@@ -124,12 +124,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			sentenciaPreparada.setObject(1, id);
 			resultado = ejecutarConsultaPorId(sentenciaPreparada);
 		}catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000349);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000350);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000080);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000081);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000349);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000351);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000080);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000082);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 		return resultado;
@@ -149,12 +149,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 				resultado=Optional.of(usuarioEntity);
 			}
 		} catch (SQLException e) {
-			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000349);
-			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000352);
+			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000080);
+			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000083);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}catch (Exception e) {
-			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000349);
-			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000353);
+			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000080);
+			var mensajeTecnico=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000084);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 		return resultado;
@@ -173,12 +173,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 		}catch (DataCoTaskerException e) {
 			throw e;
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000355);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000085);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000086);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}  catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000356);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000085);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000087);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 	}
@@ -203,12 +203,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 				listaResultados.add(usuarioEntity);
 			}
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000357);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000085);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000088);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		} catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000358);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000085);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000089);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);		
 		}
 		
@@ -222,12 +222,12 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 				sentenciaPreparada.setObject(indice + 1, parametros.get(indice));
 			}
 		} catch (SQLException e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000359);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000085);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000090);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		} catch (Exception e) {
-			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000360);
+			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000085);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000091);
 			throw DataCoTaskerException.crear(e, mensajeUsuario, mensajeTecnico);
 		}
 	}

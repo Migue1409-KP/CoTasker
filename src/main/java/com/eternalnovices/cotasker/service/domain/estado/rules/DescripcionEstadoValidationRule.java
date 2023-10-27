@@ -26,21 +26,21 @@ public class DescripcionEstadoValidationRule implements ValidationRule<String> {
 
 	private final void validarLongitud(final String dato) {
 		if(!UtilTexto.longitudMaximaValida(dato, 25)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000367);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000098);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 	
 	private final void validarObligatoriedad(final String dato) {
 		if(UtilTexto.estaVacio(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000368);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000099);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 	
 	private final void validarFormato(final String dato) {
 		if(!UtilTexto.contieneSoloLetras(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000369);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000100);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
