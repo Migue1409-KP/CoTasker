@@ -5,7 +5,6 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.crosscutting.util.UtilTexto;
 import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 import com.eternalnovices.cotasker.service.bussineslogic.validator.Validator;
-import com.eternalnovices.cotasker.service.domain.estado.rules.IdEstadoValidationRule;
 import com.eternalnovices.cotasker.service.domain.fechas.rules.FechaCreacionFechasValidationRule;
 import com.eternalnovices.cotasker.service.domain.fechas.rules.FechasValidationRule;
 import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
@@ -14,10 +13,6 @@ import com.eternalnovices.cotasker.service.domain.listatareas.rules.IdListaTarea
 import com.eternalnovices.cotasker.service.domain.listatareas.rules.NombreListaTareasValitadionRule;
 import com.eternalnovices.cotasker.service.domain.prioridad.rules.IdPrioridadValidationRule;
 import com.eternalnovices.cotasker.service.domain.proyecto.rules.IdProyectoValidationRule;
-import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
-import com.eternalnovices.cotasker.service.domain.tarea.rules.DescripcionTareaValitationRule;
-import com.eternalnovices.cotasker.service.domain.tarea.rules.IdTareaValidationRule;
-import com.eternalnovices.cotasker.service.domain.tarea.rules.NombreTareaValitadionRule;
 
 public final class ConsultarListaTareasValidator implements Validator<ListaTareasDomain>{
 	private static final Validator<ListaTareasDomain> instancia = new ConsultarListaTareasValidator();

@@ -14,13 +14,13 @@ public final class ListaTareasValidationRule implements ValidationRule<ListaTare
 		super();
 	}
 	
-	public static final void ejecutarValidacion(final ListaTareasDomain data) {
-		instancia.validar(data);
+	public static final void ejecutarValidacion(final ListaTareasDomain domain) {
+		instancia.validar(domain);
 	}
 	
 	@Override
-	public void validar(ListaTareasDomain data) {
-		if(UtilObjeto.esNulo(data)) {
+	public void validar(ListaTareasDomain domain) {
+		if(UtilObjeto.esNulo(domain)) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000264);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
