@@ -42,7 +42,7 @@ public class UsuarioProyectoDTOMapper implements DTOMapper<UsuarioProyectoDTO, U
 				.setProyecto(ProyectoDTO.crear()
 						.setIdProyecto(domain.getProyecto().getIdProyecto()))
 				.setUsuario(UsuarioDTO.crear()
-						.setIdUsuario(domain.getUsuario().getId()));
+						.setIdUsuario(domain.getUsuario().getIdUsuario()));
 	}
 	
 	public static final UsuarioProyectoDomain convertToDomain(final UsuarioProyectoDTO dto) {
