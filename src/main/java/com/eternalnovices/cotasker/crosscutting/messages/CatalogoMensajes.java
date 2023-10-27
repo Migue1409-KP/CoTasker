@@ -479,6 +479,10 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareasDTOMapper.No es posible mapear una ListaTareasDomain a partir de una entidad de tipo ListaTareasDTO nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000260, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase ListaTareasDTOMapper.No es posible mapear un tipo de ListaTareasDTO a partir de una entidad de ListaTareasDomain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000261, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase TareaDTOMapper.No es posible mapear una TareaDomain a partir de una entidad de tipo TareaDTO nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000262, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDTO de la clase TareaDTOMapper.No es posible mapear un tipo de TareaDTO a partir de una entidad de TareaDomain nula"));	
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000142, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase FechasDTOMapper.No es posible mapear fechas domain a partir de fechas dto nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000143, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
@@ -495,6 +499,13 @@ public class CatalogoMensajes {
 				"La fecha estimada de inicio no puede ser antes de su fecha de creación"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000149, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"La fecha estimada de fin no puede ser antes de su fecha de creación"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000263, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No es posible llevar a cabo la operación deseada con la tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000264, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No es posible llevar a cabo la operación deseada con la tarea"));
+		
+		
+		
 	}
 	
 	

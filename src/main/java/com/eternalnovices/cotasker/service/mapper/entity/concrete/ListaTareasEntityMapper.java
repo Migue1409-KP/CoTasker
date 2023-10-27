@@ -1,5 +1,8 @@
 package com.eternalnovices.cotasker.service.mapper.entity.concrete;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTaskerException;
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
@@ -7,6 +10,7 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.data.entity.ListaTareasEntity;
 import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
+
 
 
 public class ListaTareasEntityMapper implements EntityMapper<ListaTareasEntity, ListaTareasDomain> {
@@ -48,5 +52,14 @@ public class ListaTareasEntityMapper implements EntityMapper<ListaTareasEntity, 
 	
 	public static final ListaTareasEntity convertToEntity(final ListaTareasDomain domain) {
 		return instancia.toEntity(domain);
+	}
+	
+	public static final List<ListaTareasDomain>  convertToListDomain(final List<ListaTareasEntity> entity){
+		List<ListaTareasDomain> resultados = new ArrayList<>();
+		for (int i = 0; i < entity.size(); i++) {
+			resultados.add(convertToDomain(entity.get(i)));
+		}
+		
+		return resultados;
 	}
 }

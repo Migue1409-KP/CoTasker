@@ -1,5 +1,8 @@
 package com.eternalnovices.cotasker.service.mapper.entity.concrete;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTaskerException;
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
@@ -47,6 +50,15 @@ public class TareaEntityMapper implements EntityMapper<TareaEntity, TareaDomain>
 	
 	public static final TareaEntity convertToEntity(final TareaDomain domain) {
 		return instancia.toEntity(domain);
+	}
+	
+	public static final List<TareaDomain>  convertToListDomain(final List<TareaEntity> entity){
+		List<TareaDomain> resultados = new ArrayList<>();
+		for (int i = 0; i < entity.size(); i++) {
+			resultados.add(convertToDomain(entity.get(i)));
+		}
+		
+		return resultados;
 	}
 }
 

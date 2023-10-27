@@ -7,62 +7,65 @@ import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTask
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
-import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
+import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
+import com.eternalnovices.cotasker.service.dto.EstadoDTO;
 import com.eternalnovices.cotasker.service.dto.FechasDTO;
 import com.eternalnovices.cotasker.service.dto.ListaTareasDTO;
 import com.eternalnovices.cotasker.service.dto.PrioridadDTO;
-import com.eternalnovices.cotasker.service.dto.ProyectoDTO;
+import com.eternalnovices.cotasker.service.dto.TareaDTO;
 import com.eternalnovices.cotasker.service.mapper.dto.DTOMapper;
 
 
 
-public class ListaTareasDTOMapper implements DTOMapper<ListaTareasDTO, ListaTareasDomain> {
-	private static final DTOMapper<ListaTareasDTO, ListaTareasDomain> instancia= new ListaTareasDTOMapper();
+public class TareaDTOMapper implements DTOMapper<TareaDTO, TareaDomain> {
+	private static final DTOMapper<TareaDTO, TareaDomain> instancia= new TareaDTOMapper();
 
-	private ListaTareasDTOMapper() {
+	private TareaDTOMapper() {
 		super();
 	}
 	
 	@Override
-	public ListaTareasDomain toDomain(ListaTareasDTO dto) {
+	public TareaDomain toDomain(TareaDTO dto) {
 		if (UtilObjeto.esNulo(dto)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000259);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000261);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return ListaTareasDomain.crear(dto.getIdListaTareas(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()),
-				PrioridadDTOMapper.convertToDomain(dto.getPrioridad()), ProyectoDtoMapper.convertToDomain(dto.getProyecto()));
+		return TareaDomain.crear(dto.getIdTarea(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()),
+				PrioridadDTOMapper.convertToDomain(dto.getPrioridad()) , EstadoDTOMapper.convertToDomain(dto.getEstado()), ListaTareasDTOMapper.convertToDomain(dto.getListaTareas()));
+
 	}
 
 	@Override
-	public ListaTareasDTO toDTO(ListaTareasDomain domain) {
+	public TareaDTO toDTO(TareaDomain domain) {
 		if (UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000260);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000262);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return ListaTareasDTO.crear()
-				.setIdListaTareas(domain.getIdListaTareas())
+		return TareaDTO.crear()
+				.setIdTarea(domain.getIdTarea())
 				.setNombre(domain.getNombre())
 				.setDescripcion(domain.getDescripcion())
 				.setFecha(FechasDTO.crear().setFechaCreacion(domain.getFecha().getFechaCreacion())
 						.setFechaEstimadaInicio(domain.getFecha().getFechaEstimadaInicio())
 						.setFechaEstimadaFin(domain.getFecha().getFechaEstimadaFin()))
 				.setPrioridad(PrioridadDTO.crear().setIdPrioridad(domain.getPrioridad().getIdPrioridad()))
-				.setProyecto(ProyectoDTO.crear().setIdProyecto(domain.getProyecto().getIdProyecto()));
+				.setEstado(EstadoDTO.crear().setIdEstado(domain.getEstado().getIdEstado()))
+				.setListaTareas(ListaTareasDTO.crear().setIdListaTareas(domain.getListaTareas().getIdListaTareas()));
 				
 	}
 	
-	public static final ListaTareasDomain convertToDomain(final ListaTareasDTO dto) {		 
+	public static final TareaDomain convertToDomain(final TareaDTO dto) {		 
 		return instancia.toDomain(dto);
 	}
 	
-	public static final ListaTareasDTO convertToDTO(final ListaTareasDomain domain) {
+	public static final TareaDTO convertToDTO(final TareaDomain domain) {
 		return instancia.toDTO(domain);
 	}
 	
-	public static final List<ListaTareasDTO>  convertToListDTO(final List<ListaTareasDomain> dto){
-		List<ListaTareasDTO> resultados = new ArrayList<>();
+	public static final List<TareaDTO>  convertToListDTO(final List<TareaDomain> dto){
+		List<TareaDTO> resultados = new ArrayList<>();
 		for (int i = 0; i < dto.size(); i++) {
 			resultados.add(convertToDTO(dto.get(i)));
 		}
