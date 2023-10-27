@@ -27,7 +27,7 @@ public class ListaTareasDTOMapper implements DTOMapper<ListaTareasDTO, ListaTare
 	public ListaTareasDomain toDomain(ListaTareasDTO dto) {
 		if (UtilObjeto.esNulo(dto)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000259);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000247);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return ListaTareasDomain.crear(dto.getIdListaTareas(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()),
@@ -38,7 +38,7 @@ public class ListaTareasDTOMapper implements DTOMapper<ListaTareasDTO, ListaTare
 	public ListaTareasDTO toDTO(ListaTareasDomain domain) {
 		if (UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000260);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000248);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return ListaTareasDTO.crear()

@@ -25,7 +25,7 @@ public class UsuarioProyectoDTOMapper implements DTOMapper<UsuarioProyectoDTO, U
 	public UsuarioProyectoDomain toDomain(UsuarioProyectoDTO dto) {
 		if (UtilObjeto.esNulo(dto)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000003998);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000245);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return UsuarioProyectoDomain.crear(ProyectoDTOMapper.convertToDomain(dto.getProyecto()),UsuarioDTOMapper.convertToDomain(dto.getUsuario()));
@@ -35,7 +35,7 @@ public class UsuarioProyectoDTOMapper implements DTOMapper<UsuarioProyectoDTO, U
 	public UsuarioProyectoDTO toDTO(UsuarioProyectoDomain domain) {
 		if (UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000003999);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000246);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return UsuarioProyectoDTO.crear()

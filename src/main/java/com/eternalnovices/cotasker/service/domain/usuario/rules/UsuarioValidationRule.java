@@ -21,7 +21,7 @@ public class UsuarioValidationRule implements ValidationRule<UsuarioDomain>{
 	@Override
 	public void validar(UsuarioDomain data) {
 		if(UtilObjeto.esNulo(data)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000401);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000260);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

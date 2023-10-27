@@ -19,7 +19,7 @@ public class PrioridadEntityMapper implements EntityMapper<PrioridadEntity, Prio
 	public final PrioridadDomain toDomain(final PrioridadEntity entity) {
 		if(UtilObjeto.esNulo(entity)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000372);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000151);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		 
@@ -30,7 +30,7 @@ public class PrioridadEntityMapper implements EntityMapper<PrioridadEntity, Prio
 	public PrioridadEntity toEntity(final PrioridadDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000373);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000152);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		

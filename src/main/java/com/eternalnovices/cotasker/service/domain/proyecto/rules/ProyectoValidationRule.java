@@ -22,7 +22,7 @@ public class ProyectoValidationRule implements ValidationRule<ProyectoDomain>{
 	@Override
 	public void validar(ProyectoDomain data) {
 		if(UtilObjeto.esNulo(data)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000402);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000261);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

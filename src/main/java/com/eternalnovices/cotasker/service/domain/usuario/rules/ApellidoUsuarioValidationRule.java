@@ -27,21 +27,21 @@ public class ApellidoUsuarioValidationRule implements ValidationRule<String>{
 
 	private final void validarFormato(final String dato) {
 		if(!UtilTexto.contieneSoloLetrasDigitosEspacios(dato) ) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000389);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000208);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 
 	private final  void validarObligatoriedad(final String dato) {
 		if(UtilTexto.estaVacio(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000388);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000207);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 
 	private final void validarLongitud(final String dato) {
 		if(!UtilTexto.longitudValida(dato,1, 100)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000387);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000206);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

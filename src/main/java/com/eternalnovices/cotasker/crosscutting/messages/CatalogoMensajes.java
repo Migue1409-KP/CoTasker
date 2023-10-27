@@ -285,203 +285,203 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase FechasEntityMapper.No es posible mapear las fechas dominio a partir de una entidad de fechas entity nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000150, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase FechasEntityMapper.No es posible mapear las fehas entity a partir de una entidad de fechas dominio nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000372, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000151, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase PrioridadEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000373, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000152, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase PrioridadEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000374, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000153, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase EstadoEntityMapper.No es posible mapear un estado dominio a partir de una entidad de un estado entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000375, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000154, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase EstadoEntityMapper.No es posible mapear un estado entity a partir de una entidad de un estado dominio nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000376, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000155, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El identificador de proyecto  es un dato obligatorio y no puede ser igual al UUID por defecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000377, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000156, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del nombre del proyecto  no es valida. La longitud maxima son 30 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000378, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000157, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre del proyecto solo puede contener letras, digitos o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000379, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000158, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre del proyecto  es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000380, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000161, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud de la descripcion  del proyecto  no es valida. La longitud maxima son 60 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000381, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000159, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripcion del proyecto solo puede contener letras, digitos o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000382, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000160, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripcion  del proyecto  es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000201, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000162, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar una Lista de Tareas en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000202, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000163, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de modificar una tarea"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000203, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000164, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de modificar una Listatareas en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000204, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000165, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de crear una Lista de tareas"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000205, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000166, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de insertar una ListaTareas en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000206, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000167, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de insertar una ListaTarea en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000207, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000168, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de eliminar una lista de tareas"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000208, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000169, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de eliminar una lista de tareas en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000209, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000170, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de eliminar una lista de tareas en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000210, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000171, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar la información de la lista de tareas deseada"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000211, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000172, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de preparar la consulta por id de una lista de tareas en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000212, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000173, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de preparar la consulta por id de una lista de tareas en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000213, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000174, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de procesar los datos de una consulta por id de una lista de tareas en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000214, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000175, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado tratando de procesar los datos de una consulta por id de una lista de tareas en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000215, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000176, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en consultar ListaTareaDAO tratando de consultar tareas.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000216, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000177, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en consultar ListaTareaDAO tratando de consultar tareas.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000217, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000178, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema funcion colocarParametrosConsulta en ListaTareaDAO tratando de consultar tareas.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000218, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000179, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion colocarParametrosConsulta en ListaTareaDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000219, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000180, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en funcion ejecutarConsulta en ListaTareaDAO tratando de consultar taraes.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000220, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000181, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en ListaTareaDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000221, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000182, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de crear un proyecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000222, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000183, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de insertar un proyecto en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000223, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000184, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de insertar un proyecto en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000224, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000185, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de modificar un proyecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000225, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000186, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de modificar un proyecto en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000226, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000187, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de modificar un proyecto en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000227, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000188, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de eliminar un proyecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000228, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000189, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de eliminar un proyecto en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000229, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000190, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de eliminar un proyecto en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000230, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000191, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de consultar la información del proyecto deseada"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000231, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000192, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de preparar la consulta por id de un proyecto en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000232, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000193, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema inesperado tratando de preparar la consulta por id de un proyecto en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000233, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000194, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de procesar los datos de una consulta por id de un proyecto en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000234, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000195, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado tratando de procesar los datos de una consulta por id de un proyecto en la base de datos.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000235, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000196, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en consultar ProyectoDAO tratando de consultar tareas.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000236, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000197, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en consultar ProyectoDAO tratando de consultar tareas.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000237, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000198, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema funcion colocarParametrosConsulta en ProyectoDAO tratando de consultar tareas.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000238, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000199, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion colocarParametrosConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000239, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000200, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000240, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000201, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000382, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000160, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El id del Usuario   es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000384, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000203, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del nombre del usuario no es valida. La longitud maxima son 100 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000385, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000204, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre del usuario  es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000386, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000205, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre del usuario solo debe contener digitos letras o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000387, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000206, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del apellido del usuario no es valida. La longitud maxima son 100 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000388, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000207, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El apellido del usuario  es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000389, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000208, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El apellido del usuario solo debe contener digitos letras o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000390, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000209, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud de la contraseña del usuario no es valida. La longitud maxima son 100 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000391, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000210, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La contraseña del usuario  es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000392, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000211, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La contraseña del usuario solo debe contener digitos letras o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000393, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000212, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del correo electronico del usuario no es valida. La longitud maxima son 100 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000394, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000213, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El correo  del usuario  es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000395, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000214, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El correo del usuario no cumple con los requisitos de un correo electronico"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000396, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000215, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La comfirmacion del correo del  usuario debe ser obligatoria"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000397, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000216, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase ProyectoEntityMApper.No es posible mapear un proyecto dominio a partir de una entidad de un proyecto entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000398, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000217, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase ProyectoEntityMApper.No es posible mapear el proyecto entity a partir de una entidad de proyectos dominio nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000399, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000218, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioEntityMApper.No es posible mapear el usuario domain a partir de una entidad de usuario entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003991, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000219, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase UsuarioEntityMApper.No es posible mapear el usuario entity a partir de una entidad de usuario Domain nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003992, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000220, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioProyectoEntityMApper.No es posible mapear el UsuarioProyecto domain a partir de una entidad de UsuarioProyecto entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003993, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000221, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase UsuarioProyectoEntityMApper.No es posible mapear el UsuarioProyecto entity a partir de una entidad de UsuarioProyecto Domain nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000241, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000222, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareasEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000242, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000223, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase ListaTareasEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000243, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000224, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase TareaEntityMapper.No es posible mapear una prioridad dominio a partir de una entidad de una prioridad entity nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000244, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000225, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase TareaEntityMapper.No es posible mapear una prioridad entity a partir de una entidad de una prioridad dominio nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000245, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000226, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripcion de la lista de tareas solo puede contener letras, digitos o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000246, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000227, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud de la descripcion de la lista de tareas no es valida. La longitud maxima son 60 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000247, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000228, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripcion  de la lista de tareas es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000248, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000229, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El identificador de la lista de tareas es un dato obligatorio y no puede ser igual al UUID por defecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000249, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000230, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre de la lista de tareas solo puede contener letras, digitos o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000250, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000231, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre de la lista de tareas es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000251, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000232, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del nombre de la lista de tareas no es valida. La longitud maxima son 30 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000252, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000233, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripcion de la tarea solo puede contener letras, digitos o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000253, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000234, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud de la descripcion de la tarea no es valida. La longitud maxima son 60 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000254, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000235, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La descripcion  de la lista de tareas es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000255, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000236, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El identificador de la tarea es un dato obligatorio y no puede ser igual al UUID por defecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000256, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000237, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre de la tarea solo puede contener letras, digitos o espacios"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000257, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000238, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"El nombre de la tarea es un dato obligatorio"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000258, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000239, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del nombre de la tarea no es valida. La longitud maxima son 30 caracteres"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003994, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000240, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioDTOMapper.No es posible mapear un usuario domain a partir de una entidad de tipo usuario dto nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M000000003995, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000241, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase UsuarioDTOMapper.No es posible mapear un tipo de usuario dto a partir de una entidad de usuario domain nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003996, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000243, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase ProyectoDTOMapper.No es posible mapear un proyecto domain a partir de una entidad de tipo proyecto dto nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003997, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000244, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase ProyectoDTOMapper.No es posible mapear un tipo de Proyecto dto a partir de una entidad de Proyecto domain nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003998, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000245, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase UsuarioProyectoDTOMapper.No es posible mapear un UsuarioProyecto domain a partir de una entidad de tipo UsuarioProyecto dto nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000003999, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000246, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase UsuarioProyectoDTOMapper.No es posible mapear un tipo de UsuarioProyecto dto a partir de una entidad de UsuarioProyecto domain nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000259, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000247, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase ListaTareasDTOMapper.No es posible mapear una ListaTareasDomain a partir de una entidad de tipo ListaTareasDTO nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000260, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000248, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase ListaTareasDTOMapper.No es posible mapear un tipo de ListaTareasDTO a partir de una entidad de ListaTareasDomain nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000261, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000249, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase TareaDTOMapper.No es posible mapear una TareaDomain a partir de una entidad de tipo TareaDTO nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000262, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000250, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDTO de la clase TareaDTOMapper.No es posible mapear un tipo de TareaDTO a partir de una entidad de TareaDomain nula"));	
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000142, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toDomain de la clase FechasDTOMapper.No es posible mapear fechas domain a partir de fechas dto nula"));
@@ -499,30 +499,46 @@ public class CatalogoMensajes {
 				"La fecha estimada de inicio no puede ser antes de su fecha de creación"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000149, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"La fecha estimada de fin no puede ser antes de su fecha de creación"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000263, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000251, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No es posible llevar a cabo la operación deseada con la tarea"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000264, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000252, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No es posible llevar a cabo la operación deseada con la tarea"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039996, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000258, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la modificacion de un usuario"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039997, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000259, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase ModificarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039994, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000256, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la consulta de un usuario"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039995, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000257, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039991, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000254, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo el registro de un usuario"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039992, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000255, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000039993, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000253, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"no se puede registrar un usuario con el mismo correo electronico"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000401, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000260, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No es posible llevar a cabo la operación deseada con el usuario"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000402, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000261, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No es posible llevar a cabo la operación deseada con el proyecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000403, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000262, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No es posible llevar a cabo la operación deseada con el Usuarioproyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000263, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de eliminar  un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000264, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarUsuarioUseCase.Debido a que la factoria con la cual se desea eliminar esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000265, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No se puede eliminar el Usuario. El Usuario a eliminar no esta registrado"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000268, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la consulta de un Proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000269, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000270, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo el registro  de un Proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000271, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea registrar esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000253, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"no se puede registrar un Proyecto con el mismo nombre"));
 	}
 	
 	

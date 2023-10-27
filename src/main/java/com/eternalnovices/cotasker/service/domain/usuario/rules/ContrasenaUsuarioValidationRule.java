@@ -27,21 +27,21 @@ public class ContrasenaUsuarioValidationRule implements ValidationRule<String> {
 
 	private final void validarFormato(final String dato) {
 		if(!UtilTexto.contieneSoloLetrasDigitosEspacios(dato) ) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000392);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000211);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 
 	private final  void validarObligatoriedad(final String dato) {
 		if(UtilTexto.estaVacio(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000391);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000210);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 
 	private final void validarLongitud(final String dato) {
 		if(!UtilTexto.longitudValida(dato,1, 100)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000390);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000209);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

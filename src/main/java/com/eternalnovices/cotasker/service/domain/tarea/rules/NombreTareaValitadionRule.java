@@ -27,7 +27,7 @@ public class NombreTareaValitadionRule implements ValidationRule<String> {
 	
 	private void validarFormato(String dato) {
 		if(!UtilTexto.contieneSoloLetrasDigitosEspacios(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000256);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000237);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
@@ -36,7 +36,7 @@ public class NombreTareaValitadionRule implements ValidationRule<String> {
 
 	private void validarObligatoriedad(String dato) {
 		if(UtilTexto.estaVacio(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000257);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000238);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
@@ -45,7 +45,7 @@ public class NombreTareaValitadionRule implements ValidationRule<String> {
 
 	private void validarLongitud(String dato) {
 		if(!UtilTexto.longitudMaximaValida(dato, 30)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000258);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000239);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

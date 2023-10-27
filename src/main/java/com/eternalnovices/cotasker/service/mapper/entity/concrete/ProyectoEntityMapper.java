@@ -24,7 +24,7 @@ public class ProyectoEntityMapper implements EntityMapper<ProyectoEntity, Proyec
 	public final  ProyectoDomain toDomain(final ProyectoEntity entity) {
 		if(UtilObjeto.esNulo(entity)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000397);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000216);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}	 
 		return ProyectoDomain.crear(entity.getIdProyecto(), entity.getNombre(), entity.getDescripcion(),FechasEntityMapper.convertToDomain(entity.getFechas()));
@@ -34,7 +34,7 @@ public class ProyectoEntityMapper implements EntityMapper<ProyectoEntity, Proyec
 	public final  ProyectoEntity toEntity(final ProyectoDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000398);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000217);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		

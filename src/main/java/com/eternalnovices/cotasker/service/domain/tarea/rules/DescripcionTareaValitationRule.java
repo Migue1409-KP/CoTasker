@@ -27,7 +27,7 @@ private static final ValidationRule<String> instancia = new DescripcionTareaVali
 	
 	private void validarFormato(String dato) {
 		if(!UtilTexto.contieneSoloLetrasDigitosEspacios(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000252);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000233);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
@@ -36,7 +36,7 @@ private static final ValidationRule<String> instancia = new DescripcionTareaVali
 
 	private void validarObligatoriedad(String dato) {
 		if(UtilTexto.estaVacio(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000254);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000235);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
@@ -45,7 +45,7 @@ private static final ValidationRule<String> instancia = new DescripcionTareaVali
 
 	private void validarLongitud(String dato) {
 		if(!UtilTexto.longitudMaximaValida(dato, 60)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000253);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000234);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

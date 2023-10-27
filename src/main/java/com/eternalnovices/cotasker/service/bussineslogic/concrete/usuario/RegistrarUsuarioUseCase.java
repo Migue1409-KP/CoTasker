@@ -28,7 +28,7 @@
 		@Override
 		public void execute(UsuarioDomain domain) {
 			validarNoExistenciaMismoCorreo(domain.getCorreoElectronico());
-			domain = obtenerIdentificadorTipoIdentificacion(domain);
+			domain = obtenerIdentificadorUsuario(domain);
 			getUsuarioDAO().crear(UsuarioEntityMapper.convertToEntity(domain));
 		}
 		
@@ -38,12 +38,12 @@
 			final var resultados = getUsuarioDAO().consultar(entity);
 			
 			if(!resultados.isEmpty()) {
-				final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000039993);
+				final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000253);
 				throw ServiceCoTaskerException.crear(mensajeUsuario);
 			}
 		}
 		
-		private final UsuarioDomain obtenerIdentificadorTipoIdentificacion(UsuarioDomain domain) {
+		private final UsuarioDomain obtenerIdentificadorUsuario(UsuarioDomain domain) {
 			Optional<UsuarioEntity> optional;
 			UUID uuid;
 			
@@ -62,8 +62,8 @@
 
 		private final void setFactoria(final DAOFactory factoria) {
 			if (UtilObjeto.esNulo(factoria)) {
-				final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000039991);
-				final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000039992);
+				final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000254);
+				final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000255);
 				throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 			}
 			

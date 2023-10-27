@@ -27,21 +27,21 @@ public class CorreoElectronicoUsuarioValidationRule implements ValidationRule<St
 
 	private final void validarFormato(final String dato) {
 		if(!UtilTexto.contieneFormatoCorreo(dato) ) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000395);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000214);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 
 	private final  void validarObligatoriedad(final String dato) {
 		if(UtilTexto.estaVacio(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000394);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000213);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 
 	private final void validarLongitud(final String dato) {
 		if(!UtilTexto.longitudValida(dato,1, 100)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000393);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000212);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

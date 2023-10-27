@@ -24,7 +24,7 @@ public class ListaTareasEntityMapper implements EntityMapper<ListaTareasEntity, 
 	public final ListaTareasDomain toDomain(final ListaTareasEntity entity) {
 		if(UtilObjeto.esNulo(entity)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000241);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000222);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		 
@@ -37,7 +37,7 @@ public class ListaTareasEntityMapper implements EntityMapper<ListaTareasEntity, 
 	public ListaTareasEntity toEntity(final ListaTareasDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000242);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000223);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		

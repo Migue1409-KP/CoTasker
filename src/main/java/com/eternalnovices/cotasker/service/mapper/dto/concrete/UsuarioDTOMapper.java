@@ -22,7 +22,7 @@ public class UsuarioDTOMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
 	public UsuarioDomain toDomain(UsuarioDTO dto) {
 		if (UtilObjeto.esNulo(dto)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000003994);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000240);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return UsuarioDomain.crear(dto.getIdUsuario(),dto.getNombre(),dto.getApellido(),dto.getCorreoElectronico(),dto.isCorreoElectronicoConfirmado(),dto.getContrasena());
@@ -33,7 +33,7 @@ public class UsuarioDTOMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
 	public UsuarioDTO toDTO(UsuarioDomain domain) {
 		if (UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
-			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M000000003995);
+			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000241);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return UsuarioDTO.crear()

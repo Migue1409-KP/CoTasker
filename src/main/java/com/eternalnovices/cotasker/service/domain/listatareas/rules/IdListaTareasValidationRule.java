@@ -29,7 +29,7 @@ public class IdListaTareasValidationRule implements ValidationRule<UUID> {
 
 	private final  void validarObligatoriedad(final UUID dato) {
 		if(UtilUUID.esNulo(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000248);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000229);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}	
 	}

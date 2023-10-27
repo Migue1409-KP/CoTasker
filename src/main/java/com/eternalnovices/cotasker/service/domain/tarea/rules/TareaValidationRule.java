@@ -21,7 +21,7 @@ public final class TareaValidationRule implements ValidationRule<TareaDomain> {
 	@Override
 	public void validar(TareaDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000263);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000251);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

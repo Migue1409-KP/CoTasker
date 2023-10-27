@@ -16,7 +16,7 @@ public class UsuarioProyectoValidationRule implements ValidationRule<UsuarioProy
 	@Override
 	public void validar(UsuarioProyectoDomain domain) {
 		if(UtilObjeto.esNulo(domain)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000403);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000262);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
