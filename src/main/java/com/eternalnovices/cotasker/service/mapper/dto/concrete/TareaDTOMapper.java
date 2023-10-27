@@ -31,8 +31,9 @@ public class TareaDTOMapper implements DTOMapper<TareaDTO, TareaDomain> {
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000261);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return TareaDomain.crear(dto.getIdTarea(),dto.getNombre(),dto.getDescripcion(),FechasDtoMapper.convertToDomain(dto.getFecha()),null, null, ListaTareasDTOMapper.convertToDomain(dto.getListaTareas()));
-		//TODO hacer cambio cuando este prioridad y estado mapper
+		return TareaDomain.crear(dto.getIdTarea(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()),
+				PrioridadDTOMapper.convertToDomain(dto.getPrioridad()) , EstadoDTOMapper.convertToDomain(dto.getEstado()), ListaTareasDTOMapper.convertToDomain(dto.getListaTareas()));
+
 	}
 
 	@Override
@@ -49,8 +50,8 @@ public class TareaDTOMapper implements DTOMapper<TareaDTO, TareaDomain> {
 				.setFecha(FechasDTO.crear().setFechaCreacion(domain.getFecha().getFechaCreacion())
 						.setFechaEstimadaInicio(domain.getFecha().getFechaEstimadaInicio())
 						.setFechaEstimadaFin(domain.getFecha().getFechaEstimadaFin()))
-				.setPrioridad(PrioridadDTO.crear().setId(domain.getPrioridad().getIdPrioridad()))
-				.setEstado(EstadoDTO.crear().setId(domain.getEstado().getIdEstado()))
+				.setPrioridad(PrioridadDTO.crear().setIdPrioridad(domain.getPrioridad().getIdPrioridad()))
+				.setEstado(EstadoDTO.crear().setIdEstado(domain.getEstado().getIdEstado()))
 				.setListaTareas(ListaTareasDTO.crear().setIdListaTareas(domain.getListaTareas().getIdListaTareas()));
 				
 	}

@@ -30,8 +30,8 @@ public class ListaTareasDTOMapper implements DTOMapper<ListaTareasDTO, ListaTare
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000259);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return ListaTareasDomain.crear(dto.getIdListaTareas(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()), null, ProyectoDtoMapper.convertToDomain(dto.getProyecto()));
-		//TODO hacer cambio cuando este prioridad mapper
+		return ListaTareasDomain.crear(dto.getIdListaTareas(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()),
+				PrioridadDTOMapper.convertToDomain(dto.getPrioridad()), ProyectoDtoMapper.convertToDomain(dto.getProyecto()));
 	}
 
 	@Override
