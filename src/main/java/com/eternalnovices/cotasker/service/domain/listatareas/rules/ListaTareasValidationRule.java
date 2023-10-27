@@ -21,7 +21,7 @@ public final class ListaTareasValidationRule implements ValidationRule<ListaTare
 	@Override
 	public void validar(ListaTareasDomain data) {
 		if(UtilObjeto.esNulo(data)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000263);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000264);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
