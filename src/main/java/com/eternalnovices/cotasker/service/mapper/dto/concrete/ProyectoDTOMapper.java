@@ -14,10 +14,10 @@ import com.eternalnovices.cotasker.service.mapper.dto.DTOMapper;
 
 
 
-public class ProyectoDtoMapper implements DTOMapper<ProyectoDTO, ProyectoDomain> {
-	private static final DTOMapper<ProyectoDTO, ProyectoDomain> instancia= new ProyectoDtoMapper();
+public class ProyectoDTOMapper implements DTOMapper<ProyectoDTO, ProyectoDomain> {
+	private static final DTOMapper<ProyectoDTO, ProyectoDomain> instancia= new ProyectoDTOMapper();
 
-	private ProyectoDtoMapper() {
+	private ProyectoDTOMapper() {
 		super();
 	}
 	

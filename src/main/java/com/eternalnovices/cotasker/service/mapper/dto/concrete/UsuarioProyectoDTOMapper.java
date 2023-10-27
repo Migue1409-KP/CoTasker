@@ -14,10 +14,10 @@ import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.dto.UsuarioProyectoDTO;
 import com.eternalnovices.cotasker.service.mapper.dto.DTOMapper;
 
-public class UsuarioProyectoDtoMapper implements DTOMapper<UsuarioProyectoDTO, UsuarioProyectoDomain>{
-	private static final DTOMapper<UsuarioProyectoDTO, UsuarioProyectoDomain> instancia= new UsuarioProyectoDtoMapper();
+public class UsuarioProyectoDTOMapper implements DTOMapper<UsuarioProyectoDTO, UsuarioProyectoDomain>{
+	private static final DTOMapper<UsuarioProyectoDTO, UsuarioProyectoDomain> instancia= new UsuarioProyectoDTOMapper();
 	
-	private UsuarioProyectoDtoMapper() {
+	private UsuarioProyectoDTOMapper() {
 		super();
 	}
 	
@@ -28,7 +28,7 @@ public class UsuarioProyectoDtoMapper implements DTOMapper<UsuarioProyectoDTO, U
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000003998);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return UsuarioProyectoDomain.crear(ProyectoDtoMapper.convertToDomain(dto.getProyecto()),UsuarioDtoMapper.convertToDomain(dto.getUsuario()));
+		return UsuarioProyectoDomain.crear(ProyectoDTOMapper.convertToDomain(dto.getProyecto()),UsuarioDTOMapper.convertToDomain(dto.getUsuario()));
 	}
 	
 	@Override

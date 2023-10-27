@@ -11,10 +11,10 @@ import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
 import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.mapper.dto.DTOMapper;
 
-public class UsuarioDtoMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
-	private static final DTOMapper<UsuarioDTO, UsuarioDomain> instancia= new UsuarioDtoMapper();
+public class UsuarioDTOMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
+	private static final DTOMapper<UsuarioDTO, UsuarioDomain> instancia= new UsuarioDTOMapper();
 	
-	private UsuarioDtoMapper() {
+	private UsuarioDTOMapper() {
 		super();
 	}
 	

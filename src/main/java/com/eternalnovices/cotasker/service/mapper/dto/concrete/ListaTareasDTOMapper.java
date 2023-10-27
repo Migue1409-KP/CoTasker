@@ -31,7 +31,7 @@ public class ListaTareasDTOMapper implements DTOMapper<ListaTareasDTO, ListaTare
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return ListaTareasDomain.crear(dto.getIdListaTareas(),dto.getNombre(),dto.getDescripcion(),FechasDTOMapper.convertToDomain(dto.getFecha()),
-				PrioridadDTOMapper.convertToDomain(dto.getPrioridad()), ProyectoDtoMapper.convertToDomain(dto.getProyecto()));
+				PrioridadDTOMapper.convertToDomain(dto.getPrioridad()), ProyectoDTOMapper.convertToDomain(dto.getProyecto()));
 	}
 
 	@Override
