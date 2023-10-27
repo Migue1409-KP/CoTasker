@@ -1,4 +1,4 @@
-package com.eternalnovices.cotasker.service.bussineslogic.validator.concrete;
+package com.eternalnovices.cotasker.service.bussineslogic.validator.concrete.tarea;
 
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.crosscutting.util.UtilTexto;
