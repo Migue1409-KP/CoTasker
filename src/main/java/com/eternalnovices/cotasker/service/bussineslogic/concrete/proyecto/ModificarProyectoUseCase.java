@@ -12,6 +12,7 @@ import com.eternalnovices.cotasker.service.bussineslogic.UseCase;
 import com.eternalnovices.cotasker.service.domain.proyecto.ProyectoDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.concrete.ProyectoEntityMapper;
 
+
 public class ModificarProyectoUseCase implements UseCase<ProyectoDomain>{
 	private DAOFactory factoria;
 	
@@ -21,9 +22,8 @@ public class ModificarProyectoUseCase implements UseCase<ProyectoDomain>{
 	
 	@Override
 	public void execute(ProyectoDomain domain) {
+		validarExistenciaId(domain.getIdProyecto());
 		validarExistenciaMismoNombre(domain.getNombre());
-		validarExistenciaMismoId(domain.getIdProyecto());
-		validarExistenciaDescripcion(domain.getDescripcion());
 		actualizar(domain);
 		
 	}
@@ -32,15 +32,16 @@ public class ModificarProyectoUseCase implements UseCase<ProyectoDomain>{
 		getProyectoDAO().modificar(ProyectoEntityMapper.convertToEntity(domain));
 	}
 
-	private void validarExistenciaDescripcion(String descripcion) {
-		
-		
-	}
 
-	private void validarExistenciaMismoId(UUID idProyecto) {
-		// TODO Auto-generated method stub
+	private void validarExistenciaId(final UUID id) {
+		final var resultados = getProyectoDAO().consultarPorId(id);
 		
+		if(resultados.isEmpty()) {
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000830);
+			throw ServiceCoTaskerException.crear(mensajeUsuario);
+		}
 	}
+		
 
 	private void validarExistenciaMismoNombre(String nombre) {
 		// TODO Auto-generated method stub

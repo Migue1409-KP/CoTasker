@@ -10,9 +10,6 @@ import com.eternalnovices.cotasker.crosscutting.messages.enumerator.TipoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
 
-
-
-
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
@@ -607,6 +604,12 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo toDomain de la clase BooleanEntityMapper.No es posible mapear un Boolean dominio a partir de una entidad de Boolean entity nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000827, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo toEntity de la clase BooleanEntityMapper.No es posible mapear un Boolean entity a partir de una entidad de un Boolean domain nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000828, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No existe un usuario a modificar"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000829, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No se puede modificar el usuario deseado. Ya existe un usuario con el correo electronico a modificar"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000830, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No existe un proyecto existen a actualizar"));
 		
 		
 		
