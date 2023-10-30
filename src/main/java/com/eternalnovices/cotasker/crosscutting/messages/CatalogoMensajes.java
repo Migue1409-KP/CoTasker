@@ -78,7 +78,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000027, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de establecer la coneccion con el servidor.Por favor verifique la traza del error presentado...."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000033, TipoMensaje.USUARIO, CategoriaMensaje.ERROR, 
-				"Se ha presentado un problema tratando de consultar la información del tipo de identificación deseado"));
+				"Se ha presentado un problema tratando de consultar la información de la prioridad deseada"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000034, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de procesar los datos de una consulta por id un tipo de identificación en la base de datos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000035, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
@@ -643,12 +643,8 @@ public class CatalogoMensajes {
 				"Se presento un error inesperado tratando de modificar un usuario"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000838, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en función execute en ModificarUsuarioFacade tratando de modificar un usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
-		
-		
-		
-		
-		
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000700, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
+				"El usuario fue registrado exitosamente"));
 	}
 	
 	
