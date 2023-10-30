@@ -549,6 +549,14 @@ public class CatalogoMensajes {
 				"Se presento un error inesperado tratando de consultar una lista de tareas"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000804, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en función execute en ConsultarListaTareasFacade tratando de consultar una lista de tareas.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000805, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la consulta de datos de una tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000806, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarTareaUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000807, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de consultar una tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000808, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en ConsultarTareaFacade tratando de consultar una tarea.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 		
 		
 		
