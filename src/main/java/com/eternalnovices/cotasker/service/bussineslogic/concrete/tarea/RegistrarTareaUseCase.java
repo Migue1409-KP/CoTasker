@@ -12,9 +12,17 @@ import com.eternalnovices.cotasker.data.dao.TareaDAO;
 import com.eternalnovices.cotasker.data.dao.daofactory.DAOFactory;
 import com.eternalnovices.cotasker.data.entity.TareaEntity;
 import com.eternalnovices.cotasker.service.bussineslogic.UseCase;
+import com.eternalnovices.cotasker.service.domain.estado.EstadoDomain;
 import com.eternalnovices.cotasker.service.domain.fechas.FechasDomain;
 import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
+import com.eternalnovices.cotasker.service.domain.prioridad.PrioridadDomain;
 import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
+import com.eternalnovices.cotasker.service.dto.EstadoDTO;
+import com.eternalnovices.cotasker.service.dto.FechasDTO;
+import com.eternalnovices.cotasker.service.dto.PrioridadDTO;
+import com.eternalnovices.cotasker.service.mapper.dto.concrete.EstadoDTOMapper;
+import com.eternalnovices.cotasker.service.mapper.dto.concrete.FechasDTOMapper;
+import com.eternalnovices.cotasker.service.mapper.dto.concrete.PrioridadDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.entity.concrete.TareaEntityMapper;
 
 
@@ -50,7 +58,9 @@ public class RegistrarTareaUseCase implements UseCase<TareaDomain>{
 	
 	
 	private final void validarNoExistenciaMismoNombre(final String nombre, final ListaTareasDomain listaTareas) {
-		final var domain = TareaDomain.crear(null, nombre, null, null, null, null, listaTareas);
+		final var domain = TareaDomain.crear(null, nombre, null, FechasDTOMapper.convertToDomain(FechasDTO.crear()),
+				PrioridadDTOMapper.convertToDomain(PrioridadDTO.crear()), EstadoDTOMapper.convertToDomain(EstadoDTO.crear()),
+				listaTareas);
 		final var entity = TareaEntityMapper.convertToEntity(domain);
 		final var resultados = getTareaDAO().consultar(entity);
 		
