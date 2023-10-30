@@ -610,9 +610,22 @@ public class CatalogoMensajes {
 				"No se puede modificar el usuario deseado. Ya existe un usuario con el correo electronico a modificar"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000830, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No existe un proyecto existen a actualizar"));
-		
-		
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000905, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de consultar un Proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000906, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en ConsultarProyectoFacade tratando de consultar un Proyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000907, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de modificar un Proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000908, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en ModificarProyectoFacade tratando de modificar un Proyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000909, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de eliminar un Proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000910, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en EliminarProyectoFacade tratando de eliminar un Proyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000911, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de registrar un nuevo Proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000912, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en RegistrarProyectoFacade tratando de insertar un nuevo Proyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 		
 		
 	}
