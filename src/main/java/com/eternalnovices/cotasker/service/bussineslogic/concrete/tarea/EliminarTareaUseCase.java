@@ -30,7 +30,7 @@ public class EliminarTareaUseCase implements UseCase<TareaDomain> {
 		final var resultados = getTareaDAO().consultarPorId(id);
 		
 		if(resultados.isEmpty()) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000097);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000824);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}

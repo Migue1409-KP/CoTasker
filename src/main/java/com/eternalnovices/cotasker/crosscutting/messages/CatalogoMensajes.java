@@ -11,6 +11,7 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
 
 
+
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
@@ -579,6 +580,24 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema tratando de llevar la eliminación de la tarea"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000819, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarTareaUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000820, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La Lista de tareas a elimianar contiene aun tareas"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000821, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la eliminacion de la lista de tareas"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000822, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarListaTareasUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000821, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la eliminzacion de la lista de tareas"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000822, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarListaTareasUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000823, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La lista de tareas a eliminar no existe"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000823, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La tarea a eliminar no existe"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000824, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de eliminar una tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000825, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en EliminarTareaFacade tratando de eliminar una tarea.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 		
 		
 		
