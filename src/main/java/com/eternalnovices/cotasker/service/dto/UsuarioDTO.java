@@ -2,16 +2,16 @@ package com.eternalnovices.cotasker.service.dto;
 
 import java.util.UUID;
 
-import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.crosscutting.util.UtilTexto;
 import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
+
 
 public class UsuarioDTO {
 	private UUID id;
 	private String nombre;
 	private String apellido;
 	private String correoElectronico;
-	private boolean correoElectronicoConfirmado;
+	private BooleanDTO correoElectronicoConfirmado;
 	private String contrasena;
 	
 	public UsuarioDTO() {
@@ -19,12 +19,12 @@ public class UsuarioDTO {
 		setNombre(UtilTexto.VACIO);
 		setApellido(UtilTexto.VACIO);
 		setCorreoElectronico(UtilTexto.VACIO);
-		setCorreoElectronicoConfirmado(false);
+		setCorreoElectronicoConfirmado(new BooleanDTO());
 		setContrasena(UtilTexto.VACIO);
 	}
 	
 	public UsuarioDTO(final UUID id,final  String nombre, final String apellido,final  String correoElectronico,
-			final boolean correoElectronicoConfirmado,final String contrasena) {
+			final BooleanDTO correoElectronicoConfirmado,final String contrasena) {
 		setIdUsuario(id);
 		setNombre(nombre);
 		setApellido(apellido);
@@ -53,7 +53,7 @@ public class UsuarioDTO {
 		return correoElectronico;
 	}
 	
-	public final boolean isCorreoElectronicoConfirmado() {
+	public final BooleanDTO isCorreoElectronicoConfirmado() {
 		return correoElectronicoConfirmado;
 	}
 	
@@ -81,8 +81,8 @@ public class UsuarioDTO {
 		return this;
 	}
 	
-	public final UsuarioDTO setCorreoElectronicoConfirmado(boolean correoElectronicoConfirmado) {
-		this.correoElectronicoConfirmado = UtilObjeto.obtenerValorDefecto(correoElectronicoConfirmado, false);
+	public final UsuarioDTO setCorreoElectronicoConfirmado(BooleanDTO correoElectronicoConfirmado) {
+		this.correoElectronicoConfirmado = correoElectronicoConfirmado.isValorDefecto() ? new BooleanDTO(): new BooleanDTO().setValor(correoElectronicoConfirmado.isValor()).setValorDefecto(false);
 		return this;
 	}
 	

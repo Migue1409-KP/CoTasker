@@ -8,6 +8,8 @@ import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
+import com.eternalnovices.cotasker.data.entity.support.BooleanEntity;
+import com.eternalnovices.cotasker.service.domain.support.BooleanDomain;
 import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
@@ -25,7 +27,8 @@ public class UsuarioEntityMapper implements EntityMapper<UsuarioEntity, UsuarioD
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000218);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}	 
-		return UsuarioDomain.crear(entity.getIdUsuario(), entity.getNombre(), entity.getApellido(),entity.getCorreoElectronico(),entity.isCorreoElectronicoConfirmado(),entity.getContrasena());
+		return UsuarioDomain.crear(entity.getIdUsuario(), entity.getNombre(), entity.getApellido(),
+				entity.getCorreoElectronico(), BooleanDomain.crear(entity.isCorreoElectronicoConfirmado().isValor(), false),entity.getContrasena());
 	}
 	
 
@@ -37,7 +40,8 @@ public class UsuarioEntityMapper implements EntityMapper<UsuarioEntity, UsuarioD
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		
-		return UsuarioEntity.crear(domain.getIdUsuario(), domain.getNombre(), domain.getApellido(),domain.getCorreoElectronico(),domain.isCorreoElectronicoConfirmado(),domain.getContrasena());
+		return UsuarioEntity.crear(domain.getIdUsuario(), domain.getNombre(), domain.getApellido(),domain.getCorreoElectronico(),
+				BooleanEntity.crear(domain.isCorreoElectronicoConfirmado().isValor(), false),domain.getContrasena());
 	}
 	
 	public static final UsuarioDomain convertToDomain(final UsuarioEntity entity) {		 

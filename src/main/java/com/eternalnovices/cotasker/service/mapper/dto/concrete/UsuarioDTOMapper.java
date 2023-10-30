@@ -7,6 +7,7 @@ import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTask
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
+import com.eternalnovices.cotasker.service.domain.support.BooleanDomain;
 import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
 import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.mapper.dto.DTOMapper;
@@ -25,7 +26,7 @@ public class UsuarioDTOMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000240);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return UsuarioDomain.crear(dto.getIdUsuario(),dto.getNombre(),dto.getApellido(),dto.getCorreoElectronico(),dto.isCorreoElectronicoConfirmado(),dto.getContrasena());
+		return UsuarioDomain.crear(dto.getIdUsuario(),dto.getNombre(),dto.getApellido(),dto.getCorreoElectronico(), BooleanDomain.crear(dto.isCorreoElectronicoConfirmado().isValor(), false),dto.getContrasena());
 	}
 	
 
@@ -41,7 +42,7 @@ public class UsuarioDTOMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
 				.setNombre(domain.getNombre())
 				.setApellido(domain.getApellido())
 				.setCorreoElectronico(domain.getCorreoElectronico())
-				.setCorreoElectronicoConfirmado(domain.isCorreoElectronicoConfirmado())
+				.setCorreoElectronicoConfirmado(BooleanDTOMapper.convertToDTO(domain.isCorreoElectronicoConfirmado()))
 				.setContrasena(domain.getContrasena());
 	}
 	

@@ -18,10 +18,8 @@ import com.eternalnovices.cotasker.service.dto.PrioridadDTO;
 import com.eternalnovices.cotasker.service.dto.ProyectoDTO;
 import com.eternalnovices.cotasker.service.mapper.dto.concrete.EstadoDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.dto.concrete.FechasDTOMapper;
-import com.eternalnovices.cotasker.service.mapper.dto.concrete.ListaTareasDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.dto.concrete.PrioridadDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.dto.concrete.ProyectoDTOMapper;
-import com.eternalnovices.cotasker.service.mapper.dto.concrete.TareaDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.entity.concrete.TareaEntityMapper;
 
 

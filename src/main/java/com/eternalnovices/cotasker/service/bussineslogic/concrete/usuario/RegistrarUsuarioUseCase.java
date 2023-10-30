@@ -13,7 +13,8 @@
 	import com.eternalnovices.cotasker.data.dao.daofactory.DAOFactory;
 	import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
 	import com.eternalnovices.cotasker.service.bussineslogic.UseCase;
-	import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
+import com.eternalnovices.cotasker.service.domain.support.BooleanDomain;
+import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
 	import com.eternalnovices.cotasker.service.mapper.entity.concrete.UsuarioEntityMapper;
 
 	public class RegistrarUsuarioUseCase implements UseCase<UsuarioDomain>{
@@ -33,7 +34,7 @@
 		}
 		
 		private final void validarNoExistenciaMismoCorreo(final String correo) {
-			final var domain = UsuarioDomain.crear(null, null, null, correo, false, null);
+			final var domain = UsuarioDomain.crear(null, null, null, correo, BooleanDomain.crear(false, true), null);
 			final var entity = UsuarioEntityMapper.convertToEntity(domain);
 			final var resultados = getUsuarioDAO().consultar(entity);
 			

@@ -8,6 +8,7 @@ import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.data.entity.support.BooleanEntity;
+import com.eternalnovices.cotasker.service.domain.support.BooleanDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
 

@@ -1,9 +1,18 @@
 package com.eternalnovices.cotasker.service.mapper.dto.concrete;
 
-import com.eternalnovices.cotasker.service.domain.support.BooleanDomain;
-import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
+import java.util.ArrayList;
+import java.util.List;
 
-public class BooleanDTOMapper implements EntityMapper<BooleanDTO, BooleanDomain>{
+import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTaskerException;
+import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
+import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
+import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
+import com.eternalnovices.cotasker.service.domain.support.BooleanDomain;
+import com.eternalnovices.cotasker.service.dto.BooleanDTO;
+import com.eternalnovices.cotasker.service.mapper.dto.DTOMapper;
+
+
+public class BooleanDTOMapper implements DTOMapper<BooleanDTO, BooleanDomain>{
 	private static final DTOMapper<BooleanDTO, BooleanDomain> instancia = new BooleanDTOMapper();
 	
 	private BooleanDTOMapper() {
@@ -15,7 +24,7 @@ public class BooleanDTOMapper implements EntityMapper<BooleanDTO, BooleanDomain>
 		if(UtilObjeto.esNulo(dto)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000903);
-			throw ServiceTiendaOnlineException.crear(mensajeUsuario, mensajeTecnico);
+			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		
 		return BooleanDomain.crear(dto.isValor(), dto.isValorDefecto());
@@ -26,7 +35,7 @@ public class BooleanDTOMapper implements EntityMapper<BooleanDTO, BooleanDomain>
 		if(UtilObjeto.esNulo(domain)) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000004);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000137);
-			throw ServiceTiendaOnlineException.crear(mensajeUsuario, mensajeTecnico);
+			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		
 		return BooleanDTO.crear()

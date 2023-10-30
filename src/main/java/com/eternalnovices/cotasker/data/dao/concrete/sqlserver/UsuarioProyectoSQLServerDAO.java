@@ -17,6 +17,7 @@ import com.eternalnovices.cotasker.data.dao.base.SQLDAO;
 import com.eternalnovices.cotasker.data.entity.ProyectoEntity;
 import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
 import com.eternalnovices.cotasker.data.entity.UsuarioProyectoEntity;
+import com.eternalnovices.cotasker.data.entity.support.BooleanEntity;
 import com.eternalnovices.cotasker.data.entity.support.FechasEntity;
 
 public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyectoDAO{
@@ -143,7 +144,7 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 								resultados.getString("us.nombre"),
 								resultados.getString("us.apellido"), 
 								resultados.getString("us.correoElectronico"),
-								resultados.getBoolean("us.correoElectronicoConfirmado"),
+								BooleanEntity.crear(resultados.getBoolean("us.correoElectronicoConfirmado"), false),
 								resultados.getString("us.contrasena")
 								)
 						);
@@ -227,7 +228,7 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 								resultados.getString("us.nombre"),
 								resultados.getString("us.apellido"), 
 								resultados.getString("us.correoElectronico"),
-								resultados.getBoolean("us.correoElectronicoConfirmado"),
+								BooleanEntity.crear(resultados.getBoolean("us.correoElectronicoConfirmado"), false),
 								resultados.getString("us.contrasena")
 								)
 						);

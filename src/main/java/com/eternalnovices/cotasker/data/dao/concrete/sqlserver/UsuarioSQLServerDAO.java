@@ -16,6 +16,7 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilTexto;
 import com.eternalnovices.cotasker.data.dao.UsuarioDAO;
 import com.eternalnovices.cotasker.data.dao.base.SQLDAO;
 import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
+import com.eternalnovices.cotasker.data.entity.support.BooleanEntity;
 
 public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 
@@ -35,7 +36,7 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			sentenciaPreparada.setString(2,usuario.getNombre());
 			sentenciaPreparada.setString(3, usuario.getApellido());
 			sentenciaPreparada.setString(4, usuario.getCorreoElectronico());
-			sentenciaPreparada.setBoolean(5, usuario.isCorreoElectronicoConfirmado());
+			sentenciaPreparada.setBoolean(5, usuario.isCorreoElectronicoConfirmado().isValor());
 			sentenciaPreparada.setString(6, usuario.getContrasena());
 			
 			sentenciaPreparada.executeUpdate();
@@ -68,7 +69,7 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			sentenciaPreparada.setString(1,usuario.getNombre());
 			sentenciaPreparada.setString(2, usuario.getApellido());
 			sentenciaPreparada.setString(3, usuario.getCorreoElectronico());
-			sentenciaPreparada.setBoolean(4, usuario.isCorreoElectronicoConfirmado());
+			sentenciaPreparada.setBoolean(4, usuario.isCorreoElectronicoConfirmado().isValor());
 			sentenciaPreparada.setString(5, usuario.getContrasena());
 			sentenciaPreparada.setObject(6, usuario.getIdUsuario());
 			
@@ -144,9 +145,9 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 						resultados.getString("nombre"),
 						resultados.getString("apellido"),
 						resultados.getString("correoElectronico"),
-						resultados.getBoolean("correoElectronicoConfirmado"),
+						BooleanEntity.crear(resultados.getBoolean("correoElectronicoConfirmado"), false),
 						resultados.getString("contrasena"));
-				resultado=Optional.of(usuarioEntity);
+				resultado = Optional.of(usuarioEntity);
 			}
 		} catch (SQLException e) {
 			var mensajeUsuario=CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000080);
@@ -170,8 +171,8 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 			colocarParametrosConsulta(sentenciaPreparada, parametros);
 			return ejecutarConsulta(sentenciaPreparada);
 			
-		}catch (DataCoTaskerException e) {
-			throw e;
+		}catch (DataCoTaskerException exception) {
+			throw exception;
 		} catch (SQLException e) {
 			var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000085);
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000086);
@@ -197,7 +198,7 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 						resultados.getString("nombre"),
 						resultados.getString("apellido"),
 						resultados.getString("correoElectronico"),
-						resultados.getBoolean("correoElectronicoConfirmado"),
+						BooleanEntity.crear(resultados.getBoolean("correoElectronicoConfirmado"), false),
 						resultados.getString("contrasena"));
 						
 				listaResultados.add(usuarioEntity);
