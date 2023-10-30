@@ -11,6 +11,7 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
 
 
+
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
@@ -557,6 +558,12 @@ public class CatalogoMensajes {
 				"Se presento un error inesperado tratando de consultar una tarea"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000808, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en función execute en ConsultarTareaFacade tratando de consultar una tarea.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000809, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Ya existe una tarea con ese nombre"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000810, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo el registro de datos de una nueva tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000811, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase RegistroTareaUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
 		
 		
 		
