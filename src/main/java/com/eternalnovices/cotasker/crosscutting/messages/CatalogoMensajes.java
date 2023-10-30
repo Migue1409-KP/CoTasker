@@ -10,6 +10,7 @@ import com.eternalnovices.cotasker.crosscutting.messages.enumerator.TipoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
 
+
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
@@ -610,6 +611,23 @@ public class CatalogoMensajes {
 				"No se puede modificar el usuario deseado. Ya existe un usuario con el correo electronico a modificar"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000830, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No existe un proyecto existen a actualizar"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000831, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de consultar un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000832, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en ConsultarUsuarioFacade tratando de consultar un usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000833, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de eliminar un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000834, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en EliminarUsuarioFacade tratando de eliminar un usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000835, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de registrar un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000836, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en RegistrarUsuarioFacade tratando de insertar un nuevo usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000837, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de modificar un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000838, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en ModificarUsuarioFacade tratando de modificar un usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		
 		
 		
 		

@@ -8,10 +8,10 @@ import com.eternalnovices.cotasker.service.domain.usuario.rules.ContrasenaUsuari
 import com.eternalnovices.cotasker.service.domain.usuario.rules.CorreoElectronicoUsuarioValidationRule;
 import com.eternalnovices.cotasker.service.domain.usuario.rules.UsuarioValidationRule;
 
-public class RegistarUsuarioValidator implements Validator<UsuarioDomain>{
-	private static final Validator<UsuarioDomain> instancia  = new RegistarUsuarioValidator();
+public class RegistrarUsuarioValidator implements Validator<UsuarioDomain>{
+	private static final Validator<UsuarioDomain> instancia  = new RegistrarUsuarioValidator();
 	
-	private RegistarUsuarioValidator() {
+	private RegistrarUsuarioValidator() {
 		super();
 	}
 	
