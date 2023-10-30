@@ -14,6 +14,8 @@ import com.eternalnovices.cotasker.data.entity.ProyectoEntity;
 import com.eternalnovices.cotasker.service.bussineslogic.UseCase;
 import com.eternalnovices.cotasker.service.domain.fechas.FechasDomain;
 import com.eternalnovices.cotasker.service.domain.proyecto.ProyectoDomain;
+import com.eternalnovices.cotasker.service.dto.FechasDTO;
+import com.eternalnovices.cotasker.service.mapper.dto.concrete.FechasDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.entity.concrete.ProyectoEntityMapper;
 
 
@@ -27,8 +29,7 @@ public class RegistrarProyectoUseCase implements UseCase<ProyectoDomain> {
 	public void execute(ProyectoDomain domain) {
 		validarNoExistenciaMismoNombre(domain.getNombre());
 		domain = obtenerIdentificadorProyecto(domain);
-		getProyectoDAO().crear(ProyectoEntityMapper.convertToEntity(domain));
-		
+		getProyectoDAO().crear(ProyectoEntityMapper.convertToEntity(domain));	
 	}
 	
 	private final ProyectoDomain obtenerIdentificadorProyecto(final ProyectoDomain domain) {
@@ -45,7 +46,8 @@ public class RegistrarProyectoUseCase implements UseCase<ProyectoDomain> {
 	}
 	
 	private void validarNoExistenciaMismoNombre(String nombre) {
-		final var domain = ProyectoDomain.crear(null, nombre, null, null);
+		final var domain = ProyectoDomain.crear(null, nombre, null,
+				FechasDTOMapper.convertToDomain(FechasDTO.crear()) );
 		final var entity = ProyectoEntityMapper.convertToEntity(domain);
 		final var resultados = getProyectoDAO().consultar(entity);
 		

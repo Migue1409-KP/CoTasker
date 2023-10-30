@@ -2,16 +2,18 @@ package com.eternalnovices.cotasker.service.domain.usuario;
 
 import java.util.UUID;
 
+import com.eternalnovices.cotasker.service.domain.support.BooleanDomain;
+
 public class UsuarioDomain {
 	private UUID idUsuario;
 	private String nombre;
 	private String apellido;
 	private String correoElectronico;
-	private boolean correoElectronicoConfirmado;
+	private BooleanDomain correoElectronicoConfirmado;
 	private String contrasena;
 	
 	private UsuarioDomain(final UUID idUsuario,final String nombre,final String apellido,final String correoElectronico,
-			final boolean correoElectronicoConfirmado,final String contrasena) {
+			final BooleanDomain correoElectronicoConfirmado,final String contrasena) {
 		
 		setIdUsuario(idUsuario);
 		setNombre(nombre);
@@ -22,7 +24,7 @@ public class UsuarioDomain {
 	}
 	
 	public static final  UsuarioDomain crear(final UUID idUsuario, final String nombre,final String apellido,final String correoElectronico,
-			final boolean correoElectronicoConfirmado,final String contrasena  ) {
+			final BooleanDomain correoElectronicoConfirmado,final String contrasena  ) {
 		
 		return  new UsuarioDomain (idUsuario ,nombre,apellido,correoElectronico,correoElectronicoConfirmado,contrasena);
 	}
@@ -39,7 +41,7 @@ public class UsuarioDomain {
 	public final String getCorreoElectronico() {
 		return correoElectronico;
 	}
-	public final boolean isCorreoElectronicoConfirmado() {
+	public final BooleanDomain isCorreoElectronicoConfirmado() {
 		return correoElectronicoConfirmado;
 	}
 	public final String getContrasena() {
@@ -57,7 +59,7 @@ public class UsuarioDomain {
 	private final void setCorreoElectronico(final String correoElectronico) {
 		this.correoElectronico = correoElectronico;
 	}
-	private final void setCorreoElectronicoConfirmado( final boolean correoElectronicoConfirmado) {
+	private final void setCorreoElectronicoConfirmado( final BooleanDomain correoElectronicoConfirmado) {
 		this.correoElectronicoConfirmado = correoElectronicoConfirmado;
 	}
 	private final void setContrasena(final String contrasena) {
