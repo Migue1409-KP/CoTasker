@@ -2,16 +2,18 @@ package com.eternalnovices.cotasker.data.entity;
 
 import java.util.UUID;
 
+import com.eternalnovices.cotasker.data.entity.support.BooleanEntity;
+
 public class UsuarioEntity {
 	private UUID idUsuario;
 	private String nombre;
 	private String apellido;
 	private String correoElectronico;
-	private boolean correoElectronicoConfirmado;
+	private BooleanEntity correoElectronicoConfirmado;
 	private String contrasena;
 	
 	private UsuarioEntity(final UUID id, final String nombre, final String apellido, final String correoElectronico,
-			final boolean correoElectronicoConfirmado, final String contrasena) {
+			final BooleanEntity correoElectronicoConfirmado, final String contrasena) {
 		setIdUsuario(id);
 		setNombre(nombre);
 		setApellido(apellido);
@@ -21,7 +23,7 @@ public class UsuarioEntity {
 	}
 	
 	public static final UsuarioEntity crear(final UUID id, final String nombre, final String apellido, final String correoElectronico,
-			final boolean correoElectronicoConfirmado, final String contrasena) {
+			final BooleanEntity correoElectronicoConfirmado, final String contrasena) {
 		return new UsuarioEntity(id, nombre, apellido, correoElectronico, correoElectronicoConfirmado, contrasena);
 	}
 
@@ -41,7 +43,7 @@ public class UsuarioEntity {
 		this.correoElectronico = correoElectronico;
 	}
 
-	private final void setCorreoElectronicoConfirmado(final boolean correoElectronicoConfirmado) {
+	private final void setCorreoElectronicoConfirmado(final BooleanEntity correoElectronicoConfirmado) {
 		this.correoElectronicoConfirmado = correoElectronicoConfirmado;
 	}
 
@@ -65,7 +67,7 @@ public class UsuarioEntity {
 		return correoElectronico;
 	}
 
-	public final boolean isCorreoElectronicoConfirmado() {
+	public final BooleanEntity isCorreoElectronicoConfirmado() {
 		return correoElectronicoConfirmado;
 	}
 

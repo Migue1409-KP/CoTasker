@@ -12,6 +12,7 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
 
 
+
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
@@ -598,6 +599,10 @@ public class CatalogoMensajes {
 				"Se presento un error inesperado tratando de eliminar una tarea"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000825, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en función execute en EliminarTareaFacade tratando de eliminar una tarea.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000826, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase BooleanEntityMapper.No es posible mapear un Boolean dominio a partir de una entidad de Boolean entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000827, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase BooleanEntityMapper.No es posible mapear un Boolean entity a partir de una entidad de un Boolean domain nula"));
 		
 		
 		
