@@ -9,6 +9,8 @@ import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaj
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.TipoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
+import co.edu.tiendaonline.crosscutting.messages.Mensaje;
+
 
 
 
@@ -564,6 +566,10 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema tratando de llevar a cabo el registro de datos de una nueva tarea"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000811, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase RegistroTareaUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000812, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de registrar un nuevo tipo de identificación"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000813, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en RegistrarTipoIdentificaciónFacade tratando de insertar un nuevo tipo de identificación.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 		
 		
 		
