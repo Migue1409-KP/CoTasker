@@ -8,7 +8,6 @@ import com.eternalnovices.cotasker.service.domain.listatareas.rules.IdListaTarea
 import com.eternalnovices.cotasker.service.domain.prioridad.rules.IdPrioridadValidationRule;
 import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
 import com.eternalnovices.cotasker.service.domain.tarea.rules.DescripcionTareaValitationRule;
-import com.eternalnovices.cotasker.service.domain.tarea.rules.IdTareaValidationRule;
 import com.eternalnovices.cotasker.service.domain.tarea.rules.NombreTareaValitadionRule;
 import com.eternalnovices.cotasker.service.domain.tarea.rules.TareaValidationRule;
 

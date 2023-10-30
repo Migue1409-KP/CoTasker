@@ -10,6 +10,9 @@ import com.eternalnovices.cotasker.crosscutting.messages.enumerator.TipoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
 
+
+
+
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
@@ -572,6 +575,39 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema tratando de llevar a cabo la modificacion  de datos de un proyecto"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000000902, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase RegistroProyectoUseCase.Debido a que la factoria con la cual se desea modificar esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000815, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de registrar una lista de tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000816, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en RegistrarListaTareasFacade tratando de insertar una nueva lista de tareas.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000817, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No hay una parea existente para eliminar"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000818, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar la eliminación de la tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000819, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarTareaUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000820, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La Lista de tareas a elimianar contiene aun tareas"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000821, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la eliminacion de la lista de tareas"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000822, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarListaTareasUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000821, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la eliminzacion de la lista de tareas"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000822, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarListaTareasUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000823, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La lista de tareas a eliminar no existe"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000823, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"La tarea a eliminar no existe"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000824, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de eliminar una tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000825, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en EliminarTareaFacade tratando de eliminar una tarea.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000826, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toDomain de la clase BooleanEntityMapper.No es posible mapear un Boolean dominio a partir de una entidad de Boolean entity nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000827, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo toEntity de la clase BooleanEntityMapper.No es posible mapear un Boolean entity a partir de una entidad de un Boolean domain nula"));
+		
 		
 		
 		

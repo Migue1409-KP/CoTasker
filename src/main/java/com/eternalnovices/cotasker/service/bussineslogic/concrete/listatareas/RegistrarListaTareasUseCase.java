@@ -15,6 +15,10 @@ import com.eternalnovices.cotasker.service.bussineslogic.UseCase;
 import com.eternalnovices.cotasker.service.domain.fechas.FechasDomain;
 import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
 import com.eternalnovices.cotasker.service.domain.proyecto.ProyectoDomain;
+import com.eternalnovices.cotasker.service.dto.FechasDTO;
+import com.eternalnovices.cotasker.service.dto.PrioridadDTO;
+import com.eternalnovices.cotasker.service.mapper.dto.concrete.FechasDTOMapper;
+import com.eternalnovices.cotasker.service.mapper.dto.concrete.PrioridadDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.entity.concrete.ListaTareasEntityMapper;
 
 
@@ -50,7 +54,9 @@ public class RegistrarListaTareasUseCase implements UseCase<ListaTareasDomain>{
 	
 	
 	private final void validarNoExistenciaMismoNombre(final String nombre, final ProyectoDomain proyecto) {
-		final var domain = ListaTareasDomain.crear(null, nombre, null, null, null, proyecto);
+		final var domain = ListaTareasDomain.crear(null, nombre, null, FechasDTOMapper.convertToDomain(FechasDTO.crear()),
+				PrioridadDTOMapper.convertToDomain(PrioridadDTO.crear()),
+				proyecto);
 		final var entity = ListaTareasEntityMapper.convertToEntity(domain);
 		final var resultados = getListaTareasDAO().consultar(entity);
 		
