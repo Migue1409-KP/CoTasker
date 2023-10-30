@@ -10,6 +10,7 @@ import com.eternalnovices.cotasker.crosscutting.messages.enumerator.TipoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 
 
+
 public class CatalogoMensajes {
 	private static final Map<CodigoMensaje, Mensaje> MENSAJES = new HashMap<>();
 	
@@ -572,6 +573,12 @@ public class CatalogoMensajes {
 				"Se presento un error inesperado tratando de registrar una lista de tarea"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000816, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en función execute en RegistrarListaTareasFacade tratando de insertar una nueva lista de tareas.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000817, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No hay una parea existente para eliminar"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000818, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar la eliminación de la tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000819, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarTareaUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
 		
 		
 		

@@ -8,9 +8,7 @@ import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.data.entity.ProyectoEntity;
-import com.eternalnovices.cotasker.data.entity.TareaEntity;
 import com.eternalnovices.cotasker.service.domain.proyecto.ProyectoDomain;
-import com.eternalnovices.cotasker.service.domain.tarea.TareaDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
 public class ProyectoEntityMapper implements EntityMapper<ProyectoEntity, ProyectoDomain> {

@@ -5,7 +5,6 @@ import com.eternalnovices.cotasker.service.domain.fechas.rules.FechaCreacionFech
 import com.eternalnovices.cotasker.service.domain.fechas.rules.FechasValidationRule;
 import com.eternalnovices.cotasker.service.domain.listatareas.ListaTareasDomain;
 import com.eternalnovices.cotasker.service.domain.listatareas.rules.DescripcionListaTareasValitationRule;
-import com.eternalnovices.cotasker.service.domain.listatareas.rules.IdListaTareasValidationRule;
 import com.eternalnovices.cotasker.service.domain.listatareas.rules.ListaTareasValidationRule;
 import com.eternalnovices.cotasker.service.domain.listatareas.rules.NombreListaTareasValitadionRule;
 import com.eternalnovices.cotasker.service.domain.prioridad.rules.IdPrioridadValidationRule;

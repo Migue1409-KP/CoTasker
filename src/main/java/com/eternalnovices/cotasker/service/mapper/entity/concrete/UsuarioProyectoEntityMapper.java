@@ -8,9 +8,7 @@ import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTask
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
-import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
 import com.eternalnovices.cotasker.data.entity.UsuarioProyectoEntity;
-import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
 import com.eternalnovices.cotasker.service.domain.usuarioproyecto.UsuarioProyectoDomain;
 import com.eternalnovices.cotasker.service.mapper.entity.EntityMapper;
 
