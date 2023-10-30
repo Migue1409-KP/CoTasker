@@ -568,6 +568,11 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema inesperado en función execute en RegistrarTareaFacade tratando de insertar una nueva tarea.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000814, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Ya existe una lista de tareas con ese nombre"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000815, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de registrar una lista de tarea"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000816, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en RegistrarListaTareasFacade tratando de insertar una nueva lista de tareas.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		
 		
 		
 		
