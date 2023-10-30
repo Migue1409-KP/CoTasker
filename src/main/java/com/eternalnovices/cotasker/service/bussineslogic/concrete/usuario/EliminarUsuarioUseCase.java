@@ -10,7 +10,7 @@ import com.eternalnovices.cotasker.data.dao.UsuarioDAO;
 import com.eternalnovices.cotasker.data.dao.daofactory.DAOFactory;
 import com.eternalnovices.cotasker.service.bussineslogic.UseCase;
 import com.eternalnovices.cotasker.service.domain.usuario.UsuarioDomain;
-import com.eternalnovices.cotasker.service.mapper.entity.concrete.UsuarioEntityMapper;
+
 
 public class EliminarUsuarioUseCase implements UseCase<UsuarioDomain>{
 	private DAOFactory factoria;
@@ -30,17 +30,6 @@ public class EliminarUsuarioUseCase implements UseCase<UsuarioDomain>{
 		getUsuarioDAO().eliminar(idUsuario);
 	}
 
-	private void validarExistenciaRegistro(final UUID idUsuario) {
-		final var domain = UsuarioDomain.crear(idUsuario, null, null, null, false, null);
-		final var entity = UsuarioEntityMapper.convertToEntity(domain);
-		final var resultado = getUsuarioDAO().consultar(entity);
-		
-		if(resultado.isEmpty()) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000265);
-			throw ServiceCoTaskerException.crear(mensajeUsuario);
-		}
-	}
-
 	private final DAOFactory getFactoria() {
 		return factoria;
 	}
@@ -56,6 +45,15 @@ public class EliminarUsuarioUseCase implements UseCase<UsuarioDomain>{
 	
 	private final UsuarioDAO getUsuarioDAO() {
 		return getFactoria().obtenerUsuarioDAO();
+	}
+	
+	private void validarExistenciaRegistro(final UUID idUsuario) {
+		final var resultado = getUsuarioDAO().consultarPorId(idUsuario);
+		
+		if(resultado.isEmpty()) {
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000265);
+			throw ServiceCoTaskerException.crear(mensajeUsuario);
+		}
 	}
 }
 	

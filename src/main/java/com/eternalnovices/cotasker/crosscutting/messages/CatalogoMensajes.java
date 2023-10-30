@@ -568,6 +568,10 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema inesperado en función execute en RegistrarTareaFacade tratando de insertar una nueva tarea.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000814, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Ya existe una lista de tareas con ese nombre"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000000901, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la modificacion  de datos de un proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000000902, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase RegistroProyectoUseCase.Debido a que la factoria con la cual se desea modificar esta nula"));
 		
 		
 		
