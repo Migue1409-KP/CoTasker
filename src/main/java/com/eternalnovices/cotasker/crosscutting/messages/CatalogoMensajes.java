@@ -512,13 +512,13 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000256, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la consulta de un usuario"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000257, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarUsuarioUseCase.Debido a que la factoria con la cual se desea crear��esta��nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000254, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo el registro de un usuario"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000255, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioUseCase.Debido a que la factoria con la cual se desea crear��esta��nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000253, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
-				"no se puede registrar un usuario con el mismo correo electronico"));
+				"No se puede registrar un usuario con un correo electronico ya registrado"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000260, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No es posible llevar a cabo la operación deseada con el usuario"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000261, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
@@ -528,18 +528,18 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000263, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de eliminar  un usuario"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000264, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarUsuarioUseCase.Debido a que la factoria con la cual se desea eliminar esta nula"));
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarUsuarioUseCase.Debido a que la factoria con la cual se desea eliminar esta��nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000265, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No se puede eliminar el Usuario. El Usuario a eliminar no esta registrado"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000268, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la consulta de un Proyecto"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000269, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea crear��esta��nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000270, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo el registro  de un Proyecto"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000271, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea registrar esta nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000253, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea registrar��esta��nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000272, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"no se puede registrar un Proyecto con el mismo nombre"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000801, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la consulta de datos de una lista de tareas"));
@@ -645,6 +645,18 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema inesperado en función execute en ModificarUsuarioFacade tratando de modificar un usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000700, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
 				"El usuario fue registrado exitosamente"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000701, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
+				"Logueado"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000702, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
+				"No logueado"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000703, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+				"Se ha presentado un problema al crear la conexión SQL. No se ha podido obtener las variables de entorno"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000704, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+				"Se ha presentado un problema tratando de crear la conexión SQL. Se presento una excepción de tipo SQLException. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000705, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+				"Se ha presentado un problema tratando de crear la conexión SQL. Se presento una excepción inesperada. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000706, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
+				"Se ha presentado un problema tratando de crear DAO deseado. La conexión esta cerrada..."));
 	}
 	
 	
