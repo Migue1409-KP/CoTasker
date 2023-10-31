@@ -28,7 +28,9 @@ public class UsuarioEntityMapper implements EntityMapper<UsuarioEntity, UsuarioD
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}	 
 		return UsuarioDomain.crear(entity.getIdUsuario(), entity.getNombre(), entity.getApellido(),
-				entity.getCorreoElectronico(), BooleanDomain.crear(entity.isCorreoElectronicoConfirmado().isValor(), false),entity.getContrasena());
+				entity.getCorreoElectronico(), BooleanDomain.crear(entity.isCorreoElectronicoConfirmado().isValor(),
+						entity.isCorreoElectronicoConfirmado().isValorDefecto()),
+				entity.getContrasena());
 	}
 	
 
@@ -41,7 +43,7 @@ public class UsuarioEntityMapper implements EntityMapper<UsuarioEntity, UsuarioD
 		}
 		
 		return UsuarioEntity.crear(domain.getIdUsuario(), domain.getNombre(), domain.getApellido(),domain.getCorreoElectronico(),
-				BooleanEntity.crear(domain.isCorreoElectronicoConfirmado().isValor(), false),domain.getContrasena());
+				BooleanEntity.crear(domain.isCorreoElectronicoConfirmado().isValor(), domain.isCorreoElectronicoConfirmado().isValorDefecto()),domain.getContrasena());
 	}
 	
 	public static final UsuarioDomain convertToDomain(final UsuarioEntity entity) {		 

@@ -19,7 +19,7 @@ import com.eternalnovices.cotasker.data.entity.PrioridadEntity;
 
 public class PrioridadSQLServerDAO extends SQLDAO implements PrioridadDAO {
 
-	protected PrioridadSQLServerDAO(final Connection conexion) {
+	public PrioridadSQLServerDAO(final Connection conexion) {
 		super(conexion);
 	}
 

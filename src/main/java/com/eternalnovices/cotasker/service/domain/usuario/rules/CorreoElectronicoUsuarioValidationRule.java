@@ -19,8 +19,8 @@ public class CorreoElectronicoUsuarioValidationRule implements ValidationRule<St
 
 	@Override
 	public void validar(final String dato) {
-		validarLongitud(dato);
 		validarObligatoriedad(dato);
+		validarLongitud(dato);
 		validarFormato(dato);
 		
 	}

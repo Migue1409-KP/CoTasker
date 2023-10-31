@@ -26,7 +26,7 @@ import com.eternalnovices.cotasker.data.entity.support.FechasEntity;
 
 public class TareaSQLServerDAO extends SQLDAO implements TareaDAO{
 
-	protected TareaSQLServerDAO(Connection conexion) {
+	public TareaSQLServerDAO(Connection conexion) {
 		super(conexion);
 	}
 

@@ -29,13 +29,17 @@ public class ConsultarUsuarioValidator implements Validator<UsuarioDomain>{
 		if(!UtilObjeto.esNulo(domain)) {
 			if(!UtilUUID.esNulo(domain.getIdUsuario())) {				
 				IdTareaValidationRule.ejecutarValidacion(domain.getIdUsuario());
-			}if(!UtilTexto.estaVacio(domain.getNombre())) {
+			}
+			if(!UtilTexto.estaVacio(domain.getNombre())) {
 				NombreUsuarioValidationRule.ejecutarValidacion(domain.getNombre());
-			}if(!UtilTexto.estaVacio(domain.getApellido())) {
+			}
+			if(!UtilTexto.estaVacio(domain.getApellido())) {
 				ApellidoUsuarioValidationRule.ejecutarValidacion(domain.getApellido());
-			}if(!UtilTexto.estaVacio(domain.getCorreoElectronico())) {
+			}
+			if(!UtilTexto.estaVacio(domain.getCorreoElectronico())) {
 				CorreoElectronicoUsuarioValidationRule.ejecutarValidacion(domain.getCorreoElectronico());
-			}if(!UtilTexto.estaVacio(domain.getContrasena())) {
+			}
+			if(!UtilTexto.estaVacio(domain.getContrasena())) {
 				ContrasenaUsuarioValidationRule.ejecutarValidacion(domain.getContrasena());
 			}
 		}

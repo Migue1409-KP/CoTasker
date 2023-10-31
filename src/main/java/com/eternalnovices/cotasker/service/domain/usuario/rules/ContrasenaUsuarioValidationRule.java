@@ -19,8 +19,8 @@ public class ContrasenaUsuarioValidationRule implements ValidationRule<String> {
 
 	@Override
 	public void validar(final String dato) {
-		validarLongitud(dato);
 		validarObligatoriedad(dato);
+		validarLongitud(dato);
 	}
 
 	private final  void validarObligatoriedad(final String dato) {
@@ -31,7 +31,7 @@ public class ContrasenaUsuarioValidationRule implements ValidationRule<String> {
 	}
 
 	private final void validarLongitud(final String dato) {
-		if(!UtilTexto.longitudValida(dato,1, 100)) {
+		if(!UtilTexto.longitudValida(dato,8, 100)) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000209);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}

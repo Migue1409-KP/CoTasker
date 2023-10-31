@@ -17,8 +17,6 @@ import com.eternalnovices.cotasker.service.mapper.entity.concrete.UsuarioEntityM
 public class ConsultarUsuarioUseCase implements UseCaseFind<UsuarioDomain>{
 	private DAOFactory factoria;
 	
-	
-	
 	public ConsultarUsuarioUseCase(DAOFactory factoria) {
 		setFactoria(factoria);
 	}

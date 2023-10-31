@@ -20,7 +20,7 @@ import com.eternalnovices.cotasker.data.entity.EstadoEntity;
 
 public class EstadoSQLServerDAO extends SQLDAO implements EstadoDAO{
 
-	protected EstadoSQLServerDAO(final Connection conexion) {
+	public EstadoSQLServerDAO(final Connection conexion) {
 		super(conexion);
 	}
 

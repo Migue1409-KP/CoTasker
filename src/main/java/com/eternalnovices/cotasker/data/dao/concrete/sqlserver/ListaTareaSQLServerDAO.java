@@ -24,13 +24,13 @@ import com.eternalnovices.cotasker.data.entity.support.FechasEntity;
 
 public class ListaTareaSQLServerDAO extends SQLDAO implements ListaTareaDAO{
 
-	protected ListaTareaSQLServerDAO(final Connection conexion) {
+	public ListaTareaSQLServerDAO(final Connection conexion) {
 		super(conexion);
 	}
 
 	@Override
 	public final void crear(final ListaTareasEntity entity) {
-final var sentencia = new StringBuilder();
+		final var sentencia = new StringBuilder();
 		
 		sentencia.append("INSERT INTO ListaTareas (idLista, nombre, descripcion, fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin, idPrioridad, idProyecto) ");
 		sentencia.append("VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");

@@ -26,7 +26,10 @@ public class UsuarioDTOMapper implements DTOMapper<UsuarioDTO, UsuarioDomain> {
 			var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000240);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		return UsuarioDomain.crear(dto.getIdUsuario(),dto.getNombre(),dto.getApellido(),dto.getCorreoElectronico(), BooleanDomain.crear(dto.isCorreoElectronicoConfirmado().isValor(), false),dto.getContrasena());
+		return UsuarioDomain.crear(dto.getIdUsuario(), dto.getNombre(), dto.getApellido(), dto.getCorreoElectronico(),
+				BooleanDomain.crear(dto.isCorreoElectronicoConfirmado().isValor(),
+						dto.isCorreoElectronicoConfirmado().isValorDefecto()),
+				dto.getContrasena());
 	}
 	
 

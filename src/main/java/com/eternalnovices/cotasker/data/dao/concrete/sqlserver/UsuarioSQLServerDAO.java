@@ -13,6 +13,7 @@ import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.crosscutting.util.UtilTexto;
+import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 import com.eternalnovices.cotasker.data.dao.UsuarioDAO;
 import com.eternalnovices.cotasker.data.dao.base.SQLDAO;
 import com.eternalnovices.cotasker.data.entity.UsuarioEntity;
@@ -20,7 +21,7 @@ import com.eternalnovices.cotasker.data.entity.support.BooleanEntity;
 
 public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 
-	protected UsuarioSQLServerDAO(final Connection conexion) {
+	public UsuarioSQLServerDAO(final Connection conexion) {
 		super(conexion);
 	}
 
@@ -241,37 +242,38 @@ public class UsuarioSQLServerDAO extends SQLDAO implements UsuarioDAO {
 		sentencia.append("FROM Usuario ");
 		
 		if(!UtilObjeto.esNulo(usuario)) {
-			if(!UtilObjeto.esNulo(usuario.getIdUsuario())) {
-				sentencia.append(operadorCondicional).append( "IdUsuario = ? ");
+			if(!UtilUUID.esNulo(usuario.getIdUsuario())) {
+				sentencia.append(operadorCondicional).append(" idUsuario = ? ");
 				operadorCondicional="AND";
 				parametros.add(usuario.getIdUsuario());
 			}
 			if(!UtilTexto.estaVacio(usuario.getNombre())) {
-				sentencia.append(operadorCondicional).append("nombre =? ");
+				sentencia.append(operadorCondicional).append(" nombre = ? ");
 				operadorCondicional="AND";
 				parametros.add(usuario.getNombre());
 			}
 			if(!UtilTexto.estaVacio(usuario.getApellido())) {
-				sentencia.append(operadorCondicional).append("apellido =? ");
+				sentencia.append(operadorCondicional).append(" apellido = ? ");
 				operadorCondicional="AND";
 				parametros.add(usuario.getApellido());
 			}
 			if(!UtilTexto.estaVacio(usuario.getCorreoElectronico())) {
-				sentencia.append(operadorCondicional).append("correoElectronico =? ");
+				sentencia.append(operadorCondicional).append(" correoElectronico = ? ");
 				operadorCondicional="AND";
 				parametros.add(usuario.getCorreoElectronico());
 			}
-			if(!UtilObjeto.esNulo(usuario.isCorreoElectronicoConfirmado())) {
-				sentencia.append(operadorCondicional).append("correoElectronicoConfirmado =? ");
+			if(!usuario.isCorreoElectronicoConfirmado().isValorDefecto()) {
+				sentencia.append(operadorCondicional).append(" correoElectronicoConfirmado = ? ");
 				operadorCondicional="AND";
-				parametros.add(usuario.isCorreoElectronicoConfirmado());
+				parametros.add(usuario.isCorreoElectronicoConfirmado().isValor());
 			}
 			if(!UtilTexto.estaVacio(usuario.getContrasena())) {
-				sentencia.append(operadorCondicional).append("contrasena =? ");
+				sentencia.append(operadorCondicional).append(" contrasena = ? ");
 				parametros.add(usuario.getContrasena());
 			}
 
 		}
+		
 		return sentencia.toString();
 	}
 }

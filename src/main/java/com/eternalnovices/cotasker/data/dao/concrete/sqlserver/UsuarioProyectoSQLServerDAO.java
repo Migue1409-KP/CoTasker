@@ -24,7 +24,7 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 
 	private static final String PRIMARYKEY = "WHERE idProyecto = ? AND idUsuario = ? ";
 	
-	protected UsuarioProyectoSQLServerDAO(final Connection conexion) {
+	public UsuarioProyectoSQLServerDAO(final Connection conexion) {
 		super(conexion);
 	}
 

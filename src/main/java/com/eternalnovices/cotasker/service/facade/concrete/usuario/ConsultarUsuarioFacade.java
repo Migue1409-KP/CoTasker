@@ -16,16 +16,13 @@ import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.facade.FacadeFind;
 import com.eternalnovices.cotasker.service.mapper.dto.concrete.UsuarioDTOMapper;
 
-
-
-
 public class ConsultarUsuarioFacade implements FacadeFind<UsuarioDTO>{
 
 	@Override
 	public List<UsuarioDTO> execute(final UsuarioDTO dto) {
 		final UsuarioDomain domain = UsuarioDTOMapper.convertToDomain(dto);
 		ConsultarUsuarioValidator.ejecutar(domain);
-		List<UsuarioDTO> resultados = new ArrayList<UsuarioDTO>();
+		List<UsuarioDTO> resultados = new ArrayList<>();
 		
 		DAOFactory daofactory = DAOFactory.obtenerDAOFactory(TipoDAOFactory.SQLSERVER);
 		

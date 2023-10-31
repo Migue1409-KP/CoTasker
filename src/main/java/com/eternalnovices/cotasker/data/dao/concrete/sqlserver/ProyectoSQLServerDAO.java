@@ -24,7 +24,7 @@ public class ProyectoSQLServerDAO extends SQLDAO implements ProyectoDAO{
 	private static final String CONDICIONWHERE = "WHERE idProyecto = ? ";
 	
 	
-	protected ProyectoSQLServerDAO(final Connection conexion) {
+	public ProyectoSQLServerDAO(final Connection conexion) {
 		super(conexion);
 	}
 
