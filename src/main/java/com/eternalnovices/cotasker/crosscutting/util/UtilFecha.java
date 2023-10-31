@@ -17,4 +17,8 @@ public class UtilFecha {
     public static final Date obtenerValorDefecto(final Date fecha, final Date valorDefecto) {
         return esNulo(fecha) ? valorDefecto : fecha;
     }
+    
+    public static final Date obtenerFechaActual() {
+    	return new Date(new java.util.Date().getTime());
+    }
 }
