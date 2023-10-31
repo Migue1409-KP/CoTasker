@@ -26,7 +26,7 @@ public class ApellidoUsuarioValidationRule implements ValidationRule<String>{
 	}
 
 	private final void validarFormato(final String dato) {
-		if(!UtilTexto.contieneSoloLetrasDigitosEspacios(dato) ) {
+		if(!UtilTexto.contieneSoloLetrasEspacios(dato) ) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000208);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
