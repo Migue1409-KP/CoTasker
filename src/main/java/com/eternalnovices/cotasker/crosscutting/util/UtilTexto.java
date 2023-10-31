@@ -73,7 +73,7 @@ public final class UtilTexto {
 	}
 	public static final boolean contieneFormatoContrasena(final String valor) {
 		return obtenerValorDefecto(valor).matches(PATTERN_CONTRASENA);
-	
+	}
 	public static final boolean contieneSoloLetrasEspacios(final String valor) {
 		return obtenerValorDefecto(valor).matches(PATTERN_SOLO_LETRAS_ESPACIOS);
 	}
