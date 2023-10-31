@@ -592,7 +592,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000821, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la eliminzacion de la lista de tareas"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000822, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarListaTareasUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarListaTareasUseCase.Debido a que la factoria con la cual se desea eliminar esta nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000823, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"La lista de tareas a eliminar no existe"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000823, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
@@ -643,9 +643,14 @@ public class CatalogoMensajes {
 				"Se presento un error inesperado tratando de modificar un usuario"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000838, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en función execute en ModificarUsuarioFacade tratando de modificar un usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
-		
-		
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000913, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la eliminacion del Proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000914, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarProyectoUseCase.Debido a que la factoria con la cual se desea eliminar esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000915, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"El Proyecto a elimianar es utilizado actualmente por  un Usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000916, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No existe un Proyecto existente a eliminar"));
 		
 		
 		
