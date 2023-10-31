@@ -665,8 +665,6 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea Eliminar esta nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000841, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la eliminacion de un UsuarioProyecto"));
-		
-		
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000700, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
 				"El usuario fue registrado exitosamente"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000701, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
@@ -689,6 +687,13 @@ public class CatalogoMensajes {
 				"Se presento un error inesperado tratando de eliminar un usuarioProyecto"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000924, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en función execute en EliminarusuarioProyectoFacade tratando de eliminar un usuarioProyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000842, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Ya existe un UsuarioProyecto con los mismos id"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000843, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo el Registro de un UsuarioProyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000844, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea registrar esta nula"));
+		
 	}
 	
 	

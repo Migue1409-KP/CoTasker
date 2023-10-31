@@ -29,7 +29,7 @@ public class EliminarUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 	private void validarExistenciaRegistro(final UsuarioProyectoDomain domain) {
 		final var resultados = getUsuarioProyectoDAO().consultar(UsuarioProyectoEntityMapper.convertToEntity(domain));
 				
-		if(resultados.isEmpty()) {
+		if(!resultados.isEmpty()) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000839);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
