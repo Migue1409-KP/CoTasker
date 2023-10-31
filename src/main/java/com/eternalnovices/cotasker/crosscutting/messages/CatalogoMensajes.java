@@ -386,7 +386,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000199, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion colocarParametrosConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000200, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
+				"Se ha presentado un problema en funcion ejecutarConsulta en ProyectoDAO tratando de consultar proyectos.Se presento una excepcion de tipo SQLException. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000201, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado en funcion ejecutarConsulta en ProyectoDAO tratando de consultar taraes.Se presento una excepcion de tipo Exception. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000160, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
@@ -540,7 +540,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000271, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea registrar��esta��nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000272, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
-				"no se puede registrar un Proyecto con el mismo nombre"));
+				"No se puede registrar un Proyecto con el mismo nombre"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000801, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la consulta de datos de una lista de tareas"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000802, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
@@ -693,7 +693,10 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema tratando de llevar a cabo el Registro de un UsuarioProyecto"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000844, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea registrar esta nula"));
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000707, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
+				"El proyecto fue registrado exitosamente"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000708, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo el registro de un proyecto"));
 	}
 	
 	
