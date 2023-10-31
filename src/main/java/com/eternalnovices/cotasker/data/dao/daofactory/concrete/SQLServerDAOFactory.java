@@ -12,6 +12,7 @@ import com.eternalnovices.cotasker.data.dao.PrioridadDAO;
 import com.eternalnovices.cotasker.data.dao.ProyectoDAO;
 import com.eternalnovices.cotasker.data.dao.TareaDAO;
 import com.eternalnovices.cotasker.data.dao.UsuarioDAO;
+import com.eternalnovices.cotasker.data.dao.UsuarioProyectoDAO;
 import com.eternalnovices.cotasker.data.dao.daofactory.DAOFactory;
 
 
@@ -117,6 +118,12 @@ public class SQLServerDAOFactory extends DAOFactory {
 
 	@Override
 	public final UsuarioDAO obtenerUsuarioDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UsuarioProyectoDAO obtenrUsuarioProyectoDAO() {
 		// TODO Auto-generated method stub
 		return null;
 	}
