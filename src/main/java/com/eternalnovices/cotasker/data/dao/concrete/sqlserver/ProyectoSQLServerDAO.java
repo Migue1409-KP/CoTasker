@@ -32,7 +32,7 @@ public class ProyectoSQLServerDAO extends SQLDAO implements ProyectoDAO{
 	public final void crear(final ProyectoEntity entity) {
 		final var sentencia=new StringBuilder();
 		
-		sentencia.append("INSERT INTO Usuario ( idProyecto, nombre, descripcion , fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin ");
+		sentencia.append("INSERT INTO Proyecto (idProyecto, nombre, descripcion , fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin) ");
 		sentencia.append("VALUES (?,?,?,?,?,?) ");
 		try(final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())){
 			sentenciaPreparada.setObject(1, entity.getIdProyecto());
@@ -110,6 +110,7 @@ final var sentencia = new StringBuilder();
 	public Optional<ProyectoEntity> consultarPorId(UUID id) {
 		final var sentencia = new StringBuilder();
 		sentencia.append("SELECT idProyecto, nombre, descripcion , fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin ");
+		sentencia.append("FROM Proyecto ");
 		sentencia.append(CONDICIONWHERE);
 
 		Optional<ProyectoEntity> resultado = Optional.empty();
@@ -183,43 +184,43 @@ final var sentencia = new StringBuilder();
 		final var sentencia = new StringBuilder();
 		String operadorCondicional = "WHERE";
 		
-		sentencia.append("SELECT idProyecto, nombre, descripcion ");
-		sentencia.append("FROM  Proyecto li ");
+		sentencia.append("SELECT idProyecto, nombre, descripcion, fechaCreacion, fechaEstimadaInicio, fechaEstimadaFin ");
+		sentencia.append("FROM Proyecto ");
 		
 		if(!UtilObjeto.esNulo(entity)) {
 			if(!UtilUUID.esNulo(entity.getIdProyecto())) {
-				sentencia.append(operadorCondicional).append(" idProyecto = ?");
+				sentencia.append(operadorCondicional).append(" idProyecto = ? ");
 				operadorCondicional = "AND";
 				parametros.add(entity.getIdProyecto());
 			}
 			
 			if(!UtilTexto.estaVacio(entity.getNombre())) {
-				sentencia.append(operadorCondicional).append(" nombre = ?");
+				sentencia.append(operadorCondicional).append(" nombre = ? ");
 				operadorCondicional = "AND";
 				parametros.add(entity.getNombre());
 			}
 			
 			if(!UtilTexto.estaVacio(entity.getDescripcion())) {
-				sentencia.append(operadorCondicional).append(" descripcion = ?");
+				sentencia.append(operadorCondicional).append(" descripcion = ? ");
 				operadorCondicional = "AND";
 				parametros.add(entity.getDescripcion());
 			}
 			
 			if(!UtilObjeto.esNulo(entity.getFechas())) {
 				if(!UtilFecha.esNulo(entity.getFechas().getFechaCreacion())) {
-					sentencia.append(operadorCondicional).append(" fechaCreacion = ?");
+					sentencia.append(operadorCondicional).append(" fechaCreacion = ? ");
 					operadorCondicional = "AND";
 					parametros.add(entity.getFechas().getFechaCreacion());
 				}
 				
 				if(!UtilFecha.esNulo(entity.getFechas().getFechaEstimadaInicio())) {
-					sentencia.append(operadorCondicional).append(" fechaEstimadaInicio = ?");
+					sentencia.append(operadorCondicional).append(" fechaEstimadaInicio = ? ");
 					operadorCondicional = "AND";
 					parametros.add(entity.getFechas().getFechaEstimadaInicio());
 				}
 				
 				if(!UtilFecha.esNulo(entity.getFechas().getFechaEstimadaFin())) {
-					sentencia.append(operadorCondicional).append(" fechaEstimadaFin = ?");
+					sentencia.append(operadorCondicional).append(" fechaEstimadaFin = ? ");
 					parametros.add(entity.getFechas().getFechaEstimadaFin());
 				}
 			}
@@ -258,7 +259,8 @@ final var sentencia = new StringBuilder();
 						UUID.fromString(resultados.getObject("idProyecto").toString()),
 						resultados.getString("nombre"),
 						resultados.getString("descripcion"),
-						FechasEntity.crear(resultados.getDate("fechaCreacion"), resultados.getDate("fechaEstimadaInicio"), resultados.getDate("fechaEstimadaFin")));
+						FechasEntity.crear(resultados.getDate("fechaCreacion"),
+								resultados.getDate("fechaEstimadaInicio"), resultados.getDate("fechaEstimadaFin")));
 				listaResultados.add(proyectoEntity);		
 				}
 		} catch (SQLException e) {
