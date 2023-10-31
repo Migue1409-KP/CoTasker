@@ -75,7 +75,7 @@ public class EliminarProyectoUseCase implements UseCase<ProyectoDomain> {
 	}
 	
 	private final UsuarioProyectoDAO getUsuarioProyectoDAO() {
-		return getFactoria().obtenrUsuarioProyectoDAO();
+		return getFactoria().obtenerUsuarioProyectoDAO();
 	}
 	
 	

@@ -54,7 +54,7 @@ public abstract class DAOFactory {
 	public abstract ProyectoDAO obtenerProyectoDAO ();
 	public abstract TareaDAO obtenerTareaDAO ();
 	public abstract UsuarioDAO obtenerUsuarioDAO  ();
-	public abstract UsuarioProyectoDAO obtenrUsuarioProyectoDAO();
+	public abstract UsuarioProyectoDAO obtenerUsuarioProyectoDAO();
 	
 
 }

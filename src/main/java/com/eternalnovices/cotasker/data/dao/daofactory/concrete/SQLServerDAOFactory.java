@@ -123,7 +123,7 @@ public class SQLServerDAOFactory extends DAOFactory {
 	}
 
 	@Override
-	public UsuarioProyectoDAO obtenrUsuarioProyectoDAO() {
+	public UsuarioProyectoDAO obtenerUsuarioProyectoDAO() {
 		// TODO Auto-generated method stub
 		return null;
 	}

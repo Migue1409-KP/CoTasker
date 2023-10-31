@@ -651,6 +651,14 @@ public class CatalogoMensajes {
 				"El Proyecto a elimianar es utilizado actualmente por  un Usuario"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000916, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"No existe un Proyecto existente a eliminar"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000917, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo el Registro de un usuario en el proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000918, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase RegistrarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea registrar esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000919, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la eliminacion de un usuario en el proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000920, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea registrar esta nula"));
 		
 		
 		
