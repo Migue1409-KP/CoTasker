@@ -681,6 +681,14 @@ public class CatalogoMensajes {
 				"Se ha presentado un problema tratando de crear la conexión SQL. Se presento una excepción inesperada. Por favor verifique la traza del error presentado..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000706, TipoMensaje.TECNICO, CategoriaMensaje.ERROR, 
 				"Se ha presentado un problema tratando de crear DAO deseado. La conexión esta cerrada..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000921, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de registrar un usuarioProyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000922, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en RegistrarusuarioProyectoFacade tratando de insertar un nuevo usuarioProyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000923, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se presento un error inesperado tratando de eliminar un usuarioProyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000924, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en EliminarusuarioProyectoFacade tratando de eliminar un usuarioProyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
 	}
 	
 	
