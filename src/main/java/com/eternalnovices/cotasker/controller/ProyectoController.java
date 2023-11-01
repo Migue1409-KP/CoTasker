@@ -1,7 +1,6 @@
 package com.eternalnovices.cotasker.controller;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,7 +24,6 @@ import com.eternalnovices.cotasker.service.dto.ProyectoDTO;
 import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.dto.UsuarioProyectoDTO;
 import com.eternalnovices.cotasker.service.facade.concrete.proyecto.RegistrarProyectoFacade;
-import com.eternalnovices.cotasker.service.facade.concrete.usuario.ConsultarUsuarioFacade;
 import com.eternalnovices.cotasker.service.facade.concrete.usuarioproyecto.RegistrarUsuarioProyectoFacade;
 
 @RestController
@@ -45,10 +43,8 @@ public class ProyectoController {
 		
 		try {
 			RegistrarProyectoFacade facadeProyecto = new RegistrarProyectoFacade();
-			ConsultarUsuarioFacade facadeUsuario = new ConsultarUsuarioFacade();
 			RegistrarUsuarioProyectoFacade facadeUsuarioProyecto = new RegistrarUsuarioProyectoFacade();
 			
-			var dtoUsuario = UsuarioDTO.crear().setIdUsuario(req.getIdProyecto());
 			var dtoProyecto = ProyectoDTO.crear()
 						.setIdProyecto(req.getIdProyecto())
 						.setNombre(req.getNombre())
@@ -57,17 +53,14 @@ public class ProyectoController {
 								.setFechaCreacion(UtilFecha.obtenerFechaActual())
 								.setFechaEstimadaInicio(req.getFecha().getFechaEstimadaInicio())
 								.setFechaEstimadaFin(req.getFecha().getFechaEstimadaFin()));
-			var usuario = facadeUsuario.execute(dtoUsuario);
 			
-			UUID idProyecto = req.getIdProyecto();
+			var idProyecto = facadeProyecto.execute(dtoProyecto, req.getIdUsuario());
 			
-			if(!usuario.isEmpty()) {
-				idProyecto = facadeProyecto.execute(dtoProyecto);
-				var dtoUsuarioProyecto = UsuarioProyectoDTO.crear()
-						.setProyecto(ProyectoDTO.crear().setIdProyecto(idProyecto))
-						.setUsuario(UsuarioDTO.crear().setIdUsuario(req.getIdUsuario()));
-				facadeUsuarioProyecto.execute(dtoUsuarioProyecto);
-			}
+			var dtoUsuarioProyecto = UsuarioProyectoDTO.crear()
+					.setProyecto(ProyectoDTO.crear().setIdProyecto(idProyecto))
+					.setUsuario(UsuarioDTO.crear().setIdUsuario(req.getIdUsuario()));
+			
+			facadeUsuarioProyecto.execute(dtoUsuarioProyecto);
 			
 			var res = new ArrayList<SolicitarProyecto>();
 			res.add(ProyectoResponseMapper.convertToResponse(dtoProyecto.setIdProyecto(idProyecto), req.getIdUsuario()));

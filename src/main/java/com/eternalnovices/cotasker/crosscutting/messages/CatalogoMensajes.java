@@ -540,7 +540,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000271, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarProyectoUseCase.Debido a que la factoria con la cual se desea registrar��esta��nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000272, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
-				"No se puede registrar un Proyecto con el mismo nombre"));
+				"Un usuario no puede registrar un Proyecto con el mismo nombre"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000801, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la consulta de datos de una lista de tareas"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000802, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,

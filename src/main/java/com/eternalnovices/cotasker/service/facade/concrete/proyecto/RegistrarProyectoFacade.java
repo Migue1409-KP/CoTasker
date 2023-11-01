@@ -6,6 +6,7 @@ import com.eternalnovices.cotasker.crosscutting.exception.CoTaskerException;
 import com.eternalnovices.cotasker.crosscutting.exception.concrete.ServiceCoTaskerException;
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
+import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 import com.eternalnovices.cotasker.data.dao.daofactory.DAOFactory;
 import com.eternalnovices.cotasker.data.dao.daofactory.enumerator.TipoDAOFactory;
 import com.eternalnovices.cotasker.service.bussineslogic.concrete.proyecto.RegistrarProyectoUseCase;
@@ -15,20 +16,19 @@ import com.eternalnovices.cotasker.service.dto.ProyectoDTO;
 import com.eternalnovices.cotasker.service.facade.FacadeId;
 import com.eternalnovices.cotasker.service.mapper.dto.concrete.ProyectoDTOMapper;
 
-public class RegistrarProyectoFacade implements FacadeId<ProyectoDTO>{
+public class RegistrarProyectoFacade implements FacadeId<ProyectoDTO, UUID>{
 
 	@Override
-	public UUID execute(final ProyectoDTO dto) {
+	public UUID execute(final ProyectoDTO dto, UUID id) {
 		final ProyectoDomain domain = ProyectoDTOMapper.convertToDomain(dto);
 		RegistrarProyectoValidator.ejecutar(domain);
-		UUID id;
 		
 		DAOFactory daofactory = DAOFactory.obtenerDAOFactory(TipoDAOFactory.SQLSERVER);
-		
+		UUID res = UtilUUID.UUIDDEFECTO;
 		try {
 			daofactory.iniciarTransaccion();
 			var useCase = new RegistrarProyectoUseCase(daofactory);
-			id = useCase.execute(domain);
+			res = useCase.execute(domain, id);
 			daofactory.confirmarTransaccion();
 		} catch (CoTaskerException e) {
 			daofactory.cancelarTransaccion();
@@ -42,6 +42,6 @@ public class RegistrarProyectoFacade implements FacadeId<ProyectoDTO>{
 			daofactory.cerrarConexion();
 		}
 		
-		return id;
+		return res;
 	}
 }

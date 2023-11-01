@@ -77,7 +77,8 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 	public Optional<UsuarioProyectoEntity> consultarPorId(UUID idProyecto,UUID idUsuario) {
 		final var sentencia = new StringBuilder();
 		sentencia.append("SELECT up.idProyecto AS proyectoId, pr.nombre AS proyectoNombre, pr.descripcion AS proyectoDescripcion, "
-				+ "pr.fechaCreacion AS proyectoFechaCreacion, pr.fechaEstimadaInicio AS proyectoFechaEstimadaInicio, up.IdUsuario AS usuarioId, "
+				+ "pr.fechaCreacion AS proyectoFechaCreacion, pr.fechaEstimadaInicio AS proyectoFechaEstimadaInicio, "
+				+ "pr.fechaEstimadaFin AS proyectoFechaEstimadaFin, up.IdUsuario AS usuarioId, "
 				+ "us.nombre AS usuarioNombre, us.apellido AS usuarioApellido,  us.correoElectronico AS usuarioCorreoElectronico, "
 				+ "us.correoElectronicoConfirmado AS usuarioCorreoElectronicoConfirmado, us.contrasena AS usuarioContrasena ");
 		sentencia.append("FROM  UsuarioProyecto up ");
@@ -165,7 +166,8 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 		String operadorCondicional = "WHERE";
 		
 		sentencia.append("SELECT up.idProyecto AS proyectoId, pr.nombre AS proyectoNombre, pr.descripcion AS proyectoDescripcion, "
-				+ "pr.fechaCreacion AS proyectoFechaCreacion, pr.fechaEstimadaInicio AS proyectoFechaEstimadaInicio, up.IdUsuario AS usuarioId, "
+				+ "pr.fechaCreacion AS proyectoFechaCreacion, pr.fechaEstimadaInicio AS proyectoFechaEstimadaInicio, "
+				+ "pr.fechaEstimadaFin AS proyectoFechaEstimadaFin, up.IdUsuario AS usuarioId, "
 				+ "us.nombre AS usuarioNombre, us.apellido AS usuarioApellido,  us.correoElectronico AS usuarioCorreoElectronico, "
 				+ "us.correoElectronicoConfirmado AS usuarioCorreoElectronicoConfirmado, us.contrasena AS usuarioContrasena ");
 		sentencia.append("FROM  UsuarioProyecto up ");
