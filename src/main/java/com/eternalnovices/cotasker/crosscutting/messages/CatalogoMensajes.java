@@ -697,6 +697,12 @@ public class CatalogoMensajes {
 				"El proyecto fue registrado exitosamente"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000708, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo el registro de un proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000709, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No existe el usuario que quiere crear el proyecto"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000710, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Hubo un problema inesperado al crear un proyecto, intente de nuevo"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000711, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado creando UsuarioProyecto, el proyecto con el identificador consultado no existe"));
 	}
 	
 	

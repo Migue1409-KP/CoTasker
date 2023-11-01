@@ -11,7 +11,7 @@ import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 import com.eternalnovices.cotasker.data.dao.ProyectoDAO;
 import com.eternalnovices.cotasker.data.dao.daofactory.DAOFactory;
 import com.eternalnovices.cotasker.data.entity.ProyectoEntity;
-import com.eternalnovices.cotasker.service.bussineslogic.UseCase;
+import com.eternalnovices.cotasker.service.bussineslogic.UseCaseId;
 import com.eternalnovices.cotasker.service.domain.fechas.FechasDomain;
 import com.eternalnovices.cotasker.service.domain.proyecto.ProyectoDomain;
 import com.eternalnovices.cotasker.service.dto.FechasDTO;
@@ -19,17 +19,19 @@ import com.eternalnovices.cotasker.service.mapper.dto.concrete.FechasDTOMapper;
 import com.eternalnovices.cotasker.service.mapper.entity.concrete.ProyectoEntityMapper;
 
 
-public class RegistrarProyectoUseCase implements UseCase<ProyectoDomain> {
+public class RegistrarProyectoUseCase implements UseCaseId<ProyectoDomain> {
 	private DAOFactory factoria;
 	
 	public RegistrarProyectoUseCase(DAOFactory factoria) {
 		setFactoria(factoria);
 	}
+	
 	@Override
-	public void execute(ProyectoDomain domain) {
+	public UUID execute(ProyectoDomain domain) {
 		validarNoExistenciaMismoNombre(domain.getNombre());
 		domain = obtenerIdentificadorProyecto(domain);
 		getProyectoDAO().crear(ProyectoEntityMapper.convertToEntity(domain));
+		return domain.getIdProyecto();
 	}
 	
 	private final ProyectoDomain obtenerIdentificadorProyecto(final ProyectoDomain domain) {
