@@ -63,7 +63,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<Respuesta<SolicitarUsuario>> inicirSesion(@RequestBody SolicitarUsuario req){
+	public ResponseEntity<Respuesta<SolicitarUsuario>> iniciarSesion(@RequestBody SolicitarUsuario req){
 		final Respuesta<SolicitarUsuario> respuesta = new Respuesta<>();
 		HttpStatus codigoHttp = HttpStatus.BAD_REQUEST;
 		
@@ -74,8 +74,8 @@ public class UsuarioController {
 					.setContrasena(req.getContrasena());
 			var res = facade.execute(dto);
 			respuesta.setDatos(UsuarioResponseMapper.convertListToResponse(res));
-			codigoHttp = HttpStatus.OK;
-			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(!res.isEmpty() ? CodigoMensaje.M0000000701: CodigoMensaje.M0000000702));
+			codigoHttp = res.size() == 1  ? HttpStatus.OK: HttpStatus.NOT_FOUND;
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(res.size() == 1  ? CodigoMensaje.M0000000701: CodigoMensaje.M0000000702));
 		} catch (CoTaskerException e) {
 			respuesta.getMensajes().add(e.getMensajeTecnico());
 			logger.error(e.getLugar(), e);
