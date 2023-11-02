@@ -2,6 +2,7 @@ package com.eternalnovices.cotasker.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,7 @@ import com.eternalnovices.cotasker.service.facade.concrete.usuario.RegistrarUsua
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/usuario")
 public class UsuarioController {
