@@ -21,15 +21,7 @@ public class ContrasenaUsuarioValidationRule implements ValidationRule<String> {
 	public void validar(final String dato) {
 		validarObligatoriedad(dato);
 		validarLongitud(dato);
-		validarFormato(dato);
 		
-	}
-
-	private final void validarFormato(final String dato) {
-		if(!UtilTexto.contieneFormatoContrasena(dato)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000211);
-			throw ServiceCoTaskerException.crear(mensajeUsuario);
-		}
 	}
 
 	private final  void validarObligatoriedad(final String dato) {
