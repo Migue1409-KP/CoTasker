@@ -50,7 +50,7 @@ public class UsuarioController {
 					.setContrasena(req.getContrasena());
 			facade.execute(dto);
 			codigoHttp = HttpStatus.OK;
-			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000700));
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000338));
 		} catch (CoTaskerException e) {
 			respuesta.getMensajes().add(e.getMensajeTecnico());
 			logger.error(e.getLugar(), e);
@@ -75,7 +75,7 @@ public class UsuarioController {
 			var res = facade.execute(dto);
 			respuesta.setDatos(UsuarioResponseMapper.convertListToResponse(res));
 			codigoHttp = res.size() == 1  ? HttpStatus.OK: HttpStatus.NOT_FOUND;
-			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(res.size() == 1  ? CodigoMensaje.M0000000701: CodigoMensaje.M0000000702));
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(res.size() == 1  ? CodigoMensaje.M0000000313: CodigoMensaje.M0000000314));
 		} catch (CoTaskerException e) {
 			respuesta.getMensajes().add(e.getMensajeTecnico());
 			logger.error(e.getLugar(), e);

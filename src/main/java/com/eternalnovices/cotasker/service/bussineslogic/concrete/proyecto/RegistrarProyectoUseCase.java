@@ -67,7 +67,7 @@ public class RegistrarProyectoUseCase implements UseCaseId<ProyectoDomain, UUID>
 	private void validarExistenciaUsuario(UUID id) {
 		final var resultadosTmp = getUsuarioDAO().consultarPorId(id);
 		if(resultadosTmp.isEmpty()) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000709);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000349);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);	
 		}
 	}

@@ -68,12 +68,12 @@ public class ProyectoController {
 			res.add(ProyectoResponseMapper.convertToResponse(dtoProyecto.setIdProyecto(idProyecto), req.getIdUsuario()));
 			respuesta.setDatos(res);
 			codigoHttp = HttpStatus.OK;
-			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000707));
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000347));
 		} catch (CoTaskerException e) {
 			respuesta.getMensajes().add(e.getMensajeTecnico());
 			logger.error(e.getLugar(), e);
 		} catch (Exception e) {
-			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000708));
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000348));
 			logger.error(e);
 		}
 		

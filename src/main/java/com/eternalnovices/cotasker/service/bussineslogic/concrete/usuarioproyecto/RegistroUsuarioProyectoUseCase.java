@@ -34,7 +34,7 @@ public class RegistroUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 		final var resultados = getUsuarioProyectoDAO().consultarPorId(domain.getProyecto().getIdProyecto(), domain.getUsuario().getIdUsuario());
 				
 		if(!resultados.isEmpty()) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000842);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000330);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
@@ -43,7 +43,7 @@ public class RegistroUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 		final var resultados = getUsuarioDAO().consultarPorId(domain.getIdUsuario());
 				
 		if(resultados.isEmpty()) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000709);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000349);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
@@ -52,8 +52,8 @@ public class RegistroUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 		final var resultados = getProyectoDAO().consultarPorId(domain.getIdProyecto());
 				
 		if(resultados.isEmpty()) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000710);
-			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000711);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000350);
+			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000351);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 	}
@@ -63,8 +63,8 @@ public class RegistroUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 	}
 	private final void setFactoria(final DAOFactory factoria) {
 		if(UtilObjeto.esNulo(factoria)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000843);
-			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000844);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000331);
+			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000332);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		this.factoria=factoria;
