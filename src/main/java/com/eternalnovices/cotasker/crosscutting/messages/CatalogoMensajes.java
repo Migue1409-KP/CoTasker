@@ -408,7 +408,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000210, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La contraseña del usuario  es un dato obligatorio"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000211, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
-				"La contraseña del usuario solo debe contener digitos letras o espacios"));
+				"La contraseña del usuario debe contener minimo una letra mayuscula, un caracter especial y un numero."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000212, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
 				"La longitud del correo electronico del usuario no es valida. La longitud maxima son 100 caracteres"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000213, TipoMensaje.USUARIO, CategoriaMensaje.ADVERTENCIA,
