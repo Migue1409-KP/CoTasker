@@ -12,6 +12,4 @@ public interface UsuarioProyectoDAO {
 	
 	Optional<UsuarioProyectoEntity>consultarPorId(UUID idProyecto, UUID idUsuario);
 	List<UsuarioProyectoEntity>consultar(UsuarioProyectoEntity entity);
-	
-	
 }

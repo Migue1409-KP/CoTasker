@@ -703,6 +703,10 @@ public class CatalogoMensajes {
 				"Hubo un problema inesperado al crear un proyecto, intente de nuevo"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000351, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema inesperado creando UsuarioProyecto, el proyecto con el identificador consultado no existe"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000352, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
+				"El proyecto fue eliminado exitosamente"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000353, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la eliminación de un proyecto"));
 	}
 	
 	

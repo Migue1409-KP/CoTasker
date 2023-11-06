@@ -1,5 +1,6 @@
 package com.eternalnovices.cotasker.service.bussineslogic.validator.concrete.usuarioproyecto;
 
+import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 import com.eternalnovices.cotasker.service.bussineslogic.validator.Validator;
 import com.eternalnovices.cotasker.service.domain.proyecto.rules.IdProyectoValidationRule;
 import com.eternalnovices.cotasker.service.domain.usuario.rules.IdUsuarioValidationRule;
@@ -20,8 +21,13 @@ public class EliminarUsuarioProyectoValidator implements  Validator<UsuarioProye
 	@Override
 	public void execute(UsuarioProyectoDomain domain) {
 		UsuarioProyectoValidationRule.ejecutarValidacion(domain);
-		IdProyectoValidationRule.ejecutarValidacion(domain.getProyecto().getIdProyecto());
-		IdUsuarioValidationRule.ejecutarValidacion(domain.getUsuario().getIdUsuario());
+		if(!UtilUUID.esNulo(domain.getProyecto().getIdProyecto())) {			
+			IdProyectoValidationRule.ejecutarValidacion(domain.getProyecto().getIdProyecto());
+		}
+		
+		if(!UtilUUID.esNulo(domain.getUsuario().getIdUsuario())) {		
+			IdUsuarioValidationRule.ejecutarValidacion(domain.getUsuario().getIdUsuario());
+		}
 	}
 }
 

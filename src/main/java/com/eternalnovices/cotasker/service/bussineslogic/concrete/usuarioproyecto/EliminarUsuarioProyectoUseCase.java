@@ -29,16 +29,20 @@ public class EliminarUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 	private void validarExistenciaRegistro(final UsuarioProyectoDomain domain) {
 		final var resultados = getUsuarioProyectoDAO().consultar(UsuarioProyectoEntityMapper.convertToEntity(domain));
 				
-		if(!resultados.isEmpty()) {
+		if(resultados.isEmpty()) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000327);
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
 	
+	private void eliminar(final UsuarioProyectoDomain domain) {
+		getUsuarioProyectoDAO().eliminar(domain.getProyecto().getIdProyecto(), domain.getUsuario().getIdUsuario());
+	}
 	
 	private final DAOFactory getFactoria() {
 		return factoria;
 	}
+	
 	private final void setFactoria(final DAOFactory factoria) {
 		if(UtilObjeto.esNulo(factoria)) {
 			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000328);
@@ -46,11 +50,6 @@ public class EliminarUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		this.factoria=factoria;
-	}
-	
-	private void eliminar(final UsuarioProyectoDomain domain) {
-		
-		getUsuarioProyectoDAO().eliminar(domain.getProyecto().getIdProyecto(), domain.getUsuario().getIdUsuario());
 	}
 	
 	private final UsuarioProyectoDAO getUsuarioProyectoDAO() {

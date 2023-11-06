@@ -1,13 +1,16 @@
 package com.eternalnovices.cotasker.controller;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +27,9 @@ import com.eternalnovices.cotasker.service.dto.FechasDTO;
 import com.eternalnovices.cotasker.service.dto.ProyectoDTO;
 import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.dto.UsuarioProyectoDTO;
+import com.eternalnovices.cotasker.service.facade.concrete.proyecto.EliminarProyectoFacade;
 import com.eternalnovices.cotasker.service.facade.concrete.proyecto.RegistrarProyectoFacade;
+import com.eternalnovices.cotasker.service.facade.concrete.usuarioproyecto.EliminarUsuarioProyectoFacade;
 import com.eternalnovices.cotasker.service.facade.concrete.usuarioproyecto.RegistrarUsuarioProyectoFacade;
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -74,6 +79,33 @@ public class ProyectoController {
 			logger.error(e.getLugar(), e);
 		} catch (Exception e) {
 			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000348));
+			logger.error(e);
+		}
+		
+		return new ResponseEntity<>(respuesta, codigoHttp);
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Respuesta<SolicitarProyecto>> eliminar(@PathVariable("id") UUID id){
+		final Respuesta<SolicitarProyecto> respuesta = new Respuesta<>();
+		HttpStatus codigoHttp = HttpStatus.BAD_REQUEST;
+		
+		try {
+			EliminarUsuarioProyectoFacade facadeRelacion = new EliminarUsuarioProyectoFacade();
+			var dtoRelacion = UsuarioProyectoDTO.crear().setProyecto(ProyectoDTO.crear().setIdProyecto(id));
+			facadeRelacion.execute(dtoRelacion);
+			
+			EliminarProyectoFacade facadeProyecto = new EliminarProyectoFacade();
+			var dtoProyecto = ProyectoDTO.crear().setIdProyecto(id);
+			facadeProyecto.execute(dtoProyecto);
+			
+			codigoHttp = HttpStatus.OK;
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000352));
+		} catch (CoTaskerException e) {
+			respuesta.getMensajes().add(e.getMensajeTecnico());
+			logger.error(e.getLugar(), e);
+		} catch (Exception e) {
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000353));
 			logger.error(e);
 		}
 		

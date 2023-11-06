@@ -12,6 +12,7 @@ import com.eternalnovices.cotasker.crosscutting.exception.concrete.DataCoTaskerE
 import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
+import com.eternalnovices.cotasker.crosscutting.util.UtilUUID;
 import com.eternalnovices.cotasker.data.dao.UsuarioProyectoDAO;
 import com.eternalnovices.cotasker.data.dao.base.SQLDAO;
 import com.eternalnovices.cotasker.data.entity.ProyectoEntity;
@@ -54,12 +55,24 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 	@Override
 	public void eliminar(UUID idProyecto,UUID idUsuario) {
 		final var sentencia = new StringBuilder();
-		sentencia.append("DELETE FROM UsuarioProyecto up ");
-		sentencia.append(PRIMARYKEY);
+		sentencia.append("DELETE FROM UsuarioProyecto WHERE ");
 		
+		if(!UtilUUID.esNulo(idProyecto)) {
+			sentencia.append("idProyecto = ? ");
+		}
+		
+		if(!UtilUUID.esNulo(idUsuario)) {
+			sentencia.append("idUsuario = ?");
+		}
+		System.out.println(sentencia.toString());
 		try (final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())) {
-			sentenciaPreparada.setObject(1, idProyecto);
-			sentenciaPreparada.setObject(2, idUsuario);
+			if(!UtilUUID.esNulo(idProyecto)) {
+				sentenciaPreparada.setObject(1, idProyecto);
+			}
+			
+			if(!UtilUUID.esNulo(idUsuario)) {
+				sentenciaPreparada.setObject(2, idUsuario);
+			}
 			
 			sentenciaPreparada.executeUpdate();
 		} catch (SQLException e) {
@@ -111,7 +124,7 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 
 	@Override
 	public List<UsuarioProyectoEntity> consultar(UsuarioProyectoEntity entity) {
-		final var parametros = new ArrayList<Object>();
+		final var parametros = new ArrayList<>();
 		final String sentencia = formarSentenciaConsulta(entity, parametros);
 		
 		try(final var sentenciaPreparada = getConexion().prepareStatement(sentencia)) {
@@ -177,17 +190,16 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 		sentencia.append("	ON  us.IdUsuario = up.idUsuario ");
 		
 		if(!UtilObjeto.esNulo(entity)) {
-			if(!UtilObjeto.esNulo(entity.getProyecto())) {
+			if(!UtilUUID.esNulo(entity.getProyecto().getIdProyecto())) {
 				sentencia.append(operadorCondicional).append(" up.idProyecto = ? ");
 				operadorCondicional = "AND";
 				parametros.add(entity.getProyecto().getIdProyecto());
 			}
 			
-			if(!UtilObjeto.esNulo(entity.getUsuario())) {
+			if(!UtilUUID.esNulo(entity.getUsuario().getIdUsuario())) {
 				sentencia.append(operadorCondicional).append(" up.idUsuario = ? ");
 				parametros.add(entity.getUsuario().getIdUsuario());
 			}
-
 		}
 
 		sentencia.append("ORDER BY up.idProyecto ");			
