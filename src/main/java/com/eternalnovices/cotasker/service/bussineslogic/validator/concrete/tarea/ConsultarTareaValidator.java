@@ -41,11 +41,9 @@ public final class ConsultarTareaValidator implements Validator<TareaDomain>{
 				DescripcionTareaValitationRule.ejecutarValidacion(domain.getDescripcion());
 			}
 			
-			if(!UtilObjeto.esNulo(domain.getFecha())) {
-				if(!UtilFecha.esNulo(domain.getFecha().getFechaCreacion())) {
-					FechaCreacionFechasValidationRule.ejecutarValidacion(domain.getFecha().getFechaCreacion());
-					FechasValidationRule.ejecutarValidacion(domain.getFecha());
-				}
+			if(!UtilFecha.esNulo(domain.getFecha().getFechaCreacion())) {
+				FechaCreacionFechasValidationRule.ejecutarValidacion(domain.getFecha().getFechaCreacion());
+				FechasValidationRule.ejecutarValidacion(domain.getFecha());	
 			}
 			
 			if(!UtilObjeto.esNulo((domain.getPrioridad()))) {
