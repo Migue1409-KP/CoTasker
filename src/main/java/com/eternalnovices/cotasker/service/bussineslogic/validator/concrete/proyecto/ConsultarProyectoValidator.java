@@ -18,9 +18,9 @@ public class ConsultarProyectoValidator implements Validator<ProyectoDomain>{
 	
 	public static final void ejecutar(final ProyectoDomain domain) {
 		instancia.execute(domain);
-	}{
+	}
 
-}
+	
 
 	@Override
 	public void execute(ProyectoDomain domain) {

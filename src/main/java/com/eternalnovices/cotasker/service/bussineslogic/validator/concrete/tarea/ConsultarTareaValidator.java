@@ -28,37 +28,30 @@ public final class ConsultarTareaValidator implements Validator<TareaDomain>{
 	
 	@Override
 	public void execute(TareaDomain domain) {
-		if(!UtilObjeto.esNulo(domain)) {
-			if(!UtilUUID.esNulo(domain.getIdTarea())) {				
-				IdTareaValidationRule.ejecutarValidacion(domain.getIdTarea());
-			}
-			
-			if(!UtilTexto.estaVacio(domain.getNombre())) {				
-				NombreTareaValitadionRule.ejecutarValidacion(domain.getNombre());
-			}
-			
-			if(!UtilTexto.estaVacio(domain.getDescripcion())) {				
-				DescripcionTareaValitationRule.ejecutarValidacion(domain.getDescripcion());
-			}
-			
-			if(!UtilFecha.esNulo(domain.getFecha().getFechaCreacion())) {
-				FechaCreacionFechasValidationRule.ejecutarValidacion(domain.getFecha().getFechaCreacion());
-				FechasValidationRule.ejecutarValidacion(domain.getFecha());	
-			}
-			
-			if(!UtilObjeto.esNulo((domain.getPrioridad()))) {
-				IdPrioridadValidationRule.ejecutarValidacion(domain.getPrioridad().getIdPrioridad());
-			}
-			
-			if(!UtilObjeto.esNulo((domain.getEstado()))) {
-				IdEstadoValidationRule.ejecutarValidacion(domain.getEstado().getIdEstado());
-			}
-			
-			if(!UtilObjeto.esNulo((domain.getListaTareas()))) {
-				IdListaTareasValidationRule.ejecutarValidacion(domain.getListaTareas().getIdListaTareas());
-			}
-			
-			
+		if (UtilObjeto.esNulo(domain)) {
+			return;
+		}
+		if(!UtilUUID.esNulo(domain.getIdTarea())) {				
+			IdTareaValidationRule.ejecutarValidacion(domain.getIdTarea());
+		}
+		if(!UtilTexto.estaVacio(domain.getNombre())) {				
+			NombreTareaValitadionRule.ejecutarValidacion(domain.getNombre());
+		}
+		if(!UtilTexto.estaVacio(domain.getDescripcion())) {				
+			DescripcionTareaValitationRule.ejecutarValidacion(domain.getDescripcion());
+		}
+		if(!UtilFecha.esNulo(domain.getFecha().getFechaCreacion())) {
+			FechaCreacionFechasValidationRule.ejecutarValidacion(domain.getFecha().getFechaCreacion());
+			FechasValidationRule.ejecutarValidacion(domain.getFecha());	
+		}
+		if(!UtilObjeto.esNulo((domain.getPrioridad()))) {
+			IdPrioridadValidationRule.ejecutarValidacion(domain.getPrioridad().getIdPrioridad());
+		}
+		if(!UtilObjeto.esNulo((domain.getEstado()))) {
+			IdEstadoValidationRule.ejecutarValidacion(domain.getEstado().getIdEstado());
+		}
+		if(!UtilObjeto.esNulo((domain.getListaTareas()))) {
+			IdListaTareasValidationRule.ejecutarValidacion(domain.getListaTareas().getIdListaTareas());
 		}
 	}
 
