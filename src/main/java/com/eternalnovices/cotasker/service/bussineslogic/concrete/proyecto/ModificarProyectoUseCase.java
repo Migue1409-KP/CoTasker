@@ -23,7 +23,7 @@ public class ModificarProyectoUseCase implements UseCase<ProyectoDomain>{
 	@Override
 	public void execute(ProyectoDomain domain) {
 		validarExistenciaId(domain.getIdProyecto());
-		//TODO: validarExistenciaMismoNombre.
+		validarExistenciaMismoNombre(domain.getNombre());
 		actualizar(domain);
 		
 	}
@@ -41,7 +41,12 @@ public class ModificarProyectoUseCase implements UseCase<ProyectoDomain>{
 			throw ServiceCoTaskerException.crear(mensajeUsuario);
 		}
 	}
+		
 
+	private void validarExistenciaMismoNombre(String nombre) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	private final DAOFactory getFactoria() {
 		return factoria;

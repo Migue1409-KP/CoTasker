@@ -20,8 +20,6 @@ public class ConsultarProyectoValidator implements Validator<ProyectoDomain>{
 		instancia.execute(domain);
 	}
 
-	
-
 	@Override
 	public void execute(ProyectoDomain domain) {
 		if(!UtilObjeto.esNulo(domain)) {

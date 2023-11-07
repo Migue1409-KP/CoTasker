@@ -1,6 +1,7 @@
 package com.eternalnovices.cotasker.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.apache.logging.log4j.LogManager;
@@ -29,6 +30,7 @@ import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.dto.UsuarioProyectoDTO;
 import com.eternalnovices.cotasker.service.facade.concrete.proyecto.EliminarProyectoFacade;
 import com.eternalnovices.cotasker.service.facade.concrete.proyecto.RegistrarProyectoFacade;
+import com.eternalnovices.cotasker.service.facade.concrete.usuarioproyecto.ConsultarUsuarioProyectoFacade;
 import com.eternalnovices.cotasker.service.facade.concrete.usuarioproyecto.EliminarUsuarioProyectoFacade;
 import com.eternalnovices.cotasker.service.facade.concrete.usuarioproyecto.RegistrarUsuarioProyectoFacade;
 
@@ -76,10 +78,39 @@ public class ProyectoController {
 			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000347));
 		} catch (CoTaskerException e) {
 			respuesta.getMensajes().add(e.getMensajeTecnico());
-			logger.error(e.getLugar(), e);
+			logger.error(e.getMensajeTecnico(), e.getExcepcionRaiz());
 		} catch (Exception e) {
 			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000348));
-			logger.error(e);
+			logger.error(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000348), e);
+		}
+		
+		return new ResponseEntity<>(respuesta, codigoHttp);
+	}
+	
+	@GetMapping("/proyectosUsuario/{id}")
+	public ResponseEntity<Respuesta<SolicitarProyecto>> consultarProyectosUsuario(@PathVariable("id") UUID id){
+		final Respuesta<SolicitarProyecto> respuesta = new Respuesta<>();
+		HttpStatus codigoHttp = HttpStatus.BAD_REQUEST;
+		
+		try {
+			var dto = UsuarioProyectoDTO.crear().setUsuario(UsuarioDTO.crear().setIdUsuario(id));
+			ConsultarUsuarioProyectoFacade facade = new ConsultarUsuarioProyectoFacade();
+			var responseTmp = facade.execute(dto);
+			List<SolicitarProyecto> response = new ArrayList<>();
+			
+			for (int i = 0; i < responseTmp.size(); i++) {
+				response.add(ProyectoResponseMapper.convertToResponse(responseTmp.get(i).getProyecto()));
+			}
+			
+			respuesta.setDatos(response);
+			codigoHttp = HttpStatus.OK;
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000357));
+		} catch (CoTaskerException e) {
+			respuesta.getMensajes().add(e.getMensajeTecnico());
+			logger.error(e.getMensajeTecnico(), e.getExcepcionRaiz());
+		} catch (Exception e) {
+			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000358));
+			logger.error(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000358), e);
 		}
 		
 		return new ResponseEntity<>(respuesta, codigoHttp);
@@ -103,10 +134,10 @@ public class ProyectoController {
 			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000352));
 		} catch (CoTaskerException e) {
 			respuesta.getMensajes().add(e.getMensajeTecnico());
-			logger.error(e.getLugar(), e);
+			logger.error(e.getMensajeTecnico(), e.getExcepcionRaiz());
 		} catch (Exception e) {
 			respuesta.getMensajes().add(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000353));
-			logger.error(e);
+			logger.error(CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000353), e);
 		}
 		
 		return new ResponseEntity<>(respuesta, codigoHttp);

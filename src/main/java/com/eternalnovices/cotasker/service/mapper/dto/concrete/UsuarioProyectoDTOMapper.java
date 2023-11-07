@@ -1,6 +1,5 @@
 package com.eternalnovices.cotasker.service.mapper.dto.concrete;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +8,6 @@ import com.eternalnovices.cotasker.crosscutting.messages.CatalogoMensajes;
 import com.eternalnovices.cotasker.crosscutting.messages.enumerator.CodigoMensaje;
 import com.eternalnovices.cotasker.crosscutting.util.UtilObjeto;
 import com.eternalnovices.cotasker.service.domain.usuarioproyecto.UsuarioProyectoDomain;
-import com.eternalnovices.cotasker.service.dto.ProyectoDTO;
-import com.eternalnovices.cotasker.service.dto.UsuarioDTO;
 import com.eternalnovices.cotasker.service.dto.UsuarioProyectoDTO;
 import com.eternalnovices.cotasker.service.mapper.dto.DTOMapper;
 
@@ -39,10 +36,8 @@ public class UsuarioProyectoDTOMapper implements DTOMapper<UsuarioProyectoDTO, U
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		return UsuarioProyectoDTO.crear()
-				.setProyecto(ProyectoDTO.crear()
-						.setIdProyecto(domain.getProyecto().getIdProyecto()))
-				.setUsuario(UsuarioDTO.crear()
-						.setIdUsuario(domain.getUsuario().getIdUsuario()));
+				.setProyecto(ProyectoDTOMapper.convertToDTO(domain.getProyecto()))
+				.setUsuario(UsuarioDTOMapper.convertToDTO(domain.getUsuario()));
 	}
 	
 	public static final UsuarioProyectoDomain convertToDomain(final UsuarioProyectoDTO dto) {

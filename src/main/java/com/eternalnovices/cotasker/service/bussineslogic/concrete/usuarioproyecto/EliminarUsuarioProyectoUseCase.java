@@ -45,8 +45,8 @@ public class EliminarUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 	
 	private final void setFactoria(final DAOFactory factoria) {
 		if(UtilObjeto.esNulo(factoria)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000328);
-			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000329);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000329);
+			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000328);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
 		this.factoria=factoria;

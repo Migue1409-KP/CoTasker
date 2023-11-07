@@ -17,6 +17,7 @@ import com.eternalnovices.cotasker.service.facade.FacadeFind;
 import com.eternalnovices.cotasker.service.mapper.dto.concrete.UsuarioProyectoDTOMapper;
 
 public class ConsultarUsuarioProyectoFacade implements FacadeFind<UsuarioProyectoDTO>{
+
 	@Override
 	public List<UsuarioProyectoDTO> execute(final UsuarioProyectoDTO dto) {
 		final UsuarioProyectoDomain domain = UsuarioProyectoDTOMapper.convertToDomain(dto);
@@ -35,12 +36,13 @@ public class ConsultarUsuarioProyectoFacade implements FacadeFind<UsuarioProyect
 			throw exception;
 		} catch (Exception exception) {
 			daofactory.cancelarTransaccion();
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000403);
-			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000404);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
+			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000356);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		} finally {
 			daofactory.cerrarConexion();
 		}
 		return resultados;
 	}
+
 }

@@ -707,19 +707,16 @@ public class CatalogoMensajes {
 				"El proyecto fue eliminado exitosamente"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000353, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la eliminación de un proyecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000401, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema tratando de llevar a cabo la consulta de datos de un UsuarioProyecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000402, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea crear esta nula"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000319, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
-				"Se presento un error inesperado tratando de consultar un Usuario"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000320, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema inesperado en función execute en ConsultarUsuarioFacade tratando de consultar un Usuario.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000403, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
-				"Se presento un error inesperado tratando de consultar un UsuarioProyecto"));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000404, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
-				"Se ha presentado un problema inesperado en función execute en ConsultarProyectoFacade tratando de consultar un UsuarioProyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000354, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la operación de consultar un proyecto respecto a usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000355, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema en el metodo setFactoria de la clase ConsultarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea consultar esta nula"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000356, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema inesperado en función execute en ConsultarUsuarioProyectoFacade tratando de consultar un usuarioProyecto.Se presento una excepción de tipo Exception. Por favor verifique la traza del error presentado..."));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000357, TipoMensaje.USUARIO, CategoriaMensaje.CONFIRMACION,
+				"Los proyecto de un usuario fueron consultados exitosamente"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000358, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"Se ha presentado un problema tratando de llevar a cabo la consulta de los proyectos de un usuario"));
 	}
 	
 	

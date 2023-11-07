@@ -13,7 +13,8 @@ import com.eternalnovices.cotasker.service.domain.usuarioproyecto.UsuarioProyect
 import com.eternalnovices.cotasker.service.mapper.entity.concrete.UsuarioProyectoEntityMapper;
 
 public class ConsultarUsuarioProyectoUseCase implements UseCaseFind<UsuarioProyectoDomain>{
-private DAOFactory factoria;
+
+	private DAOFactory factoria;
 	
 	public ConsultarUsuarioProyectoUseCase(DAOFactory factoria) {
 		setFactoria(factoria);
@@ -24,19 +25,18 @@ private DAOFactory factoria;
 		final var resultadosTmp = getUsuarioProyectoDAO().consultar(UsuarioProyectoEntityMapper.convertToEntity(domain));
 		return UsuarioProyectoEntityMapper.convertToListDomain(resultadosTmp);
 	}
-
+	
 	private final DAOFactory getFactoria() {
 		return factoria;
 	}
-
+	
 	private final void setFactoria(final DAOFactory factoria) {
 		if(UtilObjeto.esNulo(factoria)) {
-			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000273);
-			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000274);
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000354);
+			final var mensajeTecnico = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000355);
 			throw ServiceCoTaskerException.crear(mensajeUsuario, mensajeTecnico);
 		}
-		
-		this.factoria = factoria;
+		this.factoria=factoria;
 	}
 	
 	private final UsuarioProyectoDAO getUsuarioProyectoDAO() {

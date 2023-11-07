@@ -64,7 +64,7 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 		if(!UtilUUID.esNulo(idUsuario)) {
 			sentencia.append("idUsuario = ?");
 		}
-		
+		System.out.println(sentencia.toString());
 		try (final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())) {
 			if(!UtilUUID.esNulo(idProyecto)) {
 				sentenciaPreparada.setObject(1, idProyecto);
@@ -184,8 +184,10 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 				+ "us.nombre AS usuarioNombre, us.apellido AS usuarioApellido,  us.correoElectronico AS usuarioCorreoElectronico, "
 				+ "us.correoElectronicoConfirmado AS usuarioCorreoElectronicoConfirmado, us.contrasena AS usuarioContrasena ");
 		sentencia.append("FROM  UsuarioProyecto up ");
-		sentencia.append("JOIN  Proyecto pr ON   pr.idProyecto = up.IdProyecto ");
-		sentencia.append("JOIN  Usuario us ON  us.IdUsuario = up.idUsuario ");
+		sentencia.append("JOIN  Proyecto pr ");
+		sentencia.append("ON   pr.idProyecto = up.idProyecto ");
+		sentencia.append("JOIN  Usuario us ");
+		sentencia.append("ON  us.idUsuario = up.idUsuario ");
 		
 		if(!UtilObjeto.esNulo(entity)) {
 			if(!UtilUUID.esNulo(entity.getProyecto().getIdProyecto())) {
@@ -200,7 +202,7 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 			}
 		}
 
-		sentencia.append("ORDER BY up.idProyecto ");			
+		sentencia.append("ORDER BY up.idProyecto ");
 		return sentencia.toString();
 	}
 	
