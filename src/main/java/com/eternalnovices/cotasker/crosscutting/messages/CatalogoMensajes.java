@@ -660,7 +660,7 @@ public class CatalogoMensajes {
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000342, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea registrar esta nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000327, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
-				"No existe un UsuarioProyecto existente a eliminar"));
+				"No existe el proyecto con el usuario a eliminar, puede no tener permisos para borrar el proyecto"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000328, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema en el metodo setFactoria de la clase EliminarUsuarioProyectoUseCase.Debido a que la factoria con la cual se desea Eliminar esta nula"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000329, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,

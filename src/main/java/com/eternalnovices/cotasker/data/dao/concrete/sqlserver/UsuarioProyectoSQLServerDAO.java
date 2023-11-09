@@ -56,15 +56,16 @@ public class UsuarioProyectoSQLServerDAO extends SQLDAO implements UsuarioProyec
 	public void eliminar(UUID idProyecto,UUID idUsuario) {
 		final var sentencia = new StringBuilder();
 		sentencia.append("DELETE FROM UsuarioProyecto WHERE ");
+		String operadorCondicional = "AND";
 		
 		if(!UtilUUID.esNulo(idProyecto)) {
 			sentencia.append("idProyecto = ? ");
 		}
 		
 		if(!UtilUUID.esNulo(idUsuario)) {
-			sentencia.append("idUsuario = ?");
+			sentencia.append(operadorCondicional).append(" idUsuario = ? ");
 		}
-		System.out.println(sentencia.toString());
+
 		try (final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())) {
 			if(!UtilUUID.esNulo(idProyecto)) {
 				sentenciaPreparada.setObject(1, idProyecto);

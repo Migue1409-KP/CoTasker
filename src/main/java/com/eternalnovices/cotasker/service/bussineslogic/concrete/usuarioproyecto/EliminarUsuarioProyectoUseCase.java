@@ -22,11 +22,11 @@ public class EliminarUsuarioProyectoUseCase implements UseCase<UsuarioProyectoDo
 	
 	@Override
 	public void execute(UsuarioProyectoDomain domain) {
-		validarExistenciaRegistro(domain);
+		validarExistenciaPermisoRegistro(domain);
 		eliminar(domain);
 	}
 	
-	private void validarExistenciaRegistro(final UsuarioProyectoDomain domain) {
+	private void validarExistenciaPermisoRegistro(final UsuarioProyectoDomain domain) {
 		final var resultados = getUsuarioProyectoDAO().consultar(UsuarioProyectoEntityMapper.convertToEntity(domain));
 				
 		if(resultados.isEmpty()) {

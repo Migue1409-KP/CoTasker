@@ -116,18 +116,18 @@ public class ProyectoController {
 		return new ResponseEntity<>(respuesta, codigoHttp);
 	}
 	
-	@DeleteMapping("/{id}")
-	public ResponseEntity<Respuesta<SolicitarProyecto>> eliminar(@PathVariable("id") UUID id){
+	@DeleteMapping("/{idProyecto}&{idUsuario}")
+	public ResponseEntity<Respuesta<SolicitarProyecto>> eliminar(@PathVariable("idProyecto") UUID idProyecto, @PathVariable("idUsuario") UUID idUsuario){
 		final Respuesta<SolicitarProyecto> respuesta = new Respuesta<>();
 		HttpStatus codigoHttp = HttpStatus.BAD_REQUEST;
 		
 		try {
 			EliminarUsuarioProyectoFacade facadeRelacion = new EliminarUsuarioProyectoFacade();
-			var dtoRelacion = UsuarioProyectoDTO.crear().setProyecto(ProyectoDTO.crear().setIdProyecto(id));
+			var dtoRelacion = UsuarioProyectoDTO.crear().setProyecto(ProyectoDTO.crear().setIdProyecto(idProyecto)).setUsuario(UsuarioDTO.crear().setIdUsuario(idUsuario));
 			facadeRelacion.execute(dtoRelacion);
 			
 			EliminarProyectoFacade facadeProyecto = new EliminarProyectoFacade();
-			var dtoProyecto = ProyectoDTO.crear().setIdProyecto(id);
+			var dtoProyecto = ProyectoDTO.crear().setIdProyecto(idProyecto);
 			facadeProyecto.execute(dtoProyecto);
 			
 			codigoHttp = HttpStatus.OK;
