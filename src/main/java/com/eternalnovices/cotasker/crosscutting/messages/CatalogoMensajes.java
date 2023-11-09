@@ -717,6 +717,8 @@ public class CatalogoMensajes {
 				"Los proyecto de un usuario fueron consultados exitosamente"));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000358, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de llevar a cabo la consulta de los proyectos de un usuario"));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M0000000359, TipoMensaje.USUARIO, CategoriaMensaje.ERROR,
+				"No se puede consultar proyectos a un usuario no existente"));
 	}
 	
 	

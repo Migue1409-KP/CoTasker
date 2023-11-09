@@ -22,8 +22,18 @@ public class ConsultarUsuarioProyectoUseCase implements UseCaseFind<UsuarioProye
 	
 	@Override
 	public List<UsuarioProyectoDomain> execute(UsuarioProyectoDomain domain) {
+		validarExistenciaUsuario(domain);
 		final var resultadosTmp = getUsuarioProyectoDAO().consultar(UsuarioProyectoEntityMapper.convertToEntity(domain));
 		return UsuarioProyectoEntityMapper.convertToListDomain(resultadosTmp);
+	}
+	
+	private void validarExistenciaUsuario(final UsuarioProyectoDomain domain) {
+		final var resultados = getUsuarioProyectoDAO().consultar(UsuarioProyectoEntityMapper.convertToEntity(domain));
+				
+		if(resultados.isEmpty()) {
+			final var mensajeUsuario = CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M0000000359);
+			throw ServiceCoTaskerException.crear(mensajeUsuario);
+		}
 	}
 	
 	private final DAOFactory getFactoria() {
